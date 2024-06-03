@@ -30,9 +30,9 @@ export default defineConfig({
     editLink: {
       text: '在 Gitee 上编辑此页面',
       pattern: ({ filePath }) => {
-        return `https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn/edit/docs/${filePath}`
-        // return `https://framagit.org/xuxiaowei-com-cn/xuxiaowei-com-cn/-/edit/docs/${filePath}`
-        // return `https://github.com/xuxiaowei-com-cn/xuxiaowei-com-cn/edit/docs/${filePath}`
+        return `https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn/edit/main/${filePath}`
+        // return `https://framagit.org/xuxiaowei-com-cn/xuxiaowei-com-cn/-/edit/main/${filePath}`
+        // return `https://github.com/xuxiaowei-com-cn/xuxiaowei-com-cn/edit/main/${filePath}`
       },
     },
 
