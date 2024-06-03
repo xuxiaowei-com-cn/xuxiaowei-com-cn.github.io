@@ -4,6 +4,38 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "徐晓伟",
   description: "一个半路出家不务正业的程序员",
+  lang: 'zh-CN',
+  base: '/',
+  head: [
+    [ 'script', { id: 'baidu' },
+      `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1da3ac34d67e4132de65ce914d2067ec";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      `
+    ],
+    [ 'style', {},
+      `
+      td, th {
+        padding: 8px !important;
+      }
+      @media only screen and (min-width: 1440px) {
+        :root {
+          --vp-layout-max-width: 100%;
+        }
+        .VPDoc.has-aside .content-container {
+          max-width: 100% !important;
+        }
+      }
+      `
+    ]
+  ],
+  lastUpdated: true,
+  srcExclude: [ 'README.md' ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
