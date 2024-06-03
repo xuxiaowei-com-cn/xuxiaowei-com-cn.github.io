@@ -1,11 +1,26 @@
 {
-  "devDependencies": {
-    "vitepress": "1.2.2"
-  },
+  "name": "xuxiaowei-com-cn-docs",
+  "version": "0.0.1",
   "scripts": {
     "pre:npm": "npm install --registry https://registry.npmmirror.com || npm install --registry https://registry.npmjs.org",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
+  },
+  "author": "徐晓伟 <xuxiaowei@xuxiaowei.com.cn>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/xuxiaowei-com-cn/xuxiaowei-com-cn.github.io/issues"
+  },
+  "homepage": "https://github.com/xuxiaowei-com-cn/xuxiaowei-com-cn.github.io#README",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuxiaowei-com-cn/xuxiaowei-com-cn.github.io.git"
+  },
+  "keywords": [
+    "vitepress"
+  ],
+  "devDependencies": {
+    "vitepress": "1.2.2"
   }
 }
