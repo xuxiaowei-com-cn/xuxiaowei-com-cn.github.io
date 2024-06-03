@@ -40,7 +40,53 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
+      {
+        text: '其他文档',
+        activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
+        items: [
+          {
+            text: '徐晓伟微服务',
+            link: 'https://docs.xuxiaowei.cloud'
+          },
+          {
+            text: 'GitLab/Kubernetes 知识库',
+            link: 'https://gitlab-k8s.xuxiaowei.com.cn'
+          },
+          {
+            text: 'Kubernetes（k8s）一键安装配置脚本',
+            link: 'https://gitee.com/xuxiaowei-com-cn/k8s.sh'
+          },
+          {
+            text: '网盾',
+            link: 'https://gateway-shield.xuxiaowei.com.cn'
+          },
+          {
+            text: '根据 IP 获取地理信息',
+            link: 'https://ip.xuxiaowei.com.cn'
+          },
+          {
+            text: '短网址',
+            link: 'https://xxw.ac.cn'
+          },
+          {
+            text: 'GitLab',
+            link: 'https://gitlab.xuxiaowei.com.cn'
+          },
+          {
+            text: 'Jenkins',
+            link: 'https://jenkins.xuxiaowei.com.cn'
+          },
+          {
+            text: 'markdown-it',
+            link: 'https://markdown-it.xuxiaowei.com.cn'
+          },
+          {
+            text: '工具',
+            link: 'https://tools.xuxiaowei.com.cn'
+          },
+        ]
+      },
     ],
 
     sidebar: [
