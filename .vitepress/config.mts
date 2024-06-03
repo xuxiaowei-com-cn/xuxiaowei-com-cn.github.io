@@ -71,7 +71,7 @@ export default defineConfig({
           },
           {
             text: 'GitLab',
-            link: 'https://gitlab.xuxiaowei.com.cn'
+            link: 'https://gitlab.xuxiaowei.com.cn/xuxiaowei-com-cn/readme/-/blob/main/README.md'
           },
           {
             text: 'Jenkins',
