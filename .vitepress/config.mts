@@ -39,11 +39,13 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      {
+        text: '个人简介',
+        link: '/guide/intro',
+        activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
+      },
       {
         text: '其他文档',
-        activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
         items: [
           {
             text: '徐晓伟微服务',
@@ -88,13 +90,18 @@ export default defineConfig({
         ]
       },
     ],
-
+    logo: { src: '/favicon.ico', width: 24, height: 24 },
+    search: {
+      provider: 'local'
+    },
     sidebar: [
       {
-        text: 'Examples',
+        text: '导读',
+        collapsed: false,
+        base: '/guide/',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '个人简介', link: 'intro' },
+          { text: '个人网址', link: 'website' }
         ]
       }
     ],
