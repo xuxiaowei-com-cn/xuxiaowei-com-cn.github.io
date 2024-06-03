@@ -44,6 +44,7 @@ jobs:
           cat .vitepress/config.mts
           sed -i 's#在 Gitee 上编辑此页面#在 GitHub 上编辑#g' .vitepress/config.mts
           sed -i 's#https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn/edit/docs/#https://github.com/xuxiaowei-com-cn/xuxiaowei-com-cn.github.io/edit/docs/#g' .vitepress/config.mts
+          sed -i 's#<a id="beian-miit-gov-cn" target="_blank" href="https://beian.miit.gov.cn">鲁ICP备19009036号-1</a>##g' .vitepress/config.mts
           cat .vitepress/config.mts
 
       - name: Build with VitePress
