@@ -13,7 +13,7 @@ pages:
     - if [ $CI_SERVER_HOST == 'framagit.org' ]; then
       cat .vitepress/config.mts;
       sed -i 's#在 Gitee 上编辑此页面#在 FramaGit 上编辑#g' .vitepress/config.mts;
-      sed -i 's#https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn/edit/docs/#https://framagit.org/xuxiaowei-com-cn/xuxiaowei-com-cn/-/edit/docs/#g' .vitepress/config.mts;
+      sed -i 's#https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn/edit/docs/#https://framagit.org/xuxiaowei-com-cn/xuxiaowei-com-cn.frama.io/-/edit/docs/#g' .vitepress/config.mts;
       cat .vitepress/config.mts;
       fi
     - if [ $CI_SERVER_HOST == 'gitlab.xuxiaowei.com.cn' ]; then
