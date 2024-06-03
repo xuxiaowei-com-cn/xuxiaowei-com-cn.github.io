@@ -32,7 +32,6 @@ coverage
 target
 
 /node/
-/spring-cloud-xuxiaowei-ui/
 
 /yarn.lock
 /pnpm-lock.yaml
