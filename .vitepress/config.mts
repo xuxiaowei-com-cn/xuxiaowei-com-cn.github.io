@@ -103,7 +103,15 @@ export default defineConfig({
           { text: '个人简介', link: 'intro' },
           { text: '个人网址', link: 'website' }
         ]
-      }
+      },
+      {
+        text: '项目',
+        collapsed: false,
+        base: '/project/',
+        items: [
+          { text: '个人项目', link: 'personal' },
+        ]
+      },
     ],
 
     socialLinks: [
