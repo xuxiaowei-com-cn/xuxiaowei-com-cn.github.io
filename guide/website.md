@@ -1,5 +1,15 @@
 # 个人网址 {id=website}
 
+[[toc]]
+
+## 微信群 {id=wechat-work}
+
+<div align="center" style="text-align: center;">
+    <a target="_blank" href="https://work.weixin.qq.com/gm/75cfc47d6a341047e4b6aca7389bdfa8">
+        <img id="wechat-work-img" alt="企业微信群" src="./static/wechat-work.jpg"/>
+    </a>
+</div>
+
 ## 社交平台 {id=social}
 
 | 社交平台           | 网址                                   | 说明                                                                                                  |
@@ -29,6 +39,10 @@
 | 短网址                   | https://xxw.ac.cn                                                                       |                                                                                                                                                         |                                                                                                                                                          |                            |
 
 <style>
+._guide_website #wechat-work-img {
+  height: 100px;
+}
+
 ._guide_website table th:nth-child(2) {
     text-align: center;
 }
