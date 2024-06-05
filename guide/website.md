@@ -2,11 +2,13 @@
 
 [[toc]]
 
-## 微信群 {id=wechat-work}
+## 微信/群 {id=wechat-work}
 
-<div align="center" style="text-align: center;">
+[//]: # (<div style="display: flex; justify-content: center; align-items: center;">)
+<div align="center" style="text-align: center; display: flex;">
+    <img id="wechat-work-img" alt="企业微信" src="./static/work.jpg" style="margin-right: 10px;"/>
     <a target="_blank" href="https://work.weixin.qq.com/gm/75cfc47d6a341047e4b6aca7389bdfa8">
-        <img id="wechat-work-img" alt="企业微信群" src="./static/wechat-work.jpg"/>
+        <img id="wechat-work-img" alt="企业微信群" src="./static/wechat-work.jpg" style="margin-left: 10px;"/>
     </a>
 </div>
 
