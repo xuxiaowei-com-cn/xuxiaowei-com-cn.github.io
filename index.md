@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: 个人网址
       link: /guide/website
+    - theme: alt
+      text: 个人项目
+      link: /project/personal
 
 features:
   - title: Java
