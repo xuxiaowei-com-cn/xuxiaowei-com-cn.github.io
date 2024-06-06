@@ -69,7 +69,7 @@
 /* 社交平台：表格：第二列 */
 ._guide_website #social + table tr td:nth-child(2) {
     /* 最小宽度 */
-    min-width: 276px;
+    min-width: 280px;
 }
 
 /* 社交平台：表格：第三列 */
