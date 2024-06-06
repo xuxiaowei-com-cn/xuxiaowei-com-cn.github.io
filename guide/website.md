@@ -6,7 +6,7 @@
 
 [//]: # (<div style="display: flex; justify-content: center; align-items: center;">)
 <div align="center" style="text-align: center; display: flex;">
-    <img id="wechat-work-img" alt="企业微信" src="./static/work.jpg" style="margin-right: 10px;"/>
+    <img id="work-img" alt="企业微信" src="./static/work.jpg" style="margin-right: 10px;"/>
     <a target="_blank" href="https://work.weixin.qq.com/gm/75cfc47d6a341047e4b6aca7389bdfa8">
         <img id="wechat-work-img" alt="企业微信群" src="./static/wechat-work.jpg" style="margin-left: 10px;"/>
     </a>
@@ -41,15 +41,59 @@
 | 短网址                   | https://xxw.ac.cn                                                                       |                                                                                                                                                         |                                                                                                                                                          |                            |
 
 <style>
-._guide_website #wechat-work-img {
-  height: 100px;
+
+/* 图片 */
+._guide_website #wechat-work-img, ._guide_website #work-img {
+    /* 大小 */
+    height: 100px;
 }
 
+/* 表格：第二列：表头 */
 ._guide_website table th:nth-child(2) {
+    /* 居中 */
     text-align: center;
 }
 
+/* 表格：第二列：内容 */
 ._guide_website table td:nth-child(2) {
+    /* 右对齐 */
     text-align: right;
 }
+
+/* 社交平台：表格：第一列 */
+._guide_website #social + table tr td:first-child {
+    /* 最小宽度 */
+    min-width: 118px;
+}
+
+/* 社交平台：表格：第二列 */
+._guide_website #social + table tr td:nth-child(2) {
+    /* 最小宽度 */
+    min-width: 276px;
+}
+
+/* 社交平台：表格：第三列 */
+._guide_website #social + table tr td:nth-child(3) {
+    /* 最小宽度 */
+    min-width: 322px;
+}
+
+/* 个人网站：表格：第一列 */
+._guide_website #person + table tr td:first-child {
+    /* 最小宽度 */
+    min-width: 188px;
+}
+
+/* 个人网站：表格：第二列 */
+._guide_website #person + table tr td:nth-child(2) {
+    /* 最小宽度 */
+    min-width: 295px;
+}
+
+/* 个人网站：表格：第五列 */
+._guide_website #person + table tr td:nth-child(5) {
+    /* 最小宽度 */
+    min-width: 260px;
+}
+
 </style>
