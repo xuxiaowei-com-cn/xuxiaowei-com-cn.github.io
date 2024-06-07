@@ -122,6 +122,28 @@ export default defineConfig({
         base: '/image/',
         items: [
           {
+            text: 'registry.cn-qingdao.aliyuncs.com',
+            collapsed: false,
+            items: [
+              {
+                text: 'xuxiaoweicomcn',
+                collapsed: false,
+                items: [
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab', text: 'gitlab' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/httpd', text: 'httpd' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/java', text: 'java' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor', text: 'kaniko-project-executor' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven', text: 'maven' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio', text: 'minio' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3', text: 'nexus3' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx', text: 'nginx' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node', text: 'node' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis', text: 'redis' },
+                ]
+              },
+            ]
+          },
+          {
             text: 'springcloudxuxiaowei',
             collapsed: false,
             items: [

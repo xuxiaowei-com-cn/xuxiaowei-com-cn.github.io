@@ -15,6 +15,7 @@
 
 ## 镜像列表
 
+- [国内镜像](../registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor.md)
 - 此处仅列举了 v1.23.0 的镜像，其他版本未列出，现已存在 `400+` 个镜像（2024-06-07 统计）
 
 | 镜像                                                          | 说明                                                  |
