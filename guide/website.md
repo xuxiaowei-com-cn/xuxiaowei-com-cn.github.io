@@ -45,7 +45,7 @@
 /* 图片 */
 ._guide_website #wechat-work-img, ._guide_website #work-img {
     /* 大小 */
-    height: 100px;
+    height: 155px;
 }
 
 /* 表格：第二列：表头 */
