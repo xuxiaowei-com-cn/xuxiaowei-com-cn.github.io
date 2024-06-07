@@ -6,5 +6,6 @@
 
 | 镜像                                                           | 说明           |
 |--------------------------------------------------------------|--------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.23.3 | 1.23.3 代表版本号 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0 | 1.27.0 代表版本号 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.26.0 |              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.23.3 |              |
