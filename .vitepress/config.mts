@@ -122,6 +122,16 @@ export default defineConfig({
         base: '/image/',
         items: [
           {
+            text: 'springcloudxuxiaowei',
+            collapsed: false,
+            items: [
+              { link: 'springcloudxuxiaowei/docs', text: 'docs' },
+              { link: 'springcloudxuxiaowei/playwright', text: 'playwright' },
+              { link: 'springcloudxuxiaowei/playwright-dragonwell', text: 'playwright-dragonwell' },
+              { link: 'springcloudxuxiaowei/playwright-maven', text: 'playwright-maven' },
+            ]
+          },
+          {
             text: 'xuxiaoweicomcn',
             collapsed: false,
             items: [
