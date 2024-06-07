@@ -116,6 +116,34 @@ export default defineConfig({
           { text: '个人项目', link: 'personal' },
         ]
       },
+      {
+        text: '镜像',
+        collapsed: false,
+        base: '/image/',
+        items: [
+          {
+            text: 'xuxiaoweicomcn',
+            collapsed: false,
+            items: [
+              { link: 'xuxiaoweicomcn/docs', text: 'docs' },
+              { link: 'xuxiaoweicomcn/gateway-shield', text: 'gateway-shield' },
+              { link: 'xuxiaoweicomcn/gateway-shield-docs', text: 'gateway-shield-docs' },
+              { link: 'xuxiaoweicomcn/gitlab-k8s', text: 'gitlab-k8s' },
+              { link: 'xuxiaoweicomcn/gitlab-runner-helper', text: 'gitlab-runner-helper' },
+              { link: 'xuxiaoweicomcn/ingress-nginx-controller', text: 'ingress-nginx-controller' },
+              { link: 'xuxiaoweicomcn/ingress-nginx-controller-chroot', text: 'ingress-nginx-controller-chroot' },
+              { link: 'xuxiaoweicomcn/ingress-nginx-kube-webhook-certgen', text: 'ingress-nginx-kube-webhook-certgen' },
+              { link: 'xuxiaoweicomcn/jenkins', text: 'jenkins' },
+              { link: 'xuxiaoweicomcn/kaniko-project-executor', text: 'kaniko-project-executor' },
+              { link: 'xuxiaoweicomcn/kube-state-metrics', text: 'kube-state-metrics' },
+              { link: 'xuxiaoweicomcn/maven-mysql-client', text: 'maven-mysql-client' },
+              { link: 'xuxiaoweicomcn/metrics-server', text: 'metrics-server' },
+              { link: 'xuxiaoweicomcn/openjdk-mysql-client', text: 'openjdk-mysql-client' },
+              { link: 'xuxiaoweicomcn/xuxiaowei-tools', text: 'xuxiaowei-tools' },
+            ]
+          },
+        ]
+      },
     ],
 
     socialLinks: [
