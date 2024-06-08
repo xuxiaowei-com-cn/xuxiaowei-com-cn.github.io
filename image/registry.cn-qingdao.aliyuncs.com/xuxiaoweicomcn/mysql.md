@@ -8,3 +8,4 @@
 |--------------------------------------------------------------|----|
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql:8.1.0  |    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql:8.0.36 |    |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql:5.7.44 |    |
