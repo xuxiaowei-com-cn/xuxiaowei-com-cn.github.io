@@ -27,6 +27,34 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.1-slim-arm64   | v1.23.1 代表版本号，微型版，支持：arm64 平台                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.1-slim-ppc64le | v1.23.1 代表版本号，微型版，支持：ppc64le 平台                             |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.1-slim-s390x   | v1.23.1 代表版本号，微型版，支持：s390x 平台                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0              |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-amd64        |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-arm64        |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-ppc64le      |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-s390x        |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-debug        |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-debug-amd64  |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-debug-arm64  |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-debug-s390x  |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-slim         |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-slim-amd64   |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-slim-arm64   |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-slim-ppc64le |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.0-slim-s390x   |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0               |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-amd64         |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-arm64         |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-ppc64le       |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-s390x         |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-debug         |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-debug-amd64   |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-debug-arm64   |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-debug-s390x   |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-slim          |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-slim-amd64    |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-slim-arm64    |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-slim-ppc64le  |                                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.9.0-slim-s390x    |                                                             |
 
 <style>
 
