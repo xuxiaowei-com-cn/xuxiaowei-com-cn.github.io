@@ -1,6 +1,6 @@
-# Docker 镜像
+# Docker 镜像 {id=docker}
 
-## 镜像列表
+## 镜像列表 {id=image-list}
 
 - 本镜像仅仅是将 `docker` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker`
 - 未修改镜像内容
@@ -19,3 +19,17 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:26.1.1      |    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:26.1.1-cli  |    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:26.1.1-dind |    |
+
+<style>
+
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_docker table tr th:nth-child(1), 
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_docker table tr td:nth-child(1) {
+    min-width: 485px;
+}
+
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_docker table tr th:nth-child(2), 
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_docker table tr td:nth-child(2) {
+    min-width: 55px;
+}
+
+</style>

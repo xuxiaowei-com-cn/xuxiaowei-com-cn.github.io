@@ -1,6 +1,6 @@
-# kaniko 镜像
+# kaniko 镜像 {id=kaniko-project-executor}
 
-## 镜像列表
+## 镜像列表 {id=image-list}
 
 - 本镜像仅仅是将 `gcr.io/kaniko-project/executor`
   同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor`
@@ -60,7 +60,7 @@
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_kaniko-project-executor table tr th:nth-child(1), 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_kaniko-project-executor table tr td:nth-child(1) {
-    min-width: 670px;
+    min-width: 675px;
 }
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_kaniko-project-executor table tr th:nth-child(2), 

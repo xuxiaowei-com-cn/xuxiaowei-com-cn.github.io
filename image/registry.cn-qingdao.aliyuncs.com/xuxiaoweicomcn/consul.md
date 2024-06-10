@@ -1,6 +1,6 @@
-# consul 镜像
+# consul 镜像 {id=consul}
 
-## 镜像列表
+## 镜像列表 {id=image-list}
 
 - 本镜像仅仅是将 `hashicorp/consul` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul`
 - 未修改镜像内容
@@ -12,3 +12,17 @@
 |---------------------------------------------------------------|----|
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1 |    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.0 |    |
+
+<style>
+
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_consul table tr th:nth-child(1), 
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_consul table tr td:nth-child(1) {
+    min-width: 445px;
+}
+
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_consul table tr th:nth-child(2), 
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_consul table tr td:nth-child(2) {
+    min-width: 55px;
+}
+
+</style>

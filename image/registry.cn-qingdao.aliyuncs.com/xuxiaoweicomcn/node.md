@@ -1,6 +1,6 @@
-# Node 镜像
+# Node 镜像 {id=node}
 
-## 镜像列表
+## 镜像列表 {id=image-list}
 
 - 注意：仅提供以下版本，其他版本待更新
 
@@ -8,3 +8,17 @@
 |--------------------------------------------------------------|---------------|
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:14.16.1 | 14.16.1 代表版本号 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:20.12.0 | 20.12.0 代表版本号 |
+
+<style>
+
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_node table tr th:nth-child(1), 
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_node table tr td:nth-child(1) {
+    min-width: 450px;
+}
+
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_node table tr th:nth-child(2), 
+._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_node table tr td:nth-child(2) {
+    min-width: 140px;
+}
+
+</style>
