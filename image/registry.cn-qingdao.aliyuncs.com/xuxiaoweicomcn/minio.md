@@ -2,7 +2,7 @@
 
 ## 镜像列表 {id=image-list}
 
-- 本镜像仅仅是将 `maven` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven`
+- 本镜像仅仅是将 `minio/minio` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio`
 - 未修改镜像内容
 - [docker hub 镜像](https://hub.docker.com/r/minio/minio)
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/github.com/minio/minio/-/pipelines
