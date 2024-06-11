@@ -140,6 +140,7 @@ export default defineConfig({
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven', text: 'maven' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio', text: 'minio' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql', text: 'mysql' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server', text: 'nacos-server' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3', text: 'nexus3' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx', text: 'nginx' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node', text: 'node' },
