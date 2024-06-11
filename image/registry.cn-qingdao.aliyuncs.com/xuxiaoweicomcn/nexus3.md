@@ -2,7 +2,7 @@
 
 ## 镜像列表 {id=image-list}
 
-- 本镜像仅仅是将 `maven` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven`
+- 本镜像仅仅是将 `sonatype/nexus3` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3`
 - 未修改镜像内容
 - [docker hub 镜像](https://hub.docker.com/r/sonatype/nexus3)
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/github.com/sonatype/nexus-public/-/pipelines
