@@ -2,13 +2,18 @@
 
 ## 镜像列表 {id=image-list}
 
-- 注意：仅提供以下版本，其他版本待更新
+- 本镜像仅仅是将 `gitlab/gitlab-runner` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner`
+- 未修改镜像内容
+- [docker hub 镜像](https://hub.docker.com/r/gitlab/gitlab-runner)
+- 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/gitlab.com/gitlab-org/gitlab-runner/-/pipelines
+- 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 
-| 镜像                                                                               | 说明                               |
-|----------------------------------------------------------------------------------|----------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.0.0            | v17.0.0 代表版本号                    |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.0.0 | alpine3.19 代表基于 alpine 3.19 镜像制作 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v16.11.1           |                                  |
+| 镜像                                                                                | 说明                                            |
+|-----------------------------------------------------------------------------------|-----------------------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.0.0             | v17.0.0 代表版本号，支持 s390x、ppc64le、arm64、amd64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.0.0  | alpine3.19 代表基于 alpine 3.19 镜像制作              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v16.11.1            |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v16.11.1 |                                               |
 
 <style>
 
