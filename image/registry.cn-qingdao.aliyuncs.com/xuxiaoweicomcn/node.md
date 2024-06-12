@@ -11,6 +11,7 @@
 | 镜像                                                           | 说明                                               |
 |--------------------------------------------------------------|--------------------------------------------------|
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:20.12.0 | 20.12.0 代表版本号，支持：amd64、arm、arm64、ppc64le、s390x平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:14.17.5 |                                                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:14.16.1 |                                                  |
 
 <style>
