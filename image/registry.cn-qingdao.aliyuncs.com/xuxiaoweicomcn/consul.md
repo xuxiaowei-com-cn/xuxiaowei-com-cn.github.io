@@ -10,13 +10,24 @@
 
 | 镜像                                                                  | 说明                                     |
 |---------------------------------------------------------------------|----------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1       | 1.18.1 代表版本号，支持：386、amd64、arm、arm64 平台 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1-386   | 1.18.1 代表版本号，支持：386 平台                 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1-amd64 | 1.18.1 代表版本号，支持：amd64 平台               |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1-arm   | 1.18.1 代表版本号，支持：arm 平台                 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1-arm64 | 1.18.1 代表版本号，支持：arm64 平台               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.0       | 1.19.0 代表版本号，支持：386、amd64、arm、arm64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.0-386   | 1.19.0 代表版本号，支持：386 平台                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.0-amd64 | 1.19.0 代表版本号，支持：amd64 平台               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.0-arm   | 1.19.0 代表版本号，支持：arm 平台                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.0-arm64 | 1.19.0 代表版本号，支持：arm64 平台               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.2       |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.2-386   |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.2-amd64 |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.2-arm   |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.2-arm64 |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1       |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1-386   |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1-amd64 |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1-arm   |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.1-arm64 |                                        |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.0       |                                        |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.0-386   |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.0-amd64 |                                        |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.0-arm   |                                        |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.0-arm64 |                                        |
 
