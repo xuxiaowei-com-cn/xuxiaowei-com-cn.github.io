@@ -3,7 +3,8 @@
 ## 镜像列表 {id=image-list}
 
 - 本镜像仅仅是将 `xuxiaoweicomcn/jenkins` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins`
-- 基于 `jenkins/jenkins` 镜像，增加了 docker 客户端程序
+- 基于 `jenkins/jenkins` 镜像，增加了 docker 客户端程序，
+  [Dockerfile](https://gitlab.com/xuxiaowei-com-cn/jenkins/-/blob/main/Dockerfile)
 - [docker hub 镜像](https://hub.docker.com/r/xuxiaoweicomcn/jenkins)
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/gitlab.com/xuxiaowei-com-cn/jenkins/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
