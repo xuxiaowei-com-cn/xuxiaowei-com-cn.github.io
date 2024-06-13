@@ -10,11 +10,82 @@
 - [Weekly](https://www.jenkins.io/download/weekly/) - 频繁发布，包括所有新功能、改进和错误修复。
 - [Long-Term Support (LTS)](https://www.jenkins.io/download/lts/) - 较旧的发布行，通过bug修复后台端口定期更新。
 - 镜像部署网站：https://jenkins.xuxiaowei.com.cn
+- 镜像部署脚本
+
+::: details docker-compose.yml 脚本
+
+::: code-group
+
+```yaml
+# mkdir -p        /srv/jenkins/jenkins-data
+# chmod -R a+rw   /srv/jenkins/jenkins-data
+#
+#
+# export JENKINS_HOME=/srv/jenkins  && echo $JENKINS_HOME && docker compose up -d
+# export JENKINS_HOME=`pwd`         && echo $JENKINS_HOME && docker compose up -d
+#
+services:
+  jenkins-blueocean:
+    # image: 'xuxiaoweicomcn/jenkins:2.452.1-jdk17'
+    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.1-jdk17'
+    restart: always
+    hostname: 'jenkins'
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    environment:
+      TZ: Asia/Shanghai
+      DOCKER_HOST: tcp://docker:2376
+      DOCKER_CERT_PATH: /certs/client
+      DOCKER_TLS_VERIFY: 1
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - '$JENKINS_HOME/jenkins-data:/var/jenkins_home'
+      - '$JENKINS_HOME/jenkins-root/.m2:/root/.m2'
+      - '$JENKINS_HOME/jenkins-docker-certs:/certs/client:ro'
+    container_name: jenkins-blueocean
+    networks:
+      jenkins:
+        ipv4_address: 172.26.26.2
+
+  jenkins-docker:
+    # image: 'docker:26.1.3-dind'
+    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:26.1.3-dind'
+    restart: always
+    privileged: true
+    hostname: 'docker'
+    environment:
+      DOCKER_TLS_CERTDIR: /certs
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - '$JENKINS_HOME/jenkins-docker-certs:/certs/client'
+      - '$JENKINS_HOME/jenkins-data:/var/jenkins_home'
+      - '$JENKINS_HOME/jenkins-docker-overlay2:/var/lib/docker/overlay2'
+      - '$JENKINS_HOME/jenkins-docker-image:/var/lib/docker/image'
+      - '$JENKINS_HOME/jenkins-root/.m2:/root/.m2'
+    command: [ "--storage-driver", "overlay2" ]
+    container_name: jenkins-docker
+    networks:
+      jenkins:
+        ipv4_address: 172.26.26.3
+
+networks:
+  jenkins:
+    driver: bridge
+    name: jenkins
+    ipam:
+      config:
+        - subnet: 172.26.26.0/24
+          gateway: 172.26.26.1
+```
+
+:::
 
 | 镜像                                                                    | 说明                      |
 |-----------------------------------------------------------------------|-------------------------|
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.2-jdk17 | Long-Term Support (LTS) |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.1-jdk17 | Long-Term Support (LTS) |
 
 <style>
 
