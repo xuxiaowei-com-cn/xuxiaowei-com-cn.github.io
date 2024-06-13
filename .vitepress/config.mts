@@ -136,6 +136,7 @@ export default defineConfig({
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/golang', text: 'golang' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/httpd', text: 'httpd' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/java', text: 'java' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins', text: 'jenkins' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor', text: 'kaniko-project-executor' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven', text: 'maven' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio', text: 'minio' },
