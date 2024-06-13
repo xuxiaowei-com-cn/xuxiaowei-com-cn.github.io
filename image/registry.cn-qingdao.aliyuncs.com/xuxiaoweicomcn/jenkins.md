@@ -9,6 +9,7 @@
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 - [Weekly](https://www.jenkins.io/download/weekly/) - 频繁发布，包括所有新功能、改进和错误修复。
 - [Long-Term Support (LTS)](https://www.jenkins.io/download/lts/) - 较旧的发布行，通过bug修复后台端口定期更新。
+- 镜像部署网站：https://jenkins.xuxiaowei.com.cn
 
 | 镜像                                                                    | 说明                      |
 |-----------------------------------------------------------------------|-------------------------|
