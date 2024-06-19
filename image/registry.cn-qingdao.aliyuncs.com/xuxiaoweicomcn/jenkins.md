@@ -84,6 +84,7 @@ networks:
 
 | 镜像                                                                    | 说明                      |
 |-----------------------------------------------------------------------|-------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.463-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.2-jdk17 | Long-Term Support (LTS) |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.1-jdk17 | Long-Term Support (LTS) |
