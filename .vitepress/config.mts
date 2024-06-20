@@ -140,6 +140,7 @@ export default defineConfig({
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor', text: 'kaniko-project-executor' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven', text: 'maven' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio', text: 'minio' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd', text: 'mvnd' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql', text: 'mysql' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server', text: 'nacos-server' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3', text: 'nexus3' },
@@ -177,6 +178,7 @@ export default defineConfig({
               { link: 'xuxiaoweicomcn/kube-state-metrics', text: 'kube-state-metrics' },
               { link: 'xuxiaoweicomcn/maven-mysql-client', text: 'maven-mysql-client' },
               { link: 'xuxiaoweicomcn/metrics-server', text: 'metrics-server' },
+              { link: 'xuxiaoweicomcn/mvnd', text: 'mvnd' },
               { link: 'xuxiaoweicomcn/openjdk-mysql-client', text: 'openjdk-mysql-client' },
               { link: 'xuxiaoweicomcn/xuxiaowei-tools', text: 'xuxiaowei-tools' },
             ]
