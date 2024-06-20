@@ -3,7 +3,7 @@
 ## 镜像列表 {id=image-list}
 
 - 本镜像仅仅是将 `xuxiaoweicomcn/mvnd` 同步到 `registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd`，
-- 基于 [maven-mvnd](https://github.com/apache/maven-mvnd/) 制作的镜像，
+- 基于 [apache/maven-mvnd](https://github.com/apache/maven-mvnd/) 制作的镜像，
   [Dockerfile](https://gitlab.com/xuxiaowei-com-cn/mvnd/-/blob/main/Dockerfile)
 - [docker hub 镜像](https://hub.docker.com/r/xuxiaoweicomcn/mvnd)
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/gitlab.com/xuxiaowei-com-cn/mvnd/-/pipelines

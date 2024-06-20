@@ -7,7 +7,7 @@
 
 ## 说明 {id=description}
 
-- 基于 [maven-mvnd](https://github.com/apache/maven-mvnd/) 制作的镜像
+- 基于 [apache/maven-mvnd](https://github.com/apache/maven-mvnd/) 制作的镜像
 
 ## 镜像列表 {id=image-list}
 
