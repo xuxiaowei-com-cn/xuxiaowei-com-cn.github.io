@@ -117,8 +117,16 @@ export default defineConfig({
         ]
       },
       {
-        text: '镜像',
+        text: '博客',
         collapsed: false,
+        base: '/blog/',
+        items: [
+          { text: '使用 mvnd 加快 Maven 项目构建速度', link: 'mvnd' },
+        ]
+      },
+      {
+        text: '镜像',
+        collapsed: true,
         base: '/image/',
         items: [
           {
