@@ -14,9 +14,9 @@
 | 镜像                                                    | 说明                            |
 |-------------------------------------------------------|-------------------------------|
 | xuxiaoweicomcn/mvnd:1.0.0-dragonwell-8-anolis         | 1.0.0 代表 mvnd 版本              |
-| xuxiaoweicomcn/mvnd:1.0.0-dragonwell-8-anolis-xxxxxx  | xxxxxx 代表构建时的流水线编号            |
-| xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis        | dragonwell-8 代表使用的是阿里巴巴 JDK 8 |
-| xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis-xxxxxx | anolis 代表是阿里云的龙蜥系统，兼容 CentOS  |
+| xuxiaoweicomcn/mvnd:1.0.0-dragonwell-8-anolis-xxxxxx  | dragonwell-8 代表使用的是阿里巴巴 JDK 8 |
+| xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis        | anolis 代表是阿里云的龙蜥系统，兼容 CentOS  |
+| xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis-xxxxxx | xxxxxx 代表构建时的流水线编号            |
 | xuxiaoweicomcn/mvnd:1.0.0-dragonwell-17-anolis        |                               |
 | xuxiaoweicomcn/mvnd:1.0.0-dragonwell-17-anolis-xxxxxx |                               |
 

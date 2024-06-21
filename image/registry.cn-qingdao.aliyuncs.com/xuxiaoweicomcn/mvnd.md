@@ -9,11 +9,11 @@
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/gitlab.com/xuxiaowei-com-cn/mvnd/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 
-| 镜像                                                                              | 说明                            |
-|---------------------------------------------------------------------------------|-------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-8-anolis  | 1.0.0 代表 mvnd 版本              |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis | dragonwell-8 代表使用的是阿里巴巴 JDK 8 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-17-anolis | anolis 代表是阿里云的龙蜥系统，兼容 CentOS  |
+| 镜像                                                                              | 说明                              |
+|---------------------------------------------------------------------------------|---------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-8-anolis  | 1.0.0 代表 mvnd 版本                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis | anolis 代表是阿里云的龙蜥系统，兼容 CentOS    |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-17-anolis | dragonwell-17 代表使用的是阿里巴巴 JDK 17 |
 
 <style>
 
