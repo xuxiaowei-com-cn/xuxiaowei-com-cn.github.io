@@ -8,21 +8,27 @@
 - [docker hub 镜像](https://hub.docker.com/r/xuxiaoweicomcn/mvnd)
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/gitlab.com/xuxiaowei-com-cn/mvnd/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
+- mvnd 2.0.0-beta-1 使用了 Maven 4.0.0-beta-3，而 Maven 4.0.0-beta-3 仅支持 JDK 17+，
+  参见：[Maven Releases History](https://maven.apache.org/docs/history.html)，故 2.x 只能提供 JDK 17、21，无法提供 JDK 8
 
-| 镜像                                                                              | 说明                              |
-|---------------------------------------------------------------------------------|---------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-8-anolis  | 1.0.1 代表 mvnd 版本                |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-11-anolis | anolis 代表是阿里云的龙蜥系统，兼容 CentOS    |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-17-anolis | dragonwell-17 代表使用的是阿里巴巴 JDK 17 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-8-anolis  |                                 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis |                                 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-17-anolis |                                 |
+| 镜像                                                                                     | 说明                              |
+|----------------------------------------------------------------------------------------|---------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:2.0.0-beta-1-dragonwell-17-anolis |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:2.0.0-beta-1-dragonwell-21-anolis |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-8-anolis         | 1.0.1 代表 mvnd 版本                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-11-anolis        | anolis 代表是阿里云的龙蜥系统，兼容 CentOS    |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-17-anolis        | dragonwell-17 代表使用的是阿里巴巴 JDK 17 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-21-anolis        |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-8-anolis         |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis        |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-17-anolis        |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-21-anolis        |                                 |
 
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_mvnd table tr th:nth-child(1), 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_mvnd table tr td:nth-child(1) {
-    min-width: 580px;
+    min-width: 630px;
 }
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_mvnd table tr th:nth-child(2), 
