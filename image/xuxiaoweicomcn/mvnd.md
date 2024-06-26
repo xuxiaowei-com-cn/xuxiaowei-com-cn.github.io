@@ -8,6 +8,7 @@
 ## 说明 {id=description}
 
 - 基于 [apache/maven-mvnd](https://github.com/apache/maven-mvnd/) 制作的镜像
+- 如果 package 中包含中文文件名的文件，可能存在打包异常，请执行 `LANG=C.UTF-8` 命令后再打包（PS. 查看字符命令 `locale`）
 
 ## 镜像列表 {id=image-list}
 
