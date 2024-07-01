@@ -97,7 +97,21 @@
 /* 个人网站：表格：第二列 */
 ._guide_website #person + table tr td:nth-child(2) {
     /* 最小宽度 */
-    min-width: 320px;
+    min-width: 365px;
+}
+
+/* 个人网站：表格：第三列 */
+._guide_website #person + table tr td:nth-child(3) {
+    /* 最小宽度 */
+    min-width: 63px;
+    width: 63px;
+}
+
+/* 个人网站：表格：第四列 */
+._guide_website #person + table tr td:nth-child(4) {
+    /* 最小宽度 */
+    min-width: 63px;
+    width: 63px;
 }
 
 /* 个人网站：表格：第五列 */
