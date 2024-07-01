@@ -76,6 +76,8 @@ docker:deploy:
   script:
     - docker info
     - docker compose up -d
+    - docker images | grep xuxiaowei-com-cn/docs
+    - docker images | grep xuxiaowei-com-cn/docs | awk '{print $3}' | xargs docker rmi || echo
   environment: production/docs
   rules:
     - if: $ENABLE_DOCS_DOCKER_DEPLOY == "true"
