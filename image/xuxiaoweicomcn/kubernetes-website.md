@@ -25,19 +25,19 @@
 4. `snapshot-final-x.y` 代表定稿版本，下表不再列出
 5. 如需使用，只需要关注 `main`、`release-x.y` 即可，其他版本无需关注
 
-| 镜像                                             | 说明                             |
-|------------------------------------------------|--------------------------------|
-| xuxiaoweicomcn/kubernetes-website:main         | `main` 从源代码的 `main` 分支构建，代表最新版 |
-| xuxiaoweicomcn/kubernetes-website:main-xxxxxx  | 历史版本，`xxxxxx` 代表构建时的流水线编号      |
-| xuxiaoweicomcn/kubernetes-website:release-1.29 | `release` 代表正式发布版，`1.29` 代表版本号 |
-| xuxiaoweicomcn/kubernetes-website:release-1.28 |                                |
-| xuxiaoweicomcn/kubernetes-website:release-1.27 |                                |
-| xuxiaoweicomcn/kubernetes-website:release-1.26 |                                |
-| xuxiaoweicomcn/kubernetes-website:release-1.25 |                                |
-| xuxiaoweicomcn/kubernetes-website:release-1.24 |                                |
-| xuxiaoweicomcn/kubernetes-website:release-1.23 |                                |
-| xuxiaoweicomcn/kubernetes-website:release-1.22 |                                |
-| xuxiaoweicomcn/kubernetes-website:release-1.21 |                                |
+| 镜像                                             | 部署地址                                             | 说明                             |
+|------------------------------------------------|--------------------------------------------------|--------------------------------|
+| xuxiaoweicomcn/kubernetes-website:main         | https://kubernetes.xuxiaowei.com.cn/zh-cn/       | `main` 从源代码的 `main` 分支构建，代表最新版 |
+| xuxiaoweicomcn/kubernetes-website:main-xxxxxx  |                                                  | 历史版本，`xxxxxx` 代表构建时的流水线编号      |
+| xuxiaoweicomcn/kubernetes-website:release-1.29 | https://kubernetes-v1-29.xuxiaowei.com.cn/zh-cn/ | `release` 代表正式发布版，`1.29` 代表版本号 |
+| xuxiaoweicomcn/kubernetes-website:release-1.28 | https://kubernetes-v1-28.xuxiaowei.com.cn/zh-cn/ |                                |
+| xuxiaoweicomcn/kubernetes-website:release-1.27 | https://kubernetes-v1-27.xuxiaowei.com.cn/zh-cn/ |                                |
+| xuxiaoweicomcn/kubernetes-website:release-1.26 | https://kubernetes-v1-26.xuxiaowei.com.cn/zh-cn/ |                                |
+| xuxiaoweicomcn/kubernetes-website:release-1.25 | https://kubernetes-v1-25.xuxiaowei.com.cn/zh-cn/ |                                |
+| xuxiaoweicomcn/kubernetes-website:release-1.24 | https://kubernetes-v1-24.xuxiaowei.com.cn/zh-cn/ |                                |
+| xuxiaoweicomcn/kubernetes-website:release-1.23 | https://kubernetes-v1-23.xuxiaowei.com.cn/zh-cn/ |                                |
+| xuxiaoweicomcn/kubernetes-website:release-1.22 | https://kubernetes-v1-22.xuxiaowei.com.cn/zh-cn/ |                                |
+| xuxiaoweicomcn/kubernetes-website:release-1.21 | https://kubernetes-v1-21.xuxiaowei.com.cn/zh-cn/ |                                |
 
 <style>
 
@@ -58,7 +58,11 @@
 
 ._image_xuxiaoweicomcn_kubernetes-website table tr th:nth-child(2), 
 ._image_xuxiaoweicomcn_kubernetes-website table tr td:nth-child(2) {
-    min-width: 320px;
+    min-width: 365px;
 }
 
+._image_xuxiaoweicomcn_kubernetes-website table tr th:nth-child(3), 
+._image_xuxiaoweicomcn_kubernetes-website table tr td:nth-child(3) {
+    min-width: 320px;
+}
 </style>
