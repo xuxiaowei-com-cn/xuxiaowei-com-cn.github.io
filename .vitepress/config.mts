@@ -141,6 +141,7 @@ export default defineConfig({
                 text: 'xuxiaoweicomcn',
                 collapsed: false,
                 items: [
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/bitnami-kubectl', text: 'bitnami-kubectl' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul', text: 'consul' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker', text: 'docker' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab', text: 'gitlab' },
