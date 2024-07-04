@@ -148,6 +148,7 @@ export default defineConfig({
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/bitnami-kubectl', text: 'bitnami-kubectl' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul', text: 'consul' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker', text: 'docker' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker-docs', text: 'docker-docs' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab', text: 'gitlab' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner', text: 'gitlab-runner' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/golang', text: 'golang' },
@@ -184,6 +185,7 @@ export default defineConfig({
             text: 'xuxiaoweicomcn',
             collapsed: false,
             items: [
+              { link: 'xuxiaoweicomcn/docker-docs', text: 'docker-docs' },
               { link: 'xuxiaoweicomcn/docs', text: 'docs' },
               { link: 'xuxiaoweicomcn/gateway-shield', text: 'gateway-shield' },
               { link: 'xuxiaoweicomcn/gateway-shield-docs', text: 'gateway-shield-docs' },
