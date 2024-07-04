@@ -7,7 +7,7 @@
 
 ## 说明 {id=description}
 
-- 用于测试，如：请求头、Docker、Kubernetes 等
+- 用于测试，如：请求头、Docker、Kubernetes（Service、Ingress、IPv6） 等
 
 ## 镜像列表 {id=image-list}
 
