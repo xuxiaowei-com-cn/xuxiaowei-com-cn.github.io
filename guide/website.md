@@ -20,10 +20,10 @@
 | CSDN           | https://xuxiaowei.blog.csdn.net      | 历史博客，现已**不再考虑更新**                                                                                   |
 | 码云 Gitee       | https://gitee.com/xuxiaowei-com-cn   | **国内**代码托管                                                                                          |
 | GitHub         | https://github.com/xuxiaowei-com-cn  | **国外**代码托管                                                                                          |
-| GitLab         | https://gitlab.com/xuxiaowei-com-cn  | 用于在**国外**网络环境下使用 GitLab CI/CD 功能                                                                    |
+| GitLab         | https://gitlab.com/xuxiaowei-com-cn  | 用于在**国外**网络环境下使用 GitLab CI/CD 功能，免费流水线时长 400 分钟/月                                                   |
 | 极狐 GitLab      | https://jihulab.com/xuxiaowei-com-cn | 用于在**国内**网络环境下使用 GitLab CI/CD 功能，<strong><font color="red">收费平台</font></strong>，**使用期限至 2025年2月21** |
-| Frama GitLab   | https://framagit.org/xuxiaowei       | 用于在**国外**网络环境下使用 GitLab CI/CD 功能                                                                    |
-| GitCode GitLab | https://gitcode.net/qq_32596527      | 用于在**国内**网络环境下使用 GitLab CI/CD 功能                                                                    |
+| Frama GitLab   | https://framagit.org/xuxiaowei       | 用于在**国外**网络环境下使用 GitLab CI/CD 功能，不限流水线时长                                                            |
+| GitCode GitLab | https://gitcode.net/qq_32596527      | 用于在**国内**网络环境下使用 GitLab CI/CD 功能，GitLab 版本较低（13.7）                                                  |
 
 ## 个人网站 {id=person}
 
