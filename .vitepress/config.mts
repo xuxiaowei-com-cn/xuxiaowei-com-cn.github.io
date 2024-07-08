@@ -146,6 +146,10 @@ export default defineConfig({
                 collapsed: false,
                 items: [
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/bitnami-kubectl', text: 'bitnami/kubectl' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-cni', text: 'calico/cni' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers', text: 'calico/kube-controllers' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node', text: 'calico/node' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-pod2daemon-flexvol', text: 'calico/pod2daemon-flexvol' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul', text: 'hashicorp/consul' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker', text: 'docker' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker-docs', text: 'docker-docs' },
