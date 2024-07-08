@@ -1,4 +1,4 @@
-# minio 镜像 {id=minio}
+# minio/minio 镜像 {id=minio}
 
 ## 镜像列表 {id=image-list}
 

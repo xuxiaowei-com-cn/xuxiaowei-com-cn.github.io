@@ -1,4 +1,4 @@
-# Nacos 镜像 {id=nacos}
+# nacos/nacos-server 镜像 {id=nacos}
 
 ## 镜像列表 {id=image-list}
 

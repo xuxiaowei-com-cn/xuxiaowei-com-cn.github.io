@@ -1,4 +1,4 @@
-# kubectl 镜像 {id=bitnami-kubectl}
+# bitnami/kubectl 镜像 {id=bitnami-kubectl}
 
 ## 镜像列表 {id=image-list}
 

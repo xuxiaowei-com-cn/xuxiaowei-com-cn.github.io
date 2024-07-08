@@ -1,4 +1,4 @@
-# kaniko 镜像 {id=kaniko-project-executor}
+# gcr.io/kaniko-project/executor 镜像 {id=kaniko-project-executor}
 
 ## 镜像列表 {id=image-list}
 

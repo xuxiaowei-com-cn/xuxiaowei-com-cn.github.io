@@ -1,4 +1,4 @@
-# consul 镜像 {id=consul}
+# hashicorp/consul 镜像 {id=consul}
 
 ## 镜像列表 {id=image-list}
 

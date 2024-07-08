@@ -1,4 +1,4 @@
-# gitlab-runner 镜像 {id=gitlab-runner}
+# gitlab/gitlab-runner 镜像 {id=gitlab-runner}
 
 ## 镜像列表 {id=image-list}
 

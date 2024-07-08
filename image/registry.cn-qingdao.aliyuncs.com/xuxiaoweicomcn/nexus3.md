@@ -1,4 +1,4 @@
-# Nexus 镜像 {id=nexus}
+# sonatype/nexus3 镜像 {id=nexus}
 
 ## 镜像列表 {id=image-list}
 
