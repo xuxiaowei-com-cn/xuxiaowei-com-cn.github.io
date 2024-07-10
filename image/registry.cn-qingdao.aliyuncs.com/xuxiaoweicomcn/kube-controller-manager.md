@@ -50,6 +50,22 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.27.2  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.27.1  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.27.0  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.15 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.14 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.13 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.12 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.11 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.10 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.9  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.8  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.7  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.6  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.5  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.4  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.3  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.2  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.1  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-controller-manager:v1.26.0  |                                               |
 
 <style>
 
