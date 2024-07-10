@@ -29,7 +29,7 @@
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nexus3 table tr th:nth-child(1), 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nexus3 table tr td:nth-child(1) {
-    min-width: 455px;
+    min-width: 550px;
 }
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nexus3 table tr th:nth-child(2), 
