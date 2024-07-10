@@ -9,7 +9,9 @@
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/gitlab.com/xuxiaowei-com-cn/jenkins/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 - [Weekly](https://www.jenkins.io/download/weekly/) - 频繁发布，包括所有新功能、改进和错误修复。
+    - [更新日志](https://www.jenkins.io/changelog/)
 - [Long-Term Support (LTS)](https://www.jenkins.io/download/lts/) - 较旧的发布行，通过bug修复后台端口定期更新。
+    - [更新日志](https://www.jenkins.io/changelog-stable/)
 - 镜像部署网站：https://jenkins.xuxiaowei.com.cn
 - 镜像部署脚本
 
