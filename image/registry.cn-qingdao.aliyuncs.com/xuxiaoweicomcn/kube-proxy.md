@@ -83,6 +83,24 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.25.2  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.25.1  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.25.0  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.17 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.16 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.15 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.14 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.13 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.12 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.11 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.10 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.9  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.8  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.7  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.6  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.5  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.4  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.3  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.2  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.1  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-proxy:v1.24.0  |                                               |
 
 <style>
 
