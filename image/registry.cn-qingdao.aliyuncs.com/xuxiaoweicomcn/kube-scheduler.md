@@ -66,6 +66,23 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.26.2  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.26.1  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.26.0  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.16 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.15 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.14 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.13 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.12 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.11 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.10 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.9  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.8  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.7  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.6  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.5  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.4  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.3  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.2  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.1  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-scheduler:v1.25.0  |                                               |
 
 <style>
 
