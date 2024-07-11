@@ -7,6 +7,7 @@
   [Dockerfile](https://gitlab.com/xuxiaowei-com-cn/jenkins/-/blob/main/Dockerfile)
 - [docker hub 镜像](https://hub.docker.com/r/xuxiaoweicomcn/jenkins)
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/gitlab.com/xuxiaowei-com-cn/jenkins/-/pipelines
+- 部署镜像流水线：https://gitlab.xuxiaowei.com.cn/docker-compose/jenkins/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 - [Weekly](https://www.jenkins.io/download/weekly/) - 频繁发布，包括所有新功能、改进和错误修复。
     - [更新日志](https://www.jenkins.io/changelog/)

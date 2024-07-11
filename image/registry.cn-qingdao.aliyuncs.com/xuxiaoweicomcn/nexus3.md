@@ -6,7 +6,36 @@
 - 未修改镜像内容
 - [docker hub 镜像](https://hub.docker.com/r/sonatype/nexus3)
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/github.com/sonatype/nexus-public/-/pipelines
+- 部署镜像流水线：https://gitlab.xuxiaowei.com.cn/docker-compose/nexus/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
+- 镜像部署脚本
+
+::: details docker-compose.yml 脚本
+
+::: code-group
+
+```yaml
+#
+# mkdir -p /srv/nexus
+#
+# export NEXUS_HOME=/srv/nexus  && chown -R 200 $NEXUS_HOME && docker compose up -d
+# export NEXUS_HOME=`pwd`       && chown -R 200 $NEXUS_HOME && echo $NEXUS_HOME && docker compose up -d
+#
+services:
+  nexus:
+    # image: 'sonatype/nexus3:3.70.1'
+    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.70.1'
+    restart: always
+    ports:
+      - '48081:8081'
+      - '48443:8443'
+      - '48500-48550:48500-48550'
+    volumes:
+      - '$NEXUS_HOME/nexus-data:/nexus-data'
+    container_name: nexus
+```
+
+:::
 
 | 镜像                                                            | 说明           |
 |---------------------------------------------------------------|--------------|
