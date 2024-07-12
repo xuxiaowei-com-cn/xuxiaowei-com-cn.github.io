@@ -1,12 +1,14 @@
 # 工具镜像 {id=xuxiaowei-tools}
 
-|            | 地址                                                                             |
-|------------|--------------------------------------------------------------------------------|
-| docker hub | https://hub.docker.com/r/xuxiaoweicomcn/xuxiaowei-tools                        |
-| 构建镜像流水线    | https://jihulab.com/xuxiaowei-jihu/xuxiaowei-tools/xuxiaowei-tools/-/pipelines |
-| 镜像部署网站     | https://tools.xuxiaowei.com.cn                                                 |
+|            | 地址                                                                          |
+|------------|-----------------------------------------------------------------------------|
+| docker hub | https://hub.docker.com/r/xuxiaoweicomcn/xuxiaowei-tools                     |
+| 构建镜像流水线    | https://gitlab.xuxiaowei.com.cn/xuxiaowei-tools/xuxiaowei-tools/-/pipelines |
+| 镜像部署网站     | https://tools.xuxiaowei.com.cn                                              |
 
 ## 镜像列表 {id=image-list}
+
+1. 由于国内推送到 docker hub 可能未启用，请根据流水线查看国内公开镜像
 
 | 镜像                                          | 说明                      |
 |---------------------------------------------|-------------------------|
@@ -22,7 +24,7 @@
 
 ._image_xuxiaoweicomcn_xuxiaowei-tools #xuxiaowei-tools + table tr th:nth-child(2), 
 ._image_xuxiaoweicomcn_xuxiaowei-tools #xuxiaowei-tools + table tr td:nth-child(2) {
-    min-width: 555px;
+    min-width: 535px;
 }
 
 ._image_xuxiaoweicomcn_xuxiaowei-tools table tr th:nth-child(1), 
