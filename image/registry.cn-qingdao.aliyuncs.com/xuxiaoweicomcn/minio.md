@@ -10,6 +10,7 @@
 
 | 镜像                                                                                 | 说明                                                                 |
 |------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-07-13T01-46-15Z |                                                                    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-06-06T09-36-42Z | RELEASE.2024-06-06T09-36-42Z 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2017-12-28T01-21-00Z |                                                                    |
 
