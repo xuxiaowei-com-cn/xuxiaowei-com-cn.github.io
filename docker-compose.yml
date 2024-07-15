@@ -1,6 +1,6 @@
 services:
   xuxiaowei-com-cn-docs:
-    image: ${CI_REGISTRY_IMAGE}/docs:${DOCKER_TAG}-${CI_PIPELINE_ID}
+    image: registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/xuxiaowei-com-cn-docs:${DOCKER_TAG}-${CI_PIPELINE_ID}
     restart: always
     ports:
       - ${XUXIAOWEI_COM_CN_DOCS_PORT:-45950}:80
