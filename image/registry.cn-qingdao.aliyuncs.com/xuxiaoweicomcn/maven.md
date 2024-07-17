@@ -15,6 +15,28 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17      |                                     |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17-slim |                                     |
 
+::: code-group
+
+```shell [maven:3.6.3-jdk-8]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name maven-3.6.3-jdk-8 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-jdk-8 \
+  sleep infinity
+```
+
+```shell [maven:3.6.3-openjdk-17]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name maven-3.6.3-openjdk-17 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17 \
+  sleep infinity
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_maven table tr th:nth-child(1), 
