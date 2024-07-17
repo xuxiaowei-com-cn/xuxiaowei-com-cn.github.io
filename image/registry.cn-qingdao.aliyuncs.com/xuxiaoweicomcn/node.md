@@ -18,6 +18,53 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:14.17.5 |                                                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:14.16.1 |                                                  |
 
+::: code-group
+
+```shell [20.x]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name node-20.15.0 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:20.15.0
+```
+
+```shell [18.x]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name node-18.20.3 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:18.20.3
+```
+
+```shell [16.x]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name node-16.20.2 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:16.20.2
+```
+
+```shell [14.x]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name node-14.21.3 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/node:14.21.3
+```
+
+:::
+
+::: code-group
+
+```shell [使用阿里云镜像]
+cat /etc/apt/sources.list
+sed -i "s#deb.debian.org#mirrors.aliyun.com#" /etc/apt/sources.list
+cat /etc/apt/sources.list
+apt update
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_node table tr th:nth-child(1), 
