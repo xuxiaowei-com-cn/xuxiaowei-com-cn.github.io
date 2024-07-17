@@ -1,12 +1,12 @@
 # 徐晓伟微服务镜像 {id=docs}
 
-|            | 地址                                                                                             | 说明        |
-|------------|------------------------------------------------------------------------------------------------|-----------|
-| Gitee 源码   | https://gitee.com/xuxiaowei-cloud/spring-cloud-xuxiaowei                                       | `docs` 分支 |
-| GitHub 源码  | https://github.com/xuxiaowei-cloud/spring-cloud-xuxiaowei                                      | `docs` 分支 |
-| docker hub | https://hub.docker.com/r/springcloudxuxiaowei/docs                                             |           |
-| 构建镜像流水线    | https://jihulab.com/xuxiaowei-jihu/xuxiaowei-cloud/spring-cloud-xuxiaowei/-/pipelines?ref=docs | `docs` 分支 |
-| 镜像部署网站     | https://docs.xuxiaowei.cloud                                                                   |           |
+|            | 地址                                                                                          | 说明        |
+|------------|---------------------------------------------------------------------------------------------|-----------|
+| Gitee 源码   | https://gitee.com/xuxiaowei-cloud/spring-cloud-xuxiaowei                                    | `docs` 分支 |
+| GitHub 源码  | https://github.com/xuxiaowei-cloud/spring-cloud-xuxiaowei                                   | `docs` 分支 |
+| docker hub | https://hub.docker.com/r/springcloudxuxiaowei/docs                                          |           |
+| 构建镜像流水线    | https://gitlab.xuxiaowei.com.cn/xuxiaowei-cloud/spring-cloud-xuxiaowei/-/pipelines?ref=docs | `docs` 分支 |
+| 镜像部署网站     | https://docs.xuxiaowei.cloud                                                                |           |
 
 ## 镜像列表 {id=image-list}
 

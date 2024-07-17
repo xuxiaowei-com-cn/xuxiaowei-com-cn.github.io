@@ -14,16 +14,16 @@
 
 ## 社交平台 {id=social}
 
-| 社交平台           | 网址                                   | 说明                                                                                                  |
-|----------------|--------------------------------------|-----------------------------------------------------------------------------------------------------|
-| 哔哩哔哩           | https://space.bilibili.com/198580655 | 直播、发布视频                                                                                             |
-| CSDN           | https://xuxiaowei.blog.csdn.net      | 历史博客，现已**不再考虑更新**                                                                                   |
-| 码云 Gitee       | https://gitee.com/xuxiaowei-com-cn   | **国内**代码托管                                                                                          |
-| GitHub         | https://github.com/xuxiaowei-com-cn  | **国外**代码托管                                                                                          |
-| GitLab         | https://gitlab.com/xuxiaowei-com-cn  | 用于在**国外**网络环境下使用 GitLab CI/CD 功能，免费流水线时长 400 分钟/月                                                   |
-| 极狐 GitLab      | https://jihulab.com/xuxiaowei-com-cn | 用于在**国内**网络环境下使用 GitLab CI/CD 功能，<strong><font color="red">收费平台</font></strong>，**使用期限至 2025年2月21** |
-| Frama GitLab   | https://framagit.org/xuxiaowei       | 用于在**国外**网络环境下使用 GitLab CI/CD 功能，不限流水线时长                                                            |
-| GitCode GitLab | https://gitcode.net/qq_32596527      | 用于在**国内**网络环境下使用 GitLab CI/CD 功能，GitLab 版本较低（13.7）                                                  |
+| 社交平台           | 网址                                   | 说明                                                 |
+|----------------|--------------------------------------|----------------------------------------------------|
+| 哔哩哔哩           | https://space.bilibili.com/198580655 | 直播、发布视频                                            |
+| CSDN           | https://xuxiaowei.blog.csdn.net      | 历史博客，现已**不再考虑更新**                                  |
+| 码云 Gitee       | https://gitee.com/xuxiaowei-com-cn   | **国内**代码托管                                         |
+| GitHub         | https://github.com/xuxiaowei-com-cn  | **国外**代码托管                                         |
+| GitLab         | https://gitlab.com/xuxiaowei-com-cn  | 用于在**国外**网络环境下使用 GitLab CI/CD 功能，免费流水线时长 400 分钟/月  |
+| 自建 GitLab      | https://gitlab.xuxiaowei.com.cn      | 用于作者储存代码、自动化测试项目、发布项目时使用                           |
+| Frama GitLab   | https://framagit.org/xuxiaowei       | 用于在**国外**网络环境下使用 GitLab CI/CD 功能，不限流水线时长           |
+| GitCode GitLab | https://gitcode.net/qq_32596527      | 用于在**国内**网络环境下使用 GitLab CI/CD 功能，GitLab 版本较低（13.7） |
 
 ## 个人网站 {id=person}
 
@@ -86,7 +86,7 @@
 /* 社交平台：表格：第三列 */
 ._guide_website #social + table tr td:nth-child(3) {
     /* 最小宽度 */
-    min-width: 322px;
+    min-width: 505px;
 }
 
 /* 个人网站：表格：第一列 */

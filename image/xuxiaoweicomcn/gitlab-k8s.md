@@ -1,12 +1,12 @@
 # GitLab/Kubernetes 文档镜像 {id=gitlab-k8s}
 
-|            | 地址                                                                         |
-|------------|----------------------------------------------------------------------------|
-| Gitee 源码   | https://gitee.com/xuxiaowei-com-cn/gitlab-k8s                              |
-| GitHub 源码  | https://github.com/xuxiaowei-com-cn/gitlab-k8s                             |
-| docker hub | https://hub.docker.com/r/xuxiaoweicomcn/gitlab-k8s                         |
-| 构建镜像流水线    | https://jihulab.com/xuxiaowei-jihu/xuxiaowei-com-cn/gitlab-k8s/-/pipelines |
-| 镜像部署网站     | https://gitlab-k8s.xuxiaowei.com.cn                                        |
+|            | 地址                                                                      |
+|------------|-------------------------------------------------------------------------|
+| Gitee 源码   | https://gitee.com/xuxiaowei-com-cn/gitlab-k8s                           |
+| GitHub 源码  | https://github.com/xuxiaowei-com-cn/gitlab-k8s                          |
+| docker hub | https://hub.docker.com/r/xuxiaoweicomcn/gitlab-k8s                      |
+| 构建镜像流水线    | https://gitlab.xuxiaowei.com.cn/xuxiaowei-com-cn/gitlab-k8s/-/pipelines |
+| 镜像部署网站     | https://gitlab-k8s.xuxiaowei.com.cn                                     |
 
 ## 镜像列表 {id=image-list}
 

@@ -1,11 +1,11 @@
 # 网盾镜像 {id=gateway-shield}
 
-|            | 地址                                                                                      | 说明        |
-|------------|-----------------------------------------------------------------------------------------|-----------|
-| Gitee 源码   | https://gitee.com/xuxiaowei-com-cn/gateway-shield                                       | `main` 分支 |
-| GitHub 源码  | https://github.com/xuxiaowei-com-cn/gateway-shield                                      | `main` 分支 |
-| docker hub | https://hub.docker.com/r/xuxiaoweicomcn/gateway-shield                                  |           |
-| 构建镜像流水线    | https://jihulab.com/xuxiaowei-jihu/xuxiaowei-com-cn/gateway-shield/-/pipelines?ref=main | `main` 分支 |
+|            | 地址                                                                                   | 说明        |
+|------------|--------------------------------------------------------------------------------------|-----------|
+| Gitee 源码   | https://gitee.com/xuxiaowei-com-cn/gateway-shield                                    | `main` 分支 |
+| GitHub 源码  | https://github.com/xuxiaowei-com-cn/gateway-shield                                   | `main` 分支 |
+| docker hub | https://hub.docker.com/r/xuxiaoweicomcn/gateway-shield                               |           |
+| 构建镜像流水线    | https://gitlab.xuxiaowei.com.cn/xuxiaowei-com-cn/gateway-shield/-/pipelines?ref=main | `main` 分支 |
 
 ## 说明 {id=description}
 

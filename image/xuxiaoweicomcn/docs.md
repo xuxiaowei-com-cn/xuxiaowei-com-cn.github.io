@@ -1,12 +1,12 @@
 # 徐晓伟博客镜像 {id=docs}
 
-|            | 地址                                                                               |
-|------------|----------------------------------------------------------------------------------|
-| Gitee 源码   | https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn                              |
-| GitHub 源码  | https://github.com/xuxiaowei-com-cn/xuxiaowei-com-cn.github.io                   |
-| docker hub | https://hub.docker.com/r/xuxiaoweicomcn/docs                                     |
-| 构建镜像流水线    | https://jihulab.com/xuxiaowei-jihu/xuxiaowei-com-cn/xuxiaowei-com-cn/-/pipelines |
-| 镜像部署网站     | https://xuxiaowei.com.cn                                                         |
+|            | 地址                                                                                                   |
+|------------|------------------------------------------------------------------------------------------------------|
+| Gitee 源码   | https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn                                                  |
+| GitHub 源码  | https://github.com/xuxiaowei-com-cn/xuxiaowei-com-cn.github.io                                       |
+| docker hub | https://hub.docker.com/r/xuxiaoweicomcn/docs                                                         |
+| 构建镜像流水线    | https://gitlab.xuxiaowei.com.cn/xuxiaowei-com-cn/xuxiaowei-com-cn.pages.xuxiaowei.com.cn/-/pipelines |
+| 镜像部署网站     | https://xuxiaowei.com.cn                                                                             |
 
 ## 镜像列表 {id=image-list}
 
@@ -24,7 +24,7 @@
 
 ._image_xuxiaoweicomcn_docs #docs + table tr th:nth-child(2), 
 ._image_xuxiaoweicomcn_docs #docs + table tr td:nth-child(2) {
-    min-width: 590px;
+    min-width: 745px;
 }
 
 ._image_xuxiaoweicomcn_docs #image-list + table tr th:nth-child(1), 
