@@ -48,7 +48,7 @@
 
 ._blog_npmrc table tr th:nth-child(2), 
 ._blog_npmrc table tr td:nth-child(2) {
-    min-width: 635px;
+    min-width: 690px;
 }
 
 ._blog_npmrc table tr th:nth-child(3), 
@@ -58,7 +58,7 @@
 
 ._blog_npmrc table tr th:nth-child(4), 
 ._blog_npmrc table tr td:nth-child(4) {
-    min-width: 790px;
+    min-width: 850px;
 }
 
 </style>
