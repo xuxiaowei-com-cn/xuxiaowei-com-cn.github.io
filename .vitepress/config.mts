@@ -130,6 +130,7 @@ export default defineConfig({
         base: '/blog/',
         items: [
           { text: '使用 mvnd 加快 Maven 项目构建速度', link: 'mvnd' },
+          { text: 'Node 配置文件', link: 'npmrc' },
         ]
       },
       {
