@@ -16,6 +16,89 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.23.3      |                                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.14-alpine |                                                               |
 
+::: code-group
+
+```shell [创建容器]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name nginx-1.27.0 \
+  -p 80:80 \
+  -p 443:443 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0
+```
+
+```shell [创建容器、挂载路径]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name nginx-1.27.0 \
+  -p 80:80 \
+  -p 443:443 \
+  -v /nginx/conf.d:/etc/nginx/conf.d \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0
+```
+
+```shell [默认 /etc/nginx/conf.d/default.conf]
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    #
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache's document root
+    # concurs with nginx's one
+    #
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
+}
+```
+
+:::
+
+::: code-group
+
+```shell [使用阿里云镜像]
+cat /etc/apt/sources.list.d/debian.sources
+sed -i "s#deb.debian.org#mirrors.aliyun.com#" /etc/apt/sources.list.d/debian.sources
+cat /etc/apt/sources.list.d/debian.sources
+apt update
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nginx table tr th:nth-child(1), 
