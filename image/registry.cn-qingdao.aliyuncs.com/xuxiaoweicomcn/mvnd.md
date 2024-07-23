@@ -25,6 +25,26 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-17-anolis        |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-21-anolis        |                                 |
 
+::: code-group
+
+```shell [mvnd:1.0.1-dragonwell-8-anolis]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name mvnd-1.0.1-dragonwell-8-anolis \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-8-anolis
+```
+
+```shell [mvnd:1.0.1-dragonwell-17-anolis]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name mvnd-1.0.1-dragonwell-17-anolis \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-17-anolis
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_mvnd table tr th:nth-child(1), 
