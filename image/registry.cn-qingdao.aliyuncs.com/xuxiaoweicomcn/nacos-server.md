@@ -8,16 +8,18 @@
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/github.com/alibaba/nacos/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 
-| 镜像                                                                  | 说明           |
-|---------------------------------------------------------------------|--------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.3.2 | v2.3.2 代表版本号 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.0.3 |              |
+| 镜像                                                                    | 说明           |
+|-----------------------------------------------------------------------|--------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.4.0.1 |              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.4.0   |              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.3.2   | v2.3.2 代表版本号 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.0.3   |              |
 
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nacos-server table tr th:nth-child(1), 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nacos-server table tr td:nth-child(1) {
-    min-width: 500px;
+    min-width: 510px;
 }
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nacos-server table tr th:nth-child(2), 
