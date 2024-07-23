@@ -12,6 +12,36 @@
 |-------------------------------------------------------------|--------------------------------------------------------------|
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.4 | 7.2.4 代表版本号，支持：386、amd64、arm、arm64、mips64le、ppc64le、s390x 平台 |
 
+::: code-group
+
+```shell [使用固定密码创建 Redis]
+REDIS_PASSWORD=8d4fa85e314b49c8bc6ab63d898a7597
+
+echo $REDIS_PASSWORD
+
+sudo docker run \
+  -itd \
+  --restart always \
+  --name redis-7.2.4 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.4 \
+  --requirepass $REDIS_PASSWORD
+```
+
+```shell [使用随机密码创建 Redis]
+REDIS_PASSWORD=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 32 ; echo '')
+
+echo $REDIS_PASSWORD
+
+sudo docker run \
+  -itd \
+  --restart always \
+  --name redis-7.2.4 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.4 \
+  --requirepass $REDIS_PASSWORD
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_redis table tr th:nth-child(1), 
