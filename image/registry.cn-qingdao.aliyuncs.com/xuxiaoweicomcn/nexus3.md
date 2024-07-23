@@ -20,6 +20,9 @@
 #
 # export NEXUS_HOME=/srv/nexus  && chown -R 200 $NEXUS_HOME && docker compose up -d
 # export NEXUS_HOME=`pwd`       && chown -R 200 $NEXUS_HOME && echo $NEXUS_HOME && docker compose up -d
+# 默认密码位置：
+# cat /srv/nexus/nexus-data/admin.password && echo
+# cat ./nexus-data/admin.password && echo
 #
 services:
   nexus:
@@ -49,6 +52,27 @@ services:
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.59.0 |              |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.58.1 |              |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.38.1 |              |
+
+::: code-group
+
+```shell [创建容器]
+sudo mkdir -p /nexus-data
+sudo chown -R 200 /nexus-data
+
+sudo docker run \
+  -itd \
+  --restart always \
+  --name nexus3-3.70.1 \
+  -p 48081:8081 \
+  -p 48443:8443 \
+  -p 48500-48550:48500-48550 \
+  -v /nexus-data:/nexus-data \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.70.1
+
+# 默认密码位置：cat /nexus-data/admin.password && echo
+```
+
+:::
 
 <style>
 
