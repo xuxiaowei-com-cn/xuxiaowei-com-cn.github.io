@@ -36,6 +36,27 @@ sudo docker run \
   sleep infinity
 ```
 
+```shell [maven:3.9.8-amazoncorretto-17]
+sudo docker run \
+  -itd \
+  --restart always \
+  --name maven-3.9.8-amazoncorretto-17 \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.9.8-amazoncorretto-17 \
+  sleep infinity
+```
+
+:::
+
+::: code-group
+
+```shell [下载源码]
+mvn clean -U package dependency:sources
+```
+
+```shell [下载文档]
+mvn clean -U package dependency:resolve -Dclassifier=javadoc
+```
+
 :::
 
 <style>
