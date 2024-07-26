@@ -80,11 +80,12 @@
 
 ## Comparison {id=comparison}
 
-| 名称      | GitLab                    | GitHub                                                              | Jenkins         |
-|---------|---------------------------|---------------------------------------------------------------------|-----------------|
-| 当前工作区   | `CI_PROJECT_DIR`          | `GITHUB_WORKSPACE`                                                  | `WORKSPACE`     |
-| 临时文件夹   | `RUNNER_TEMP_PROJECT_DIR` | `RUNNER_TEMP`                                                       | `WORKSPACE_TMP` |
-| 流水线 URL | `CI_PIPELINE_URL`         | `$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID` | `BUILD_URL`     |
+| 名称       | GitLab                    | GitHub                                                              | Jenkins         |
+|----------|---------------------------|---------------------------------------------------------------------|-----------------|
+| 当前工作区    | `CI_PROJECT_DIR`          | `GITHUB_WORKSPACE`                                                  | `WORKSPACE`     |
+| 临时文件夹    | `RUNNER_TEMP_PROJECT_DIR` | `RUNNER_TEMP`                                                       | `WORKSPACE_TMP` |
+| 流水线 URL  | `CI_PIPELINE_URL`         | `$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID` | `BUILD_URL`     |
+| 项目流水线 ID | `CI_PIPELINE_IID`         | `GITHUB_RUN_NUMBER`                                                 | `BUILD_NUMBER`  |
 
 <style>
 
