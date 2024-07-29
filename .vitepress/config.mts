@@ -132,6 +132,7 @@ export default defineConfig({
           { text: '使用 mvnd 加快 Maven 项目构建速度', link: 'mvnd' },
           { text: 'Node 配置文件', link: 'npmrc' },
           { text: '流水线环境变量', link: 'ci-cd-env' },
+          { text: 'JDK 17', link: 'jdk-17' },
         ]
       },
       {
