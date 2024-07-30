@@ -133,6 +133,7 @@ export default defineConfig({
           { text: 'Node 配置文件', link: 'npmrc' },
           { text: '流水线环境变量', link: 'ci-cd-env' },
           { text: 'JDK 17', link: 'jdk-17' },
+          { text: 'Docker', link: 'docker' },
         ]
       },
       {
