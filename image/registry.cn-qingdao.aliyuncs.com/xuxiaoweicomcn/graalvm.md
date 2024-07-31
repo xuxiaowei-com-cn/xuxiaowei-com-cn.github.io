@@ -10,9 +10,11 @@
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/github.com/graalvm/graalvm-ce-builds/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 
-| 镜像                                                                           | 说明                             |
-|------------------------------------------------------------------------------|--------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm-jdk-community:22.0.2 | 22.0.2 代表版本号，支持：amd64、arm64 平台 |
+| 镜像                                                                           | 说明                                  |
+|------------------------------------------------------------------------------|-------------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm-jdk-community:22.0.2 | 22.0.2 代表 JDK 版本号，支持：amd64、arm64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm-jdk-community:21.0.2 |                                     |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm-jdk-community:17.0.9 |                                     |
 
 <style>
 
@@ -23,7 +25,7 @@
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_graalvm table tr th:nth-child(2), 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_graalvm table tr td:nth-child(2) {
-    min-width: 330px;
+    min-width: 365px;
 }
 
 </style>
