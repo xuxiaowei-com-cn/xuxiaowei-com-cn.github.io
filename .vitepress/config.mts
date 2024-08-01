@@ -134,6 +134,7 @@ export default defineConfig({
           { text: '流水线环境变量', link: 'ci-cd-env' },
           { text: 'JDK 17', link: 'jdk-17' },
           { text: 'Docker', link: 'docker' },
+          { text: 'ldd', link: 'ldd' },
         ]
       },
       {
