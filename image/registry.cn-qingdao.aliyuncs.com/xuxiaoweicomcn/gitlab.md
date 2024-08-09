@@ -35,7 +35,7 @@
 #
 services:
   gitlab:
-    image: 'registry.gitlab.cn/omnibus/gitlab-jh:17.0.1'
+    image: 'registry.gitlab.cn/omnibus/gitlab-jh:17.2.2'
     restart: always
     # hostname: 'gitlab.xuxiaowei.cn'
     # 更新证书 并 启动 gitlab
@@ -128,10 +128,10 @@ services:
         ipv4_address: 172.26.13.2
 
   gitlab-runner:
-    # image: 'gitlab/gitlab-runner:v17.0.0'
-    # image: 'gitlab/gitlab-runner:alpine3.19-v17.0.0'
-    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.0.0'
-    # image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.0.0'
+    # image: 'gitlab/gitlab-runner:v17.2.0'
+    # image: 'gitlab/gitlab-runner:alpine3.19-v17.2.0'
+    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.2.0'
+    # image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.2.0'
     volumes:
       - '$GITLAB_HOME/gitlab-runner/config:/etc/gitlab-runner'
       - '$GITLAB_HOME/config/ssl:/etc/gitlab-runner/certs'
@@ -174,8 +174,10 @@ networks:
 
 | 镜像                                                                  | 说明                    |
 |---------------------------------------------------------------------|-----------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ce.0  | 17.2.1 代表版本号，ce 代表社区版 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ee.0  | 17.2.1 代表版本号，ee 代表企业版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ce.0  | 17.2.2 代表版本号，ce 代表社区版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ee.0  | 17.2.2 代表版本号，ee 代表企业版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ee.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.0-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.0-ee.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.2-ce.0  |                       |
