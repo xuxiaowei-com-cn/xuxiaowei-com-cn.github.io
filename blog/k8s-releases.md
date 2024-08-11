@@ -1,4 +1,4 @@
-# k8s 发布
+# k8s 发布 {id=k8s-releases}
 
 | 版本                                                       | 首次发布日期     | 终止日期       | 最后一个版本  |
 |----------------------------------------------------------|------------|------------|---------|
@@ -13,3 +13,26 @@
 | [1.23](https://kubernetes-v1-23.xuxiaowei.com.cn/zh/)    | 2021-12-07 | 2023-02-28 | 1.23.17 |
 | [1.22](https://kubernetes-v1-22.xuxiaowei.com.cn/zh/)    | 2021-08-04 | 2022-10-28 | 1.22.17 |
 | [1.21](https://kubernetes-v1-21.xuxiaowei.com.cn/zh/)    | 2021-04-08 | 2022-06-28 | 1.21.14 |
+
+<style>
+
+._blog_k8s-releases #k8s-releases + table tr th:nth-child(1), 
+._blog_k8s-releases #k8s-releases + table tr td:nth-child(1) {
+    min-width: 45px;
+}
+
+._blog_k8s-releases #k8s-releases + table tr th:nth-child(2), 
+._blog_k8s-releases #k8s-releases + table tr td:nth-child(2) {
+    min-width: 105px;
+}
+
+._blog_k8s-releases #k8s-releases + table tr th:nth-child(3), 
+._blog_k8s-releases #k8s-releases + table tr td:nth-child(3) {
+    min-width: 105px;
+}
+
+._blog_k8s-releases #k8s-releases + table tr th:nth-child(4), 
+._blog_k8s-releases #k8s-releases + table tr td:nth-child(4) {
+    min-width: 105px;
+}
+</style>
