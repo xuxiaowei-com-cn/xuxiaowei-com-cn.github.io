@@ -136,6 +136,7 @@ export default defineConfig({
           { text: 'JDK 版本与字节码', link: 'jdk-major' },
           { text: 'Docker', link: 'docker' },
           { text: 'ldd', link: 'ldd' },
+          { text: 'k8s 发布', link: 'k8s-releases' },
         ]
       },
       {
