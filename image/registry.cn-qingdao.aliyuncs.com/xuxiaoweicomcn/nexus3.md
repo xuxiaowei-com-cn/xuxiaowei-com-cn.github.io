@@ -101,6 +101,7 @@ sudo docker run \
 | maven-tencent              | maven2 | proxy  |       |       | Release        | https://mirrors.cloud.tencent.com/nexus/repository/maven-public     |
 | maven-topiam               | maven2 | proxy  |       |       | Mixed          | https://pingfangushi-maven.pkg.coding.net/repository/topiam/public/ |
 | raw                        | raw    | hosted |       |       |                |                                                                     |
+| raw-gradle                 | raw    | proxy  |       |       |                | https://mirrors.cloud.tencent.com/gradle                            |
 
 <style>
 
