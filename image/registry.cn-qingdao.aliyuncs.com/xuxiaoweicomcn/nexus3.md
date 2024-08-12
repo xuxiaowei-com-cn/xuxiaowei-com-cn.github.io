@@ -42,7 +42,8 @@ services:
 
 | 镜像                                                            | 说明           |
 |---------------------------------------------------------------|--------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.70.1 | 3.70.1 代表版本号 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.71.0 | 3.71.0 代表版本号 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.70.1 |              |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.70.0 |              |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.69.0 |              |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.68.1 |              |
