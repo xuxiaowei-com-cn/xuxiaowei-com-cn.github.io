@@ -1,7 +1,7 @@
 stages:
   - pages
-  - docker:build
-  - docker:deploy
+  - docker-build
+  - docker-deploy
   - sync
 
 variables:
@@ -35,8 +35,8 @@ pages:
   rules:
     - if: $ENABLE_DOCS == "true"
 
-docker:build:
-  stage: docker:build
+docker-build:
+  stage: docker-build
   image:
     name: registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kaniko-project-executor:v1.23.1-debug
     entrypoint: [ "" ]
@@ -69,10 +69,10 @@ docker:build:
   rules:
     - if: $ENABLE_DOCS_DOCKER == "true"
 
-docker:deploy:
-  stage: docker:deploy
+docker-deploy:
+  stage: docker-deploy
   needs:
-    - job: docker:build
+    - job: docker-build
   image: registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:26.1.3-cli
   variables:
     DOCKER_HOST: $DEPLOY_DOCKER_HOST
