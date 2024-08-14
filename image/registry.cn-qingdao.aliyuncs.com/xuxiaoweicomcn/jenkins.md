@@ -30,8 +30,8 @@
 #
 services:
   jenkins-blueocean:
-    # image: 'xuxiaoweicomcn/jenkins:2.452.1-jdk17'
-    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.1-jdk17'
+    # image: 'xuxiaoweicomcn/jenkins:2.462.1-jdk17'
+    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462.1-jdk17'
     restart: always
     hostname: 'jenkins'
     ports:
@@ -87,6 +87,7 @@ networks:
 
 | 镜像                                                                    | 说明                      |
 |-----------------------------------------------------------------------|-------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.472-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.471-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.470-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.469-jdk17   | Weekly                  |
