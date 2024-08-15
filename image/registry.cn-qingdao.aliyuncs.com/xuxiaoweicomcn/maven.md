@@ -57,6 +57,14 @@ mvn clean -U package dependency:sources
 mvn clean -U package dependency:resolve -Dclassifier=javadoc
 ```
 
+```shell [依赖分析]
+mvn dependency:tree
+```
+
+```shell [插件依赖分析]
+mvn dependency:resolve-plugins
+```
+
 :::
 
 <style>
