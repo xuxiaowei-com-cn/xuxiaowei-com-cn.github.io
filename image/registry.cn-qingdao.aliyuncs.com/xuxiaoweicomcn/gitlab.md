@@ -174,8 +174,10 @@ networks:
 
 | 镜像                                                                  | 说明                    |
 |---------------------------------------------------------------------|-----------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ce.0  | 17.2.2 代表版本号，ce 代表社区版 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ee.0  | 17.2.2 代表版本号，ee 代表企业版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.0-ce.0  | 17.3.0 代表版本号，ce 代表社区版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.0-ee.0  | 17.3.0 代表版本号，ee 代表企业版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ee.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ee.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.0-ce.0  |                       |
