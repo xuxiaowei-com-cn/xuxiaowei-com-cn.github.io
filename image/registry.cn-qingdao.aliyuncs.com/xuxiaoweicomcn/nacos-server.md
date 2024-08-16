@@ -10,9 +10,10 @@
 
 | 镜像                                                                    | 说明           |
 |-----------------------------------------------------------------------|--------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.4.1   | v2.4.1 代表版本号 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.4.0.1 |              |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.4.0   |              |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.3.2   | v2.3.2 代表版本号 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.3.2   |              |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nacos-server:v2.0.3   |              |
 
 <style>
