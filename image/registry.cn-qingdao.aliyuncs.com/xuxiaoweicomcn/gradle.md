@@ -15,6 +15,14 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle/8.0.2-jdk8  |                                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle/8.0.2-jdk17 |                                                 |
 
+::: code-group
+
+```shell [本地仓库位置]
+export GRADLE_USER_HOME="/software/.gradle"
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_gradle table tr th:nth-child(1), 

@@ -49,6 +49,14 @@ sudo docker run \
 
 ::: code-group
 
+```shell [本地仓库位置]
+export MAVEN_OPTS="-Dmaven.repo.local=/software/apache-maven-repository"
+```
+
+:::
+
+::: code-group
+
 ```shell [下载源码]
 mvn clean -U package dependency:sources -DskipTests=true
 ```
