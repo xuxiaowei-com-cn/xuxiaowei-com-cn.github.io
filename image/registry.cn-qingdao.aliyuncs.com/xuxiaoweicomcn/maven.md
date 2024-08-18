@@ -50,11 +50,11 @@ sudo docker run \
 ::: code-group
 
 ```shell [下载源码]
-mvn clean -U package dependency:sources
+mvn clean -U package dependency:sources -DskipTests=true
 ```
 
 ```shell [下载文档]
-mvn clean -U package dependency:resolve -Dclassifier=javadoc
+mvn clean -U package dependency:resolve -Dclassifier=javadoc -DskipTests=true
 ```
 
 ```shell [依赖分析]
