@@ -67,6 +67,14 @@ mvn dependency:resolve-plugins
 
 :::
 
+::: code-group
+
+```shell [刪除快照]
+find /software/apache-maven-repository -type d -name '*-SNAPSHOT' -print -exec rm -r {} +
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_maven table tr th:nth-child(1), 
