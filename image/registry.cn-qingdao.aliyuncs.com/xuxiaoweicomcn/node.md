@@ -75,6 +75,14 @@ npm config list
 
 ::: code-group
 
+```shell [查看全局安装目录]
+npm config get prefix
+```
+
+:::
+
+::: code-group
+
 ```shell [查看代理]
 npm config get proxy
 npm config get https-proxy
@@ -104,6 +112,37 @@ npm config set registry https://registry.npmmirror.com
 
 ```shell [删除代理]
 npm config delete registry
+```
+
+:::
+
+::: code-group
+
+```shell [查看缓存路径]
+# 默认：C:\Users\%USERNAME%\AppData\Local\npm-cache、~/.npm
+npm config get cache
+# 默认：C:\Users\%USERNAME%\AppData\Local\Yarn\Cache\v6、/usr/local/share/.cache/yarn/v6
+yarn cache dir
+# 默认：C:\Users\%USERNAME%\AppData\Local\pnpm-cache、~/.cache/pnpm
+pnpm config get store-dir
+```
+
+```shell [设置缓存路径]
+npm config set cache D:\nodejs\npm_cache
+yarn config set cache-folder D:\nodejs\yarn_cache
+pnpm config set store-dir D:\\nodejs\\pnpm_cache
+```
+
+```shell [清理缓存]
+npm cache clean --force
+yarn cache clean
+pnpm store prune
+```
+
+```shell [删除缓存路径]
+npm config delete cache
+yarn config delete cache-folder
+pnpm config delete store-dir
 ```
 
 :::
