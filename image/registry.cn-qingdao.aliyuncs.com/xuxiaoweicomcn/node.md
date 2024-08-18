@@ -65,6 +65,57 @@ apt update
 
 :::
 
+::: code-group
+
+```shell [查看配置]
+npm config list
+```
+
+:::
+
+::: code-group
+
+```shell [查看代理]
+npm config get proxy
+npm config get https-proxy
+```
+
+```shell [设置代理]
+npm config set proxy http://localhost:1085
+npm config set https-proxy http://localhost:1085
+```
+
+```shell [删除代理]
+npm config delete proxy
+npm config delete https-proxy
+```
+
+:::
+
+::: code-group
+
+```shell [查看代理]
+npm config get registry
+```
+
+```shell [设置代理]
+npm config set registry https://registry.npmmirror.com
+```
+
+```shell [删除代理]
+npm config delete registry
+```
+
+:::
+
+::: code-group
+
+```shell [跳过证书验证]
+npm install --unsafe-perm=true --no-verify-ssl
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_node table tr th:nth-child(1), 
