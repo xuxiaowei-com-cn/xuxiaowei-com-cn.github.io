@@ -16,9 +16,13 @@
 |----------------------------------------------------------------------------------------|---------------------------------|
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:2.0.0-beta-1-dragonwell-17-anolis |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:2.0.0-beta-1-dragonwell-21-anolis |                                 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-8-anolis         | 1.0.1 代表 mvnd 版本                |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-11-anolis        | anolis 代表是阿里云的龙蜥系统，兼容 CentOS    |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-17-anolis        | dragonwell-17 代表使用的是阿里巴巴 JDK 17 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-8-anolis         | 1.0.2 代表 mvnd 版本                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-11-anolis        | anolis 代表是阿里云的龙蜥系统，兼容 CentOS    |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-17-anolis        | dragonwell-17 代表使用的是阿里巴巴 JDK 17 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-21-anolis        |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-8-anolis         |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-11-anolis        |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-17-anolis        |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-21-anolis        |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-8-anolis         |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.0-dragonwell-11-anolis        |                                 |
