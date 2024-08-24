@@ -31,20 +31,20 @@
 
 ::: code-group
 
-```shell [mvnd:1.0.1-dragonwell-8-anolis]
+```shell [mvnd:1.0.2-dragonwell-8-anolis]
 sudo docker run \
   -itd \
   --restart always \
-  --name mvnd-1.0.1-dragonwell-8-anolis \
-  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-8-anolis
+  --name mvnd-1.0.2-dragonwell-8-anolis \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-8-anolis
 ```
 
-```shell [mvnd:1.0.1-dragonwell-17-anolis]
+```shell [mvnd:1.0.2-dragonwell-17-anolis]
 sudo docker run \
   -itd \
   --restart always \
-  --name mvnd-1.0.1-dragonwell-17-anolis \
-  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-17-anolis
+  --name mvnd-1.0.2-dragonwell-17-anolis \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-17-anolis
 ```
 
 :::
