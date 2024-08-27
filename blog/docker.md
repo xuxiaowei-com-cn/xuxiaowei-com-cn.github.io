@@ -46,7 +46,7 @@ docker build --build-arg A=123 -t registry.cn-qingdao.aliyuncs.com/xuxiaoweicomc
 
 ::: warning 警告
 
-1. 使用 --push 参数前，需要先登录对应的 Docker 仓库
+1. 使用 `--push` 参数前，需要先登录对应的 Docker 仓库
 
 :::
 
@@ -90,6 +90,76 @@ docker import nginx_2024-08-27_10-19.tar nginx:2024-08-27-10-19
 # repository:tag：镜像名称
 docker commit <container_id> repository:tag
 ```
+
+## 信任/忽略证书验证 {id=certs}
+
+### 文档
+
+1. https://docs.docker.com/engine/security/certificates/
+2. https://docker-docs.xuxiaowei.com.cn/engine/security/certificates/
+
+### <font color="red">信任</font>证书 {id=trust-certs}
+
+::: code-group
+
+```shell [无端口]
+# 要信任的 Docker 仓库域名
+domain_name=registry.xuxiaowei.com.cn
+
+mkdir -p /etc/docker/certs.d/$domain_name
+openssl s_client -showcerts -connect $domain_name:443 -servername $domain_name < /dev/null 2>/dev/null | openssl x509 -outform PEM > /etc/docker/certs.d/$domain_name/ca.crt
+echo | openssl s_client -CAfile /etc/docker/certs.d/$domain_name/ca.crt -connect $domain_name:443 -servername $domain_name
+ls -lh /etc/docker/certs.d/$domain_name
+```
+
+```shell [有端口]
+# 要信任的 Docker 仓库域名
+domain_name=registry.xuxiaowei.com.cn
+# 要信任的 Docker 仓库域名端口
+port=443
+
+mkdir -p /etc/docker/certs.d/$domain_name:$port
+openssl s_client -showcerts -connect $domain_name:$port -servername $domain_name < /dev/null 2>/dev/null | openssl x509 -outform PEM > /etc/docker/certs.d/$domain_name:$port/ca.crt
+echo | openssl s_client -CAfile /etc/docker/certs.d/$domain_name:$port/ca.crt -connect $domain_name:$port -servername $domain_name
+ls -lh /etc/docker/certs.d/$domain_name:$port
+```
+
+:::
+
+::: warning 警告
+
+1. `registry.xuxiaowei.com.cn` 与 `registry.xuxiaowei.com.cn:443` 属于不同的配置
+2. 缺点：虽然无需重启 docker 服务，但 Docker 仓库证书如果更新了，需要重新配置一遍
+3. 优点：在完成证书信任配置`后`，无需担心 DNS 是否受到污染，信任机制来源于 `/etc/docker/certs.d/` 已配置的证书
+
+:::
+
+### <font color="red">忽略</font>证书验证 {id=ignore-certs}
+
+```shell
+vim /etc/docker/daemon.json
+```
+
+```json
+{
+  "insecure-registries": [
+    "registry.xuxiaowei.com.cn:443",
+    "registry.xuxiaowei.com.cn"
+  ]
+}
+```
+
+```shell
+sudo systemctl restart docker
+```
+
+::: warning 警告
+
+1. `registry.xuxiaowei.com.cn` 与 `registry.xuxiaowei.com.cn:443` 属于不同的配置
+2. 缺点 1：需要重启 docker 服务
+3. 缺点 2：如果 DNS 受到污染，拉取镜像将不可信
+
+:::
 
 ## 开通远程调用的端口 {id=open-port}
 
