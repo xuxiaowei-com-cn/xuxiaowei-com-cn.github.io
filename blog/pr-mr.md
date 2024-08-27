@@ -53,12 +53,11 @@
                 ```
                :::
 
+               ```
                上述提交内容中，提交标题使用两个英文 : 中加上一个单词（词组）组成，后面跟着一个空格，
-               其中 :bug: 会被识别为一个虫子，
-               :arrow_up: 会被识别为一个向上的箭头，
-               :pencil2: 会被识别为一支笔，
-               更多内容参见：
-               [gitmoji.md](https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn/raw/main/gitmoji.md)
+               其中 :bug: 会被识别为一个虫子，:arrow_up: 会被识别为一个向上的箭头，:pencil2: 会被识别为一支笔，
+               更多内容参见：https://gitee.com/xuxiaowei-com-cn/xuxiaowei-com-cn/raw/main/gitmoji.md
+               ```
 
         5. 提交内容建议携带相关 `议题 issues` 的链接，代码托管仓库会自动识别，并在相关议题下方出现提交的链接（前人种树后人乘凉）
             1. 如果有多个链接，建议每行一个链接
