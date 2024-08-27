@@ -137,6 +137,7 @@ export default defineConfig({
           { text: 'Docker', link: 'docker' },
           { text: 'ldd', link: 'ldd' },
           { text: 'k8s 发布', link: 'k8s-releases' },
+          { text: '合并请求 PR/MR', link: 'pr-mr' },
         ]
       },
       {
