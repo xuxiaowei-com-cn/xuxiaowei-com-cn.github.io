@@ -98,6 +98,7 @@ networks:
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.466-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.464-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.463-jdk17   | Weekly                  |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462.1-jdk17 | Long-Term Support (LTS) |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.461-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.460-jdk17   | Weekly                  |
@@ -108,7 +109,6 @@ networks:
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.455-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.454-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.453-jdk17   | Weekly                  |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462.1-jdk17 | Long-Term Support (LTS) |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.4-jdk17 | Long-Term Support (LTS) |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.3-jdk17 | Long-Term Support (LTS) |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.452.2-jdk17 | Long-Term Support (LTS) |
