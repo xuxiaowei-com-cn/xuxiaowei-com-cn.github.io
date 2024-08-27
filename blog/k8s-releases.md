@@ -14,6 +14,12 @@
 | [1.22](https://kubernetes-v1-22.xuxiaowei.com.cn/zh/)    | 2021-08-04 | 2022-10-28 | 1.22.17 |
 | [1.21](https://kubernetes-v1-21.xuxiaowei.com.cn/zh/)    | 2021-04-08 | 2022-06-28 | 1.21.14 |
 
+## 相关文档
+
+1. https://github.com/kubernetes/kubernetes/releases
+2. https://kubernetes.xuxiaowei.com.cn/zh-cn/releases
+3. https://kubernetes.xuxiaowei.com.cn/zh-cn/releases/patch-releases/
+
 <style>
 
 ._blog_k8s-releases #k8s-releases + table tr th:nth-child(1), 
