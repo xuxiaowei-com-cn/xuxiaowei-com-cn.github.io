@@ -41,8 +41,14 @@ docker manifest inspect ghcr.io/graalvm/jdk-community:22.0.2
 | `--push`                                                        | 可选   | 构建完成后自动推送镜像                                                              |
 
 ```shell
-docker build --build-arg A=123 -t registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/test:0.0.1 . --no-cache --progress plain
+docker build --build-arg A=123 -t registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/test:0.0.1 . --no-cache --progress plain --push
 ```
+
+::: warning 警告
+
+1. 使用 --push 参数前，需要先登录对应的 Docker 仓库
+
+:::
 
 ### 保存/加载镜像 {id=save-load}
 
@@ -106,6 +112,329 @@ ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
+
+## 附录 {id=appendix}
+
+### 帮助文档 {id=help}
+
+::: details docker 帮助文档
+
+```shell
+[root@spring-boot-2 ~]# docker --help 
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+```
+
+:::
+
+::: details docker 登录文档
+
+```shell
+[root@spring-boot-2 ~]# docker login --help 
+
+Usage:  docker login [OPTIONS] [SERVER]
+
+Log in to a registry.
+If no server is specified, the default is defined by the daemon.
+
+Options:
+  -p, --password string   Password
+      --password-stdin    Take the password from stdin
+  -u, --username string   Username
+```
+
+:::
+
+::: details docker 拉取镜像文档
+
+```shell
+[root@spring-boot-2 ~]# docker pull --help 
+
+Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+Download an image from a registry
+
+Aliases:
+  docker image pull, docker pull
+
+Options:
+  -a, --all-tags                Download all tagged images in the repository
+      --disable-content-trust   Skip image verification (default true)
+      --platform string         Set platform if server is multi-platform capable
+  -q, --quiet                   Suppress verbose output
+```
+
+:::
+
+::: details docker 推送镜像帮助文档
+
+```shell
+[root@spring-boot-2 ~]# docker push --help 
+
+Usage:  docker push [OPTIONS] NAME[:TAG]
+
+Upload an image to a registry
+
+Aliases:
+  docker image push, docker push
+
+Options:
+  -a, --all-tags                Push all tags of an image to the repository
+      --disable-content-trust   Skip image signing (default true)
+  -q, --quiet                   Suppress verbose output
+```
+
+:::
+
+::: details docker 保存帮助文档
+
+```shell
+[root@spring-boot-2 ~]# docker save --help 
+
+Usage:  docker save [OPTIONS] IMAGE [IMAGE...]
+
+Save one or more images to a tar archive (streamed to STDOUT by default)
+
+Aliases:
+  docker image save, docker save
+
+Options:
+  -o, --output string   Write to a file, instead of STDOUT
+```
+
+:::
+
+::: details docker 加载帮助文档
+
+```shell
+[root@spring-boot-2 ~]# docker load --help 
+
+Usage:  docker load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+
+Aliases:
+  docker image load, docker load
+
+Options:
+  -i, --input string   Read from tar archive file, instead of STDIN
+  -q, --quiet          Suppress the load output
+```
+
+:::
+
+::: details docker 导出帮助文档
+
+```shell
+[root@spring-boot-2 ~]# docker export --help 
+
+Usage:  docker export [OPTIONS] CONTAINER
+
+Export a container's filesystem as a tar archive
+
+Aliases:
+  docker container export, docker export
+
+Options:
+  -o, --output string   Write to a file, instead of STDOUT
+```
+
+:::
+
+::: details docker 导入帮助文档
+
+```shell
+[root@spring-boot-2 ~]# docker import --help 
+
+Usage:  docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]
+
+Import the contents from a tarball to create a filesystem image
+
+Aliases:
+  docker image import, docker import
+
+Options:
+  -c, --change list       Apply Dockerfile instruction to the created image
+  -m, --message string    Set commit message for imported image
+      --platform string   Set platform if server is multi-platform capable
+```
+
+:::
+
+::: details docker 提交帮助文档
+
+```shell
+[root@spring-boot-2 ~]# docker commit --help 
+
+Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+Create a new image from a container's changes
+
+Aliases:
+  docker container commit, docker commit
+
+Options:
+  -a, --author string    Author (e.g., "John Hannibal Smith <hannibal@a-team.com>")
+  -c, --change list      Apply Dockerfile instruction to the created image
+  -m, --message string   Commit message
+  -p, --pause            Pause container during commit (default true)
+```
+
+:::
+
+::: details docker 信息
+
+```shell
+[root@spring-boot-2 ~]# docker info
+Client: Docker Engine - Community
+ Version:    26.1.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.14.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.27.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 8
+  Running: 4
+  Paused: 0
+  Stopped: 4
+ Images: 24
+ Server Version: 26.1.3
+ Storage Driver: overlay2
+  Backing Filesystem: xfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: false
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: runc io.containerd.runc.v2
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 8b3b7ca2e5ce38e8f31a34f35b2b68ceb8470d89
+ runc version: v1.1.12-0-g51d5e94
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.6.25-2.1.an23.x86_64
+ Operating System: Anolis OS 23
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 4
+ Total Memory: 7.755GiB
+ Name: spring-boot-2
+ ID: 821a9498-61da-4784-b357-1e8fb314b6f2
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  registry.xuxiaowei.com.cn
+  registry.xuxiaowei.com.cn:443
+  gitlab.xuxiaowei.com.cn:443
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+[DEPRECATION NOTICE]: API is accessible on http://0.0.0.0:2375 without encryption.
+         Access to the remote API is equivalent to root access on the host. Refer
+         to the 'Docker daemon attack surface' section in the documentation for
+         more information: https://docs.docker.com/go/attack-surface/
+In future versions this will be a hard failure preventing the daemon from starting! Learn more at: https://docs.docker.com/go/api-security/
+```
+
+:::
 
 <style>
 
