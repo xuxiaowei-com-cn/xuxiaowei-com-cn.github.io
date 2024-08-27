@@ -44,6 +44,47 @@ docker manifest inspect ghcr.io/graalvm/jdk-community:22.0.2
 docker build --build-arg A=123 -t registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/test:0.0.1 . --no-cache --progress plain
 ```
 
+### 保存/加载镜像 {id=save-load}
+
+1. 用于备份/迁移镜像
+2. 用于在网络不好/无网络/离线安装等环境下使用 Docker 镜像
+
+```shell
+# nginx-1.27.1.tar：导出到磁盘上的文件名
+# nginx:1.27.1：镜像名称
+docker save -o nginx-1.27.1.tar nginx:1.27.1
+ls -lh
+```
+
+```shell
+# nginx-1.27.1.tar：从磁盘导入的镜像文件名
+docker load -i nginx-1.27.1.tar
+docker images
+```
+
+### 导出/导入镜像 {id=export-import}
+
+1. 将 Docker 容器导出为文件，常用于备份容器
+2. 用于在不同机器间迁移 Docker 容器
+
+```shell
+docker export -o nginx_2024-08-27-10-19.tar nginx
+```
+
+```shell
+docker import nginx_2024-08-27_10-19.tar nginx:2024-08-27-10-19
+```
+
+### 提交 {id=commit}
+
+1. 将容器保存为一个 Docker 镜像
+
+```shell
+# <container_id>：容器名称/容器ID
+# repository:tag：镜像名称
+docker commit <container_id> repository:tag
+```
+
 ## 开通远程调用的端口 {id=open-port}
 
 ::: danger 警告
