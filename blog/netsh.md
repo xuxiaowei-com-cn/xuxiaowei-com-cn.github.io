@@ -10,13 +10,13 @@
 
 | 参数          | 说明           |
 |-------------|--------------|
-| `portproxy` | 端口代理         |
+| `portproxy` | 端口代理/转发      |
 | `add`       | 添加           |
 | `delete`    | 删除           |
 | `v4tov4`    | IPv4 转到 IPv4 |
 
 1. <font color="red">添加、删除 命令需要管理员身份运行 cmd</font>
-2. <font color="red">查看已存在的端口代理/转发，无需管理员身份运行 cmd</font>
+2. 查看已存在的端口代理/转发，无需管理员身份运行 cmd
 
 ::: code-group
 
