@@ -138,6 +138,7 @@ export default defineConfig({
           { text: 'ldd', link: 'ldd' },
           { text: 'k8s 发布', link: 'k8s-releases' },
           { text: '合并请求 PR/MR', link: 'pr-mr' },
+          { text: 'Windows 配置网络', link: 'netsh' },
         ]
       },
       {
