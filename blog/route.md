@@ -7,7 +7,7 @@
 ::: code-group
 
 ```shell [CentOS 系列]
-yun -y install net-tools
+yum -y install net-tools
 ```
 
 :::
@@ -30,7 +30,7 @@ route print
 
 ::: warning 警告
 
-1. 部分内容被 `x` 替换
+1. 为了避免 `MAC`、`IPv6` 地址等信息泄露，部分内容被 `x` 替换
 
 :::
 
@@ -213,25 +213,74 @@ C:\Users\xuxiaowei>
 
 ::: code-group
 
-```shell
+```shell [Linux 临时添加]
+ip route add destination via gateway dev interface
+
+# add：添加路由
+# destination：指定主机（网段）
+# via：指定下一个参数为网关
+# gateway：指定网关
+# dev：指定下一个参数为网卡
+# interface：网卡名称
+
+# dev、interface 可缺省（同时）
+
+# 示例：ip route add 172.26.12.0/24 via 172.25.25.14
+# 示例（指定网卡）：ip route add 172.26.12.0/24 via 172.25.25.14 dev ens18
+```
+
+```shell [Linux 使用 nmcli 永久添加]
+# 查看所有网卡
+nmcli connection show
+# 查看某个网卡的配置，网卡名称：ens18
+nmcli connection show ens18
+# 修改 ens18 网卡，添加一个 IPv4 路由：访问 172.26.12.0/24 时要通过 172.25.25.14 跳转
+# 删除命令：将 +ipv4.routes 修改为 -ipv4.routes
+nmcli connection modify ens18 +ipv4.routes "172.26.12.0/24 172.25.25.14"
+# 重启上线 ens18 网卡，使配置生效：
+# 注意：此操作可能导致网络中断。并且下线和上线要同时执行，否则可能导致远程连接中断且无法再次连接。
+# 注意：这里使用 nmcli connection reload 无效
+nmcli connection down ens18; nmcli connection up ens18
+# 搜索 ens18 网卡 自定义的路由表
+nmcli connection show ens18 | grep ipv4.routes
+nmcli connection show ens18 | grep IP4.ROUTE
+```
+
+```shell [Linux 在 network-scripts 文件夹中永久添加]
+# 以下以网卡 enp6s0 为例：
+
+# 查看 /etc/sysconfig/network-scripts 存在的文件，其中：
+# ifcfg-enp6s0：文件代表网卡的配置，enp6s0 代表网卡名称
+# route-enp6s0：文件代表网卡的路由永久配置，enp6s0 代表网卡名称
+ls -lh /etc/sysconfig/network-scripts
+
+# 修改 /etc/sysconfig/network-scripts/route-enp6s0 文件（如果没有则新建一个此文件）
+# 添加内容如下：
+172.26.12.0/24 via 172.25.25.14
+
+# 重启网卡
+systemctl restart NetworkManager
+```
+
+```shell [Windows 临时/永久]
 route -p ADD destination MASK mask  gateway METRIC metric IF Interface
 
 # 如果未给出 IF，它将尝试查找给定网关的最佳接口
-# -p：与 ADD 命令结合使用时，将路由设置为在系统引导期间保持不变。默认情况下，重新启动系统时，不保存路由。忽略所有其他命令，这始终会影响相应的永久路由。
+# -p：可缺省，缺省时为临时添加。与 ADD 命令结合使用时，将路由设置为在系统引导期间保持不变。默认情况下，重新启动系统时，不保存路由。忽略所有其他命令，这始终会影响相应的永久路由。
 # ADD：添加路由
-# destination：指定主机
+# destination：指定主机（网段）
 # MASK：指定下一个参数为“netmask”值。
 # netmask：指定此路由项的子网掩码值。如果未指定，其默认设置为 255.255.255.255。
 # gateway：指定网关。
 # interface：指定路由的接口号码。
 # METRIC：指定跃点数，例如目标的成本。
 
-route add 172.26.12.0 mask 255.255.255.0 172.25.25.14
+# 示例：route add 172.26.12.0 mask 255.255.255.0 172.25.25.14
 ```
 
 :::
 
-### 添加路由示例 {id=add-route-example}
+### Windows 添加路由示例 {id=windows-add-route-example}
 
 1. `172.25.25.14` 是一台 Linux 系统，安装了 Docker
 2. `172.26.12.0` 子网掩码 `255.255.255.0`，是 `172.25.25.14` 所在系统的 Docker 其中一个网络
@@ -345,6 +394,10 @@ C:\Users\xuxiaowei>
 
 :::
 
+### Linux 添加路由示例 {id=linux-add-route-example}
+
+- 参见上述：[添加路由](#add-route)
+
 ### 删除路由 {id=delete-route}
 
 ::: warning 警告
@@ -355,7 +408,13 @@ C:\Users\xuxiaowei>
 
 ::: code-group
 
-```shell
+```shell [Linux]
+ip route delete destination via gateway
+
+# route del -net destination netmask mask
+```
+
+```shell [Windows]
 route delete destination MASK mask  gateway METRIC metric IF Interface
 ```
 
@@ -365,7 +424,13 @@ route delete destination MASK mask  gateway METRIC metric IF Interface
 
 ::: code-group
 
-```shell
+```shell [Linux]
+ip route delete 172.26.12.0/24 via 172.25.25.14
+
+# route del -net 172.26.12.0 netmask 255.255.255.0
+```
+
+```shell [Windows]
 route delete 172.26.12.0 mask 255.255.255.0 172.25.25.14
 ```
 
