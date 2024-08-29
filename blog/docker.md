@@ -2,6 +2,196 @@
 
 [[toc]]
 
+## 安装 Docker {id=install-docker}
+
+### CentOS 安装 Docker {id=centos-install-docker}
+
+::: code-group
+
+```shell [腾讯源]
+sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://mirrors.cloud.tencent.com/docker-ce/linux/centos/docker-ce.repo
+sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo docker info
+sudo docker ps
+sudo docker images
+```
+
+```shell [阿里源]
+sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo docker info
+sudo docker ps
+sudo docker images
+```
+
+```shell [官方源]
+sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo docker info
+sudo docker ps
+sudo docker images
+```
+
+:::
+
+### 类 CentOS 安装 Docker {id=similar-centos-install-docker}
+
+::: warning 警告
+
+1. 如果需要安装 Docker 的操作系统不是 CentOS，而是 CentOS 系列的操作系统（比如：可以使用 yum 安装软件），
+   可使用下方命令安装 Docker
+2. 若操作系统基于 CentOS 7/8/9 发布，则可以选择下方对应的命令
+3. 若无法确定操作系统基于 CentOS 几 发布，根据尝试下方的 3 个选择
+
+:::
+
+1. 基于 <strong><font color="red">CentOS 7</font></strong> 的系统
+
+   ::: code-group
+
+   ```shell [腾讯源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://mirrors.cloud.tencent.com/docker-ce/linux/centos/docker-ce.repo
+   sudo sed -i "s#\$releasever#7#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   ```shell [阿里源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+   sudo sed -i "s#\$releasever#7#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   ```shell [官方源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   sudo sed -i "s#\$releasever#7#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   :::
+
+2. 基于 <strong><font color="red">CentOS 8</font></strong> 的系统
+
+   ::: code-group
+
+   ```shell [腾讯源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://mirrors.cloud.tencent.com/docker-ce/linux/centos/docker-ce.repo
+   sudo sed "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   ```shell [阿里源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+   sudo sed "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   ```shell [官方源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   sudo sed "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   :::
+
+3. 基于 <strong><font color="red">CentOS 9</font></strong> 的系统
+
+   ::: code-group
+
+   ```shell [腾讯源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://mirrors.cloud.tencent.com/docker-ce/linux/centos/docker-ce.repo
+   sudo sed "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   ```shell [阿里源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+   sudo sed "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   ```shell [官方源]
+   sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+   sudo yum install -y yum-utils
+   sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   sudo sed "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
+   sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sudo docker info
+   sudo docker ps
+   sudo docker images
+   ```
+
+   :::
+
 ## Docker 命令 {id=command}
 
 - 执行 Docker 命令存在多种方式，如：本机执行、远程调用等
