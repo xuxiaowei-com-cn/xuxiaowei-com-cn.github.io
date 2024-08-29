@@ -141,6 +141,7 @@ export default defineConfig({
           { text: 'Windows Netsh 网络配置', link: 'netsh' },
           { text: 'CentOS Firewalld 防火墙', link: 'firewalld' },
           { text: '路由表 route', link: 'route' },
+          { text: 'CIDR 无类别域间路由', link: 'cidr' },
         ]
       },
       {
