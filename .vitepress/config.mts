@@ -140,6 +140,7 @@ export default defineConfig({
           { text: '合并请求 PR/MR', link: 'pr-mr' },
           { text: 'Windows Netsh 网络配置', link: 'netsh' },
           { text: 'CentOS Firewalld 防火墙', link: 'firewalld' },
+          { text: '路由表 route', link: 'route' },
         ]
       },
       {
