@@ -110,7 +110,7 @@ sudo docker images
    sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
    sudo yum install -y yum-utils
    sudo yum-config-manager --add-repo https://mirrors.cloud.tencent.com/docker-ce/linux/centos/docker-ce.repo
-   sudo sed "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
+   sudo sed -i "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
    sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    sudo systemctl start docker
    sudo systemctl enable docker
@@ -123,7 +123,7 @@ sudo docker images
    sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
    sudo yum install -y yum-utils
    sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-   sudo sed "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
+   sudo sed -i "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
    sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    sudo systemctl start docker
    sudo systemctl enable docker
@@ -136,7 +136,7 @@ sudo docker images
    sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
    sudo yum install -y yum-utils
    sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-   sudo sed "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
+   sudo sed -i "s#\$releasever#8#" /etc/yum.repos.d/docker-ce.repo
    sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    sudo systemctl start docker
    sudo systemctl enable docker
@@ -155,7 +155,7 @@ sudo docker images
    sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
    sudo yum install -y yum-utils
    sudo yum-config-manager --add-repo https://mirrors.cloud.tencent.com/docker-ce/linux/centos/docker-ce.repo
-   sudo sed "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
+   sudo sed -i "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
    sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    sudo systemctl start docker
    sudo systemctl enable docker
@@ -168,7 +168,7 @@ sudo docker images
    sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
    sudo yum install -y yum-utils
    sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-   sudo sed "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
+   sudo sed -i "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
    sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    sudo systemctl start docker
    sudo systemctl enable docker
@@ -181,7 +181,7 @@ sudo docker images
    sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
    sudo yum install -y yum-utils
    sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-   sudo sed "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
+   sudo sed -i "s#\$releasever#9#" /etc/yum.repos.d/docker-ce.repo
    sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    sudo systemctl start docker
    sudo systemctl enable docker
