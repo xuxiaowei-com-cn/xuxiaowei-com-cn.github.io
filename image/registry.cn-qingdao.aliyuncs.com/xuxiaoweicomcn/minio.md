@@ -10,9 +10,11 @@
 
 | 镜像                                                                                 | 说明                                                                 |
 |------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-08-29T01-40-52Z | RELEASE.2024-08-29T01-40-52Z 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-08-03T04-33-23Z |                                                                    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-07-16T23-46-41Z |                                                                    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-07-13T01-46-15Z |                                                                    |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-06-06T09-36-42Z | RELEASE.2024-06-06T09-36-42Z 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-06-06T09-36-42Z |                                                                    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2017-12-28T01-21-00Z |                                                                    |
 
 ```shell
@@ -36,8 +38,8 @@ docker run \
   -e MINIO_ROOT_USER=${MINIO_ROOT_USER} \
   -e MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD} \
   -v /minio-data:/data \
-  --name minio-2024-07-16T23-46-41Z \
-  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-07-16T23-46-41Z \
+  --name minio-2024-08-29T01-40-52Z \
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio:RELEASE.2024-08-29T01-40-52Z \
   server /data --console-address ":9001"
 ```
 
