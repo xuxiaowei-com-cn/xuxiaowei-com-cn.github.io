@@ -30,8 +30,8 @@
 #
 services:
   jenkins-blueocean:
-    # image: 'xuxiaoweicomcn/jenkins:2.462.1-jdk17'
-    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462.1-jdk17'
+    # image: 'xuxiaoweicomcn/jenkins:2.462.2-jdk17'
+    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462.2-jdk17'
     restart: always
     hostname: 'jenkins'
     ports:
@@ -53,8 +53,8 @@ services:
         ipv4_address: 172.26.26.2
 
   jenkins-docker:
-    # image: 'docker:26.1.3-dind'
-    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:26.1.3-dind'
+    # image: 'docker:27.2.0-dind'
+    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.0-dind'
     restart: always
     privileged: true
     hostname: 'docker'
@@ -87,6 +87,7 @@ networks:
 
 | 镜像                                                                    | 说明                      |
 |-----------------------------------------------------------------------|-------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.475-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.474-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.473-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.472-jdk17   | Weekly                  |
@@ -98,6 +99,7 @@ networks:
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.466-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.464-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.463-jdk17   | Weekly                  |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462.2-jdk17 | Long-Term Support (LTS) |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462.1-jdk17 | Long-Term Support (LTS) |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.462-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.461-jdk17   | Weekly                  |
