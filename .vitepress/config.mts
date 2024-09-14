@@ -142,6 +142,7 @@ export default defineConfig({
           { text: 'CentOS Firewalld 防火墙', link: 'firewalld' },
           { text: '路由表 route', link: 'route' },
           { text: 'CIDR 无类别域间路由', link: 'cidr' },
+          { text: 'Yum', link: 'yum' },
         ]
       },
       {
