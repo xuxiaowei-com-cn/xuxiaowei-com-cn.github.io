@@ -15,6 +15,7 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17        |                                     |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17-slim   |                                     |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.9.8-amazoncorretto-17 |                                     |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.9.9-amazoncorretto-21 |                                     |
 
 ::: code-group
 
