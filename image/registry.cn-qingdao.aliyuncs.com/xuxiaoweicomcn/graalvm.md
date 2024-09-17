@@ -16,6 +16,8 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:21.0.2-anolis-23  |                                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:22.0.2-anolis-7.9 |                                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:22.0.2-anolis-23  |                                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:23.0.0-anolis-7.9 |                                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:23.0.0-anolis-23  |                                       |
 
 <style>
 
