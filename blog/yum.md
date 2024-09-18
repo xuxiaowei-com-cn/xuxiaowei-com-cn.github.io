@@ -8,8 +8,9 @@
 
 ```shell
 cd /etc/yum.repos.d/
-ll
+ls -lh
 rename '.repo' '.repo.bak' CentOS*.repo
+ls -lh
 ```
 
 ### 切换阿里 yum 源 {id=centos-switch-repo-aliyun}
