@@ -40,13 +40,14 @@ ls -lh
 REDIS_VERSION=7.2.5
 cd redis-$REDIS_VERSION
 yum -y install gcc make
+# 或 make
 make MALLOC=libc
 make install
 ```
 
 :::
 
-### 安装结果 {id=install-result}
+### 安装结果 {id=source-install-result}
 
 | 文件目录                            | 说明        |
 |---------------------------------|-----------|
@@ -140,9 +141,9 @@ redis-server --version
 
 :::
 
-::: code-group
+### 本地连接 {id=source-redis-cli}
 
-```shell [本地连接]
+```shell
 [root@centos-8-5-1 redis-7.2.5]# redis-cli 
 127.0.0.1:6379> set name xuxiaowei
 OK
@@ -151,9 +152,7 @@ OK
 127.0.0.1:6379> 
 ```
 
-:::
-
-### 开通 Redis 端口 {id=open-port}
+### 开通 Redis 端口 {id=source-open-port}
 
 ::: code-group
 
@@ -174,18 +173,19 @@ firewall-cmd --list-all
 
 :::
 
-::: code-group
+#### redis.conf 配置文件 {id=source-redis.conf}
 
-```shell [复制源码解压目录中的 redis.conf 到指定目录，作为 Linux Service 启动 Redis 配置]
+- 复制源码解压目录中的 `redis.conf` 到指定目录，作为 Linux Service 启动 Redis 配置
+
+```shell
 mkdir -p /etc/redis/
 cp redis.conf /etc/redis/
+ls -lh /etc/redis/
 ```
 
-:::
+#### 开启远程连接 {id=source-bind}
 
-::: code-group
-
-```shell [开启远程连接]
+```shell
 # 注释默认绑定本地连接
 # 默认配置：bind 127.0.0.1 -::1
 # 默认仅支持本地连接
@@ -193,16 +193,14 @@ sed -i 's/^bind.*/#&/' /etc/redis/redis.conf
 cat /etc/redis/redis.conf | grep bind
 ```
 
-:::
+#### 关闭保护模式 {id=source-protected-mode}
 
-::: code-group
-
-```shell [关闭保护模式]
+```shell
 sed -i 's#protected-mode yes#protected-mode no#' /etc/redis/redis.conf
 cat /etc/redis/redis.conf | grep protected-mode
 ```
 
-:::
+#### 设置密码 {id=source-requirepass}
 
 ::: code-group
 
@@ -237,6 +235,8 @@ Warning: Using a password with '-a' or '-u' option on the command line interface
 
 :::
 
+#### 创建 Linux Service 服务 {id=source-redis.service}
+
 ::: code-group
 
 ```shell [创建 Linux Service 服务：不允许后台运行，Redis 默认配置，推荐]
@@ -245,6 +245,7 @@ sed -i 's#daemonize yes#daemonize no#' /etc/redis/redis.conf
 cat /etc/redis/redis.conf | grep daemonize
 
 cat <<EOF | tee /lib/systemd/system/redis.service
+# 查看 redis 服务日志：journalctl -xefu redis
 [Unit]
 Description=redis
 After=network.target
@@ -265,6 +266,7 @@ sed -i 's#daemonize no#daemonize yes#' /etc/redis/redis.conf
 cat /etc/redis/redis.conf | grep daemonize
 
 cat <<EOF | tee /lib/systemd/system/redis.service
+# 查看 redis 服务日志：journalctl -xefu redis
 [Unit]
 Description=redis
 After=network.target
@@ -282,6 +284,14 @@ EOF
 ```
 
 :::
+
+#### 启动 {id=source-start}
+
+```shell
+systemctl start redis.service
+systemctl status redis.service --no-pager -l
+systemctl enable redis.service
+```
 
 ### Redis 服务命令 {id=source-service-command}
 
@@ -302,14 +312,15 @@ EOF
 | `systemctl enable redis.service`     | 打开 Redis 开启自启   |
 | `systemctl disable redis.service`    | 关闭 Redis 开启自启   |
 | `systemctl is-enabled redis.service` | 查看 Redis 是否开启自启 |
+| `journalctl -xefu redis`             | 查看 Redis 服务日志   |
 
 ## 主从复制 {id=replication}
 
 ::: warning 注意
 
 1. 主从复制至少需要两个服务器
-    - `主节点` IP：`192.168.61.176`
-    - `从节点` IP：`192.168.61.178`
+    - `主节点` IP：`192.168.80.81`
+    - `从节点` IP：`192.168.80.82`
     - `节点`间使用内网通信
     - 如果在同一台机器内操作，需要使用不同的 `redis.conf`，并修改下列配置，防止冲突
         - `port`：Redis 端口
@@ -331,30 +342,38 @@ EOF
 ### 从节点增加主节点的地址与端口 {id=add-slaveof}
 
 ```shell
-sed -i '1s/^/slaveof 192.168.61.176 6379\n/' /etc/redis/redis.conf
+# 192.168.80.81 是主节点的地址
+sed -i '1s/^/slaveof 192.168.80.81 6379\n/' /etc/redis/redis.conf
 
 cat /etc/redis/redis.conf | grep slaveof
 ```
 
 ### 从节点增加主节点的密码 {id=add-masterauth}
 
-::: code-group
+::: warning 注意
 
-```shell [主节点没有密码可忽略此步骤]
+1. 主节点没有密码可忽略此步骤
+
+:::
+
+```shell
 # 尽量不要在 Linux 命令行中直接输入密码
 # 实际配置请使用 vi、vim 等工具
+# 其中 SmTbQcOV0mXm2XLW 为 Redis 密码
 sed -i '2s/^/masterauth SmTbQcOV0mXm2XLW\n/' /etc/redis/redis.conf
 
 cat /etc/redis/redis.conf | grep masterauth
 ```
 
-:::
-
 ### 配置从节点的密码 {id=slave-requirepass}
 
-::: code-group
+::: warning 注意
 
-```shell [根据自己的需求配置，也可以与主节点密码相同]
+1. 根据自己的需求配置，也可以与主节点密码相同
+
+:::
+
+```shell
 # 产生一个随机的16位密码
 # 注意：尽量不要在 Linux 命令行中直接输入密码
 REDIS_PASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)
@@ -365,8 +384,6 @@ sed -i "1s/^/requirepass $REDIS_PASSWORD\n/" /etc/redis/redis.conf
 
 cat /etc/redis/redis.conf | grep requirepass
 ```
-
-:::
 
 ### 重启从节点 {id=slave-restart}
 
@@ -385,7 +402,7 @@ systemctl status redis.service --no-pager -l
 # Replication
 role:master
 connected_slaves:1
-slave0:ip=192.168.61.177,port=6379,state=online,offset=168,lag=0
+slave0:ip=192.168.80.82,port=6379,state=online,offset=168,lag=0
 master_failover_state:no-failover
 master_replid:c1c6b45e2dcbfc44a08136ff43075b10f2d9ebf1
 master_replid2:0000000000000000000000000000000000000000
@@ -403,7 +420,7 @@ repl_backlog_histlen:168
 127.0.0.1:6379> INFO replication
 # Replication
 role:slave
-master_host:192.168.61.176
+master_host:192.168.80.81
 master_port:6379
 master_link_status:up
 master_last_io_seconds_ago:3
@@ -433,21 +450,22 @@ repl_backlog_histlen:252
 ::: warning 注意
 
 1. 哨兵模式至少需要三个服务器
-    - 第一台：`192.168.61.176`
-    - 第二台：`192.168.61.177`
-    - 第三台：`192.168.61.178`
+    - `主节点`：`192.168.80.81`
+    - `从节点`：`192.168.80.82`
+    - `从节点`：`192.168.80.83`
 2. 哨兵模式使用的配置文件是 `sentinel.conf`，而不是 `redis.conf`
 3. 源码解压目录中可找到 `sentinel.conf` 文件
 4. 哨兵模式要保持 Redis 版本一致
 5. 哨兵模式每个`节点` Redis 安装步骤相同
     - 先在任意`节点`完成 Redis 安装、测试
+    - 哨兵模式部分功能基于`主从复制`，请先学会主从复制后再学习`哨兵模式`
     - 确认任意`节点`的 Redis 均能正常工作后，再进行哨兵模式的配置
 
 :::
 
 ### 配置 Linux 服务，管理 Redis 服务 {id=redis-service}
 
-- 先让各个节点的 Redis 正常启动，参考上方的`源码安装`中的 `redis.service` 配置
+- 先让各个节点的 Redis 正常启动，并能正常远程连接，参考上方的`源码安装`中的 `redis.service` 配置
 
 ### 配置 Linux 服务，管理 Redis Sentinel 哨兵服务 {id=redis-sentinel-service}
 
@@ -457,7 +475,7 @@ repl_backlog_histlen:252
 
 :::
 
-### 开通 Redis 端口 {id=sentinel-open-port}
+### 开通 Redis Sentinel 哨兵端口 {id=sentinel-open-port}
 
 ::: code-group
 
@@ -469,27 +487,71 @@ firewall-cmd --list-all
 
 :::
 
-::: code-group
+### 从节点增加主节点的地址与端口 {id=sentinel-add-slaveof}
 
-```shell [复制源码解压目录中的 sentinel.conf 到指定目录，作为 Linux Service 启动 Redis Sentinel 配置]
+```shell
+# 192.168.80.81 是主节点的地址，仅在从节点上添加
+sed -i '1s/^/slaveof 192.168.80.81 6379\n/' /etc/redis/redis.conf
+
+cat /etc/redis/redis.conf | grep slaveof
+```
+
+### 从节点增加主节点的密码 {id=sentinel-add-masterauth}
+
+::: warning 注意
+
+1. 主节点没有密码可忽略此步骤
+
+:::
+
+```shell
+# 尽量不要在 Linux 命令行中直接输入密码
+# 实际配置请使用 vi、vim 等工具
+# 其中 SmTbQcOV0mXm2XLW 为 Redis 密码
+sed -i '2s/^/masterauth SmTbQcOV0mXm2XLW\n/' /etc/redis/redis.conf
+
+cat /etc/redis/redis.conf | grep masterauth
+```
+
+### 重启从节点 {id=sentinel-slave-restart}
+
+```shell
+systemctl restart redis.service
+```
+
+### sentinel.conf 配置文件 {id=sentinel.conf}
+
+- 复制源码解压目录中的 sentinel.conf 到指定目录，作为 Linux Service 启动 Redis Sentinel 配置
+
+```shell
 mkdir -p /etc/redis/
 cp sentinel.conf /etc/redis/
+ls -lh /etc/redis/
 ```
+
+### 从节点监控主节点 {id=sentinel-monitor}
+
+::: warning 注意
+
+1. 仅在 `从节点` 上配置，`主节点` 不配置
 
 :::
 
-::: code-group
+```shell
+# 注释掉默认配置
+sed -i 's/sentinel monitor mymaster 127.0.0.1 6379 2/#&/' /etc/redis/sentinel.conf
 
-```shell []
-sed -i "1s/^/sentinel monitor mymaster 192.168.61.176 6379 2\n/" /etc/redis/sentinel.conf
+# 192.168.80.81 代表主节点地址
+sed -i "1s/^/sentinel monitor mymaster 192.168.80.81 6379 2\n/" /etc/redis/sentinel.conf
+
+cat /etc/redis/sentinel.conf | grep 'sentinel monitor'
 ```
 
-:::
+### 创建 Linux Service 服务 {id=sentinel-service}
 
-::: code-group
-
-```shell [创建 Linux Service 服务]
+```shell
 cat <<EOF | tee /lib/systemd/system/redis-sentinel.service
+# 查看 redis sentinel 哨兵服务日志：journalctl -xefu redis-sentinel
 [Unit]
 Description=redis sentinel
 # 在 Redis 服务启动后再启动 Redis 哨兵服务
@@ -507,3 +569,33 @@ WantedBy=multi-user.target
 
 EOF
 ```
+
+### 启动哨兵 {id=sentinel-start}
+
+```shell
+systemctl start redis-sentinel.service
+systemctl status redis-sentinel.service --no-pager -l
+systemctl enable redis-sentinel.service
+```
+
+### Redis Sentinel 哨兵服务命令 {id=sentinel-service-command}
+
+::: warning 注意
+
+1. 如果修改 `/lib/systemd/system/redis-sentinel.service` 文件后，需要运行 `systemctl daemon-reload` 命令，然后再操作 Redis
+   Sentinel 服务
+2. 查看 Linux 服务状态时，可增加参数 `--no-pager` 关闭分页，否则需要手动退出
+3. 查看 Linux 服务状态时，可增加参数 `-l` 查看全部内容
+
+:::
+
+| 命令                                            | 说明                       |
+|-----------------------------------------------|--------------------------|
+| `systemctl status redis-sentinel.service`     | 查看 Redis Sentinel 状态     |
+| `systemctl start redis-sentinel.service`      | 启动 Redis Sentinel        |
+| `systemctl stop redis-sentinel.service`       | 停止                       |
+| `systemctl restart redis-sentinel.service`    | 重启                       |
+| `systemctl enable redis-sentinel.service`     | 打开 Redis Sentinel 开启自启   |
+| `systemctl disable redis-sentinel.service`    | 关闭 Redis Sentinel 开启自启   |
+| `systemctl is-enabled redis-sentinel.service` | 查看 Redis Sentinel 是否开启自启 |
+| `journalctl -xefu redis-sentinel`             | 查看 Redis Sentinel 服务日志   |
