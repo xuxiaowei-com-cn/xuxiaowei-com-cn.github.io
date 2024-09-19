@@ -35,7 +35,7 @@
 #
 services:
   gitlab:
-    image: 'registry.gitlab.cn/omnibus/gitlab-jh:17.3.1'
+    image: 'registry.gitlab.cn/omnibus/gitlab-jh:17.3.3'
     restart: always
     # hostname: 'gitlab.xuxiaowei.cn'
     # 更新证书 并 启动 gitlab
@@ -174,8 +174,12 @@ networks:
 
 | 镜像                                                                  | 说明                    |
 |---------------------------------------------------------------------|-----------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.1-ce.0  | 17.3.1 代表版本号，ce 代表社区版 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.1-ee.0  | 17.3.1 代表版本号，ee 代表企业版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.3-ce.0  | 17.3.3 代表版本号，ce 代表社区版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.3-ee.0  | 17.3.3 代表版本号，ee 代表企业版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.2-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.2-ee.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.1-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.1-ee.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.0-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.0-ee.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ce.0  |                       |
