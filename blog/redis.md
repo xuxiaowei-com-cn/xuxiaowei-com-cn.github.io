@@ -19,7 +19,7 @@
 REDIS_VERSION=7.2.5
 curl -L -o redis-$REDIS_VERSION.tar.gz https://github.com/redis/redis/archive/refs/tags/$REDIS_VERSION.tar.gz
 ls -lh redis-$REDIS_VERSION.tar.gz
-tar -zxvf redis-7.2.5.tar.gz
+tar -zxvf redis-$REDIS_VERSION.tar.gz
 ls -lh
 ```
 
@@ -27,7 +27,7 @@ ls -lh
 REDIS_VERSION=7.2.5
 wget --no-check-certificate --content-disposition https://github.com/redis/redis/archive/refs/tags/$REDIS_VERSION.tar.gz
 ls -lh redis-$REDIS_VERSION.tar.gz
-tar -zxvf redis-7.2.5.tar.gz
+tar -zxvf redis-$REDIS_VERSION.tar.gz
 ls -lh
 ```
 
