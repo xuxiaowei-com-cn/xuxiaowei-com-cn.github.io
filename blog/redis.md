@@ -517,13 +517,16 @@ Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.562 * MAST
     - `主节点`：`192.168.80.81`
     - `从节点`：`192.168.80.82`
     - `从节点`：`192.168.80.83`
-2. 哨兵模式使用的配置文件是 `sentinel.conf`，而不是 `redis.conf`
-3. 源码解压目录中可找到 `sentinel.conf` 文件
-4. 哨兵模式要保持 Redis 版本一致
-5. 哨兵模式每个`节点` Redis 安装步骤相同
+2. `哨兵模式`基于`主从复制`
+3. `主从复制`使用的配置文件是 `redis.conf`，`哨兵`使用的配置文件是 `sentinel.conf`，所以`哨兵模式`需要两个配置文件
+4. 源码解压目录中可找到 `sentinel.conf` 文件
+5. 哨兵模式要保持 Redis 版本一致
+6. 哨兵模式每个`节点` Redis 安装步骤相同
     - 先在任意`节点`完成 Redis 安装、测试
     - 哨兵模式部分功能基于`主从复制`，请先学会主从复制后再学习`哨兵模式`
     - 确认任意`节点`的 Redis 均能正常工作后，再进行哨兵模式的配置
+7. `从节点`配置后，无法在`从节点`中`增加`、`修改`、`删除`数据，只能在主节点`增加`、`修改`、`删除`数据，`从节点`只能`读取`数据
+8. 哨兵模式主节点可以进行`故障转译`
 
 :::
 
@@ -587,6 +590,12 @@ systemctl restart redis.service
 
 - 复制源码解压目录中的 sentinel.conf 到指定目录，作为 Linux Service 启动 Redis Sentinel 配置
 
+::: warning 注意
+
+1. 所有节点均执行
+
+:::
+
 ```shell
 mkdir -p /etc/redis/
 cp sentinel.conf /etc/redis/
@@ -613,6 +622,12 @@ cat /etc/redis/sentinel.conf | grep 'sentinel monitor'
 
 ### 创建 Linux Service 服务 {id=sentinel-service}
 
+::: warning 注意
+
+1. 所有节点均执行
+
+:::
+
 ```shell
 cat <<EOF | tee /lib/systemd/system/redis-sentinel.service
 # 查看 redis sentinel 哨兵服务日志：journalctl -xefu redis-sentinel
@@ -636,11 +651,402 @@ EOF
 
 ### 启动哨兵 {id=sentinel-start}
 
+::: warning 注意
+
+1. 所有节点均执行
+2. 先启动主节点，再启动从节点
+
+:::
+
 ```shell
 systemctl start redis-sentinel.service
 systemctl status redis-sentinel.service --no-pager -l
 systemctl enable redis-sentinel.service
 ```
+
+### 查看日志 {id=sentinel-log}
+
+::: tip
+
+1. 启动 Redis 哨兵前，在各个节点查看哨兵的日志：`journalctl -xefu redis-sentinel`
+
+:::
+
+::: code-group
+
+```shell [主节点哨兵日志]
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.435 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.435 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.435 * Redis version=7.2.5, bits=64, commit=00000000, modified=0, pid=1734, just started
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.435 * Configuration loaded
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.437 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.437 * monotonic clock: POSIX clock_gettime
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.438 * Running mode=sentinel, port=26379.
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.438 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.459 * Sentinel new configuration saved on disk
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.459 * Sentinel ID is e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.459 # +monitor master mymaster 127.0.0.1 6379 quorum 2
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.465 * +slave slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.469 * Sentinel new configuration saved on disk
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.469 * +slave slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:06:58 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:06:58.472 * Sentinel new configuration saved on disk
+```
+
+:::
+
+::: code-group
+
+```shell [第一个从节点启动时第一个从节点哨兵日志]
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.388 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.389 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.389 * Redis version=7.2.5, bits=64, commit=00000000, modified=0, pid=1742, just started
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.389 * Configuration loaded
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.389 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.389 * monotonic clock: POSIX clock_gettime
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.391 * Running mode=sentinel, port=26379.
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.391 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.395 * Sentinel new configuration saved on disk
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.395 * Sentinel ID is c2ab7f6241f2328021858214b05f10cd5a4ad859
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.395 # +monitor master mymaster 192.168.80.81 6379 quorum 2
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.398 * +slave slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 192.168.80.81 6379
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.400 * Sentinel new configuration saved on disk
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.400 * +slave slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 192.168.80.81 6379
+Sep 19 13:07:27 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:27.402 * Sentinel new configuration saved on disk
+Sep 19 13:07:29 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:29.092 * +sentinel sentinel e0ed55a14f9f1b958b080ca5671f4af3f80bf44a 127.0.0.1 26379 @ mymaster 192.168.80.81 6379
+Sep 19 13:07:29 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:29.095 * Sentinel new configuration saved on disk
+Sep 19 13:07:29 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:29.095 * +sentinel-address-switch master mymaster 192.168.80.81 6379 ip 192.168.80.81 port 26379 for e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:07:29 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:29.097 * Sentinel new configuration saved on disk
+Sep 19 13:07:29 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:29.097 * +sentinel-address-switch master mymaster 192.168.80.81 6379 ip 127.0.0.1 port 26379 for e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:07:29 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:29.099 * Sentinel new configuration saved on disk
+Sep 19 13:07:31 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:31.135 * +sentinel-address-switch master mymaster 192.168.80.81 6379 ip 192.168.80.81 port 26379 for e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:07:31 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:31.137 * Sentinel new configuration saved on disk
+Sep 19 13:07:31 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:31.138 * +sentinel-address-switch master mymaster 192.168.80.81 6379 ip 127.0.0.1 port 26379 for e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:07:31 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:07:31.140 * Sentinel new configuration saved on disk
+
+... 重复上面四行日志
+
+```
+
+:::
+
+::: code-group
+
+```shell [第一个从节点启动时主节点哨兵日志]
+Sep 19 13:07:29 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:07:29.390 * +sentinel sentinel c2ab7f6241f2328021858214b05f10cd5a4ad859 192.168.80.82 26379 @ mymaster 127.0.0.1 6379
+Sep 19 13:07:29 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:07:29.394 * Sentinel new configuration saved on disk
+```
+
+:::
+
+::: code-group
+
+```shell [第二个从节点启动时第二个从节点哨兵日志]
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.064 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.064 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.064 * Redis version=7.2.5, bits=64, commit=00000000, modified=0, pid=1742, just started
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.064 * Configuration loaded
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.065 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.065 * monotonic clock: POSIX clock_gettime
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.066 * Running mode=sentinel, port=26379.
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.066 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.069 * Sentinel new configuration saved on disk
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.069 * Sentinel ID is 032386697444c3c8f2b300ce71bd7f376b75aa04
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.069 # +monitor master mymaster 192.168.80.81 6379 quorum 2
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.072 * +slave slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 192.168.80.81 6379
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.075 * Sentinel new configuration saved on disk
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.075 * +slave slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 192.168.80.81 6379
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.077 * Sentinel new configuration saved on disk
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.384 * +sentinel sentinel c2ab7f6241f2328021858214b05f10cd5a4ad859 192.168.80.82 26379 @ mymaster 192.168.80.81 6379
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.386 * Sentinel new configuration saved on disk
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.440 * +sentinel sentinel e0ed55a14f9f1b958b080ca5671f4af3f80bf44a 127.0.0.1 26379 @ mymaster 192.168.80.81 6379
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.446 * Sentinel new configuration saved on disk
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.446 * +sentinel-address-switch master mymaster 192.168.80.81 6379 ip 192.168.80.81 port 26379 for e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.454 * Sentinel new configuration saved on disk
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.454 * +sentinel-address-switch master mymaster 192.168.80.81 6379 ip 127.0.0.1 port 26379 for e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:09:24 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:24.457 * Sentinel new configuration saved on disk
+Sep 19 13:09:26 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:26.494 * +sentinel-address-switch master mymaster 192.168.80.81 6379 ip 192.168.80.81 port 26379 for e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:09:26 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:26.497 * Sentinel new configuration saved on disk
+Sep 19 13:09:26 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:26.497 * +sentinel-address-switch master mymaster 192.168.80.81 6379 ip 127.0.0.1 port 26379 for e0ed55a14f9f1b958b080ca5671f4af3f80bf44a
+Sep 19 13:09:26 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:26.500 * Sentinel new configuration saved on disk
+
+... 重复上面四行日志
+
+```
+
+:::
+
+::: code-group
+
+```shell [第二个从节点启动时第一个从节点哨兵日志]
+Sep 19 13:09:26 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:26.102 * +sentinel sentinel 032386697444c3c8f2b300ce71bd7f376b75aa04 192.168.80.83 26379 @ mymaster 192.168.80.81 6379
+Sep 19 13:09:26 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:09:26.106 * Sentinel new configuration saved on disk
+```
+
+:::
+
+::: code-group
+
+```shell [第二个从节点启动时主节点哨兵日志]
+Sep 19 13:09:26 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:09:26.101 * +sentinel sentinel 032386697444c3c8f2b300ce71bd7f376b75aa04 192.168.80.83 26379 @ mymaster 127.0.0.1 6379
+Sep 19 13:09:26 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:09:26.105 * Sentinel new configuration saved on disk
+```
+
+:::
+
+::: code-group
+
+```shell [随后主节点哨兵日志每隔一段时间输出一下从节点的信息]
+Sep 19 13:09:59 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:09:59.300 * +fix-slave-config slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:09:59 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:09:59.426 * +fix-slave-config slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:16:06 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:16:06.441 * +fix-slave-config slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:16:07 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:16:07.000 * +fix-slave-config slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:22:09 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:22:09.623 * +fix-slave-config slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:22:09 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:22:09.623 * +fix-slave-config slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:28:11 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:28:11.819 * +fix-slave-config slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 127.0.0.1 6379
+Sep 19 13:28:12 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:28:12.875 * +fix-slave-config slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 127.0.0.1 6379
+
+... 省略
+
+```
+
+:::
+
+### 查看节点信息 {id=sentinel-info-replication}
+
+::: code-group
+
+```shell [查看主节点信息]
+[root@k8s-1 redis-7.2.5]# redis-cli 
+127.0.0.1:6379> INFO replication
+# Replication
+role:master
+connected_slaves:2
+slave0:ip=192.168.80.83,port=6379,state=online,offset=290842,lag=1
+slave1:ip=192.168.80.82,port=6379,state=online,offset=290842,lag=1
+master_failover_state:no-failover
+master_replid:1daf5bf2ec9b8b01bf375e28d139af75ba064c74
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:290842
+second_repl_offset:-1
+repl_backlog_active:1
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:1
+repl_backlog_histlen:290842
+127.0.0.1:6379> 
+```
+
+```shell [查看从节点信息]
+[root@k8s-2 redis-7.2.5]# redis-cli 
+127.0.0.1:6379> INFO replication
+# Replication
+role:slave
+master_host:192.168.80.81
+master_port:6379
+master_link_status:up
+master_last_io_seconds_ago:1
+master_sync_in_progress:0
+slave_read_repl_offset:294591
+slave_repl_offset:294591
+slave_priority:100
+slave_read_only:1
+replica_announced:1
+connected_slaves:0
+master_failover_state:no-failover
+master_replid:1daf5bf2ec9b8b01bf375e28d139af75ba064c74
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:294591
+second_repl_offset:-1
+repl_backlog_active:1
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:15
+repl_backlog_histlen:294577
+127.0.0.1:6379> 
+```
+
+```shell [查看从节点信息]
+[root@k8s-3 redis-7.2.5]# redis-cli 
+127.0.0.1:6379> INFO replication
+# Replication
+role:slave
+master_host:192.168.80.81
+master_port:6379
+master_link_status:up
+master_last_io_seconds_ago:0
+master_sync_in_progress:0
+slave_read_repl_offset:296968
+slave_repl_offset:296968
+slave_priority:100
+slave_read_only:1
+replica_announced:1
+connected_slaves:0
+master_failover_state:no-failover
+master_replid:1daf5bf2ec9b8b01bf375e28d139af75ba064c74
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:296968
+second_repl_offset:-1
+repl_backlog_active:1
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:15
+repl_backlog_histlen:296954
+127.0.0.1:6379> 
+```
+
+:::
+
+### Redis Sentinel 哨兵模式 故障转移 {id=sentinel-failover}
+
+1. 停止主节点，模拟故障
+
+   ```shell
+   [root@k8s-1 redis-7.2.5]# systemctl stop redis.service 
+   [root@k8s-1 redis-7.2.5]# systemctl status redis.service 
+   ● redis.service - redis
+   Loaded: loaded (/usr/lib/systemd/system/redis.service; enabled; vendor preset: disabled)
+   Active: inactive (dead) since Thu 2024-09-19 13:58:16 CST; 5min ago
+   Process: 1062 ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf (code=exited, status=0/SUCCESS)
+   Main PID: 1062 (code=exited, status=0/SUCCESS)
+   
+   Sep 19 13:57:40 k8s-1 redis-server[1062]: 1062:M 19 Sep 2024 13:57:40.433 * Connection with replica 192.168.80.82:6379 lost.
+   Sep 19 13:58:06 k8s-1 redis-server[1062]: 1062:M 19 Sep 2024 13:58:06.633 * Connection with replica 192.168.80.83:6379 lost.
+   Sep 19 13:58:16 k8s-1 redis-server[1062]: 1062:signal-handler (1726725496) Received SIGTERM scheduling shutdown...
+   Sep 19 13:58:16 k8s-1 systemd[1]: Stopping redis...
+   Sep 19 13:58:16 k8s-1 redis-server[1062]: 1062:M 19 Sep 2024 13:58:16.890 * User requested shutdown...
+   Sep 19 13:58:16 k8s-1 redis-server[1062]: 1062:M 19 Sep 2024 13:58:16.890 * Saving the final RDB snapshot before exiting.
+   Sep 19 13:58:16 k8s-1 redis-server[1062]: 1062:M 19 Sep 2024 13:58:16.893 * DB saved on disk
+   Sep 19 13:58:16 k8s-1 redis-server[1062]: 1062:M 19 Sep 2024 13:58:16.893 * Removing the pid file.
+   Sep 19 13:58:16 k8s-1 redis-server[1062]: 1062:M 19 Sep 2024 13:58:16.894 # Redis is now ready to exit, bye bye...
+   Sep 19 13:58:16 k8s-1 systemd[1]: Stopped redis.
+   [root@k8s-1 redis-7.2.5]#
+   ```
+
+2. 查看 Redis Sentinel 哨兵 日志
+
+   由日志内容可知，原始主节点 `192.168.80.81 6379` 故障，已投票将 `192.168.80.83 6379` 作为新的主节点
+
+   ::: code-group
+
+   ```shell [查看 192.168.80.81 节点 哨兵日志]
+   Sep 19 13:58:46 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:58:46.953 # +sdown master mymaster 127.0.0.1 6379
+   Sep 19 13:58:47 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:58:47.612 * Sentinel new configuration saved on disk
+   Sep 19 13:58:47 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:58:47.613 # +new-epoch 1
+   Sep 19 13:58:48 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:58:48.002 # +config-update-from sentinel c2ab7f6241f2328021858214b05f10cd5a4ad859 192.168.80.82 26379 @ mymaster 127.0.0.1 6379
+   Sep 19 13:58:48 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:58:48.002 # +switch-master mymaster 127.0.0.1 6379 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:58:48.003 * +slave slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:58:48.003 * +slave slave 127.0.0.1:6379 127.0.0.1 6379 @ mymaster 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:58:48.007 * Sentinel new configuration saved on disk
+   Sep 19 13:59:18 k8s-1 redis-sentinel[1734]: 1734:X 19 Sep 2024 13:59:18.060 # +sdown slave 127.0.0.1:6379 127.0.0.1 6379 @ mymaster 192.168.80.83 6379
+   ```
+
+   ```shell [查看 192.168.80.82 节点 哨兵日志]
+   Sep 19 13:58:46 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:46.993 # +sdown master mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.084 # +odown master mymaster 192.168.80.81 6379 #quorum 2/2
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.084 # +new-epoch 1
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.084 # +try-failover master mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.087 * Sentinel new configuration saved on disk
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.087 # +vote-for-leader c2ab7f6241f2328021858214b05f10cd5a4ad859 1
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.088 * c2ab7f6241f2328021858214b05f10cd5a4ad859 voted for c2ab7f6241f2328021858214b05f10cd5a4ad859 1
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.094 * 032386697444c3c8f2b300ce71bd7f376b75aa04 voted for c2ab7f6241f2328021858214b05f10cd5a4ad859 1
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.179 # +elected-leader master mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.179 # +failover-state-select-slave master mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.238 # +selected-slave slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.238 * +failover-state-send-slaveof-noone slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.315 * +failover-state-wait-promotion slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.980 * Sentinel new configuration saved on disk
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.980 # +promoted-slave slave 192.168.80.83:6379 192.168.80.83 6379 @ mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.980 # +failover-state-reconf-slaves master mymaster 192.168.80.81 6379
+   Sep 19 13:58:48 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.001 * +slave-reconf-sent slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 192.168.80.81 6379
+   Sep 19 13:58:48 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.635 * +slave-reconf-inprog slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 192.168.80.81 6379
+   Sep 19 13:58:48 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.635 * +slave-reconf-done slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 192.168.80.81 6379
+   Sep 19 13:58:48 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.698 # +failover-end master mymaster 192.168.80.81 6379
+   Sep 19 13:58:48 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.698 # +switch-master mymaster 192.168.80.81 6379 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.698 * +slave slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.698 * +slave slave 192.168.80.81:6379 192.168.80.81 6379 @ mymaster 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.702 * Sentinel new configuration saved on disk
+   Sep 19 13:59:18 k8s-2 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:59:18.752 # +sdown slave 192.168.80.81:6379 192.168.80.81 6379 @ mymaster 192.168.80.83 6379
+   ```
+
+   ```shell [查看 192.168.80.83 节点 哨兵日志]
+   Sep 19 13:58:47 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.049 # +sdown master mymaster 192.168.80.81 6379
+   Sep 19 13:58:47 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.091 * Sentinel new configuration saved on disk
+   Sep 19 13:58:47 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.091 # +new-epoch 1
+   Sep 19 13:58:47 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.093 * Sentinel new configuration saved on disk
+   Sep 19 13:58:47 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.093 # +vote-for-leader c2ab7f6241f2328021858214b05f10cd5a4ad859 1
+   Sep 19 13:58:47 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.108 # +odown master mymaster 192.168.80.81 6379 #quorum 3/2
+   Sep 19 13:58:47 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:47.108 * Next failover delay: I will not start a failover before Thu Sep 19 14:04:47 2024
+   Sep 19 13:58:48 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.002 # +config-update-from sentinel c2ab7f6241f2328021858214b05f10cd5a4ad859 192.168.80.82 26379 @ mymaster 192.168.80.81 6379
+   Sep 19 13:58:48 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.002 # +switch-master mymaster 192.168.80.81 6379 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.002 * +slave slave 192.168.80.82:6379 192.168.80.82 6379 @ mymaster 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.002 * +slave slave 192.168.80.81:6379 192.168.80.81 6379 @ mymaster 192.168.80.83 6379
+   Sep 19 13:58:48 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:58:48.007 * Sentinel new configuration saved on disk
+   Sep 19 13:59:18 k8s-3 redis-sentinel[1742]: 1742:X 19 Sep 2024 13:59:18.041 # +sdown slave 192.168.80.81:6379 192.168.80.81 6379 @ mymaster 192.168.80.83 6379
+   ```
+
+   :::
+
+3. 查看节点信息
+
+   由日志内容可知，原始主节点 `192.168.80.81 6379` 故障，已投票将 `192.168.80.83 6379` 作为新的主节点
+
+   ::: code-group
+
+   ```shell [查看 192.168.80.81 节点信息]
+   [root@k8s-1 redis-7.2.5]# redis-cli 
+   Could not connect to Redis at 127.0.0.1:6379: Connection refused
+   not connected> INFO replication
+   Could not connect to Redis at 127.0.0.1:6379: Connection refused
+   not connected> 
+   ```
+
+   ```shell [查看 192.168.80.82 节点信息]
+   [root@k8s-2 redis-7.2.5]# redis-cli 
+   127.0.0.1:6379> INFO replication
+   # Replication
+   role:slave
+   master_host:192.168.80.83
+   master_port:6379
+   master_link_status:up
+   master_last_io_seconds_ago:1
+   master_sync_in_progress:0
+   slave_read_repl_offset:753140
+   slave_repl_offset:753140
+   slave_priority:100
+   slave_read_only:1
+   replica_announced:1
+   connected_slaves:0
+   master_failover_state:no-failover
+   master_replid:cdc67aa8a83dc0e05f36d358645b6c8659ae7dff
+   master_replid2:1daf5bf2ec9b8b01bf375e28d139af75ba064c74
+   master_repl_offset:753140
+   second_repl_offset:611993
+   repl_backlog_active:1
+   repl_backlog_size:1048576
+   repl_backlog_first_byte_offset:474187
+   repl_backlog_histlen:278954
+   127.0.0.1:6379> 
+   ```
+
+   ```shell [查看 192.168.80.83 节点信息]
+   [root@k8s-3 redis-7.2.5]# redis-cli 
+   127.0.0.1:6379> INFO replication
+   # Replication
+   role:master
+   connected_slaves:1
+   slave0:ip=192.168.80.82,port=6379,state=online,offset=758244,lag=0
+   master_failover_state:no-failover
+   master_replid:cdc67aa8a83dc0e05f36d358645b6c8659ae7dff
+   master_replid2:1daf5bf2ec9b8b01bf375e28d139af75ba064c74
+   master_repl_offset:758526
+   second_repl_offset:617571
+   repl_backlog_active:1
+   repl_backlog_size:1048576
+   repl_backlog_first_byte_offset:471957
+   repl_backlog_histlen:286570
+   127.0.0.1:6379> 
+   ```
+
+   :::
+
+4. 节点 `192.168.80.81` 恢复正常后，自动加入集群，作为从节点使用
 
 ### Redis Sentinel 哨兵服务命令 {id=sentinel-service-command}
 
