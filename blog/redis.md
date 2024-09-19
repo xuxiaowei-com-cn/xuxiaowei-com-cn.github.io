@@ -73,20 +73,20 @@ redis-server --version
 ::: code-group
 
 ```shell [直接启动]
-[root@centos-8-5-1 ~]# redis-server 
-1591:C 18 Sep 2024 10:32:56.392 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-1591:C 18 Sep 2024 10:32:56.393 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-1591:C 18 Sep 2024 10:32:56.393 * Redis version=7.2.5, bits=64, commit=00000000, modified=0, pid=1591, just started
-1591:C 18 Sep 2024 10:32:56.393 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-1591:M 18 Sep 2024 10:32:56.395 * Increased maximum number of open files to 10032 (it was originally set to 1024).
-1591:M 18 Sep 2024 10:32:56.395 * monotonic clock: POSIX clock_gettime
+[root@k8s-1 ~]# redis-server 
+1623:C 19 Sep 2024 11:26:21.854 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1623:C 19 Sep 2024 11:26:21.855 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1623:C 19 Sep 2024 11:26:21.855 * Redis version=7.2.5, bits=64, commit=00000000, modified=0, pid=1623, just started
+1623:C 19 Sep 2024 11:26:21.855 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+1623:M 19 Sep 2024 11:26:21.856 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+1623:M 19 Sep 2024 11:26:21.856 * monotonic clock: POSIX clock_gettime
                 _._                                                  
            _.-``__ ''-._                                             
       _.-``    `.  `_.  ''-._           Redis 7.2.5 (00000000/0) 64 bit
   .-`` .-```.  ```\/    _.,_ ''-._                                  
  (    '      ,       .-`  | `,    )     Running in standalone mode
  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
- |    `-._   `._    /     _.-'    |     PID: 1591
+ |    `-._   `._    /     _.-'    |     PID: 1623
   `-._    `-._  `-./  _.-'    _.-'                                   
  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
  |    `-._`-._        _.-'_.-'    |           https://redis.io       
@@ -98,26 +98,26 @@ redis-server --version
           `-._        _.-'                                           
               `-.__.-'                                               
 
-1591:M 18 Sep 2024 10:32:56.397 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
-1591:M 18 Sep 2024 10:32:56.399 * Server initialized
-1591:M 18 Sep 2024 10:32:56.399 * Ready to accept connections tcp
+1623:M 19 Sep 2024 11:26:21.859 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1623:M 19 Sep 2024 11:26:21.862 * Server initialized
+1623:M 19 Sep 2024 11:26:21.862 * Ready to accept connections tcp
 ```
 
 ```shell [使用配置文件启动]
-[root@centos-8-5-1 redis-7.2.5]# redis-server redis.conf 
-1599:C 18 Sep 2024 10:35:02.561 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-1599:C 18 Sep 2024 10:35:02.561 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-1599:C 18 Sep 2024 10:35:02.561 * Redis version=7.2.5, bits=64, commit=00000000, modified=0, pid=1599, just started
-1599:C 18 Sep 2024 10:35:02.561 * Configuration loaded
-1599:M 18 Sep 2024 10:35:02.562 * Increased maximum number of open files to 10032 (it was originally set to 1024).
-1599:M 18 Sep 2024 10:35:02.562 * monotonic clock: POSIX clock_gettime
+[root@k8s-1 redis-7.2.5]# redis-server redis.conf 
+1674:C 19 Sep 2024 11:33:52.116 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1674:C 19 Sep 2024 11:33:52.116 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1674:C 19 Sep 2024 11:33:52.116 * Redis version=7.2.5, bits=64, commit=00000000, modified=0, pid=1674, just started
+1674:C 19 Sep 2024 11:33:52.116 * Configuration loaded
+1674:M 19 Sep 2024 11:33:52.117 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+1674:M 19 Sep 2024 11:33:52.117 * monotonic clock: POSIX clock_gettime
                 _._                                                  
            _.-``__ ''-._                                             
       _.-``    `.  `_.  ''-._           Redis 7.2.5 (00000000/0) 64 bit
   .-`` .-```.  ```\/    _.,_ ''-._                                  
  (    '      ,       .-`  | `,    )     Running in standalone mode
  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
- |    `-._   `._    /     _.-'    |     PID: 1599
+ |    `-._   `._    /     _.-'    |     PID: 1674
   `-._    `-._  `-./  _.-'    _.-'                                   
  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
  |    `-._`-._        _.-'_.-'    |           https://redis.io       
@@ -129,14 +129,14 @@ redis-server --version
           `-._        _.-'                                           
               `-.__.-'                                               
 
-1599:M 18 Sep 2024 10:35:02.563 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
-1599:M 18 Sep 2024 10:35:02.563 * Server initialized
-1599:M 18 Sep 2024 10:35:02.563 * Loading RDB produced by version 7.2.5
-1599:M 18 Sep 2024 10:35:02.563 * RDB age 3 seconds
-1599:M 18 Sep 2024 10:35:02.563 * RDB memory usage when created 0.91 Mb
-1599:M 18 Sep 2024 10:35:02.563 * Done loading RDB, keys loaded: 0, keys expired: 0.
-1599:M 18 Sep 2024 10:35:02.563 * DB loaded from disk: 0.000 seconds
-1599:M 18 Sep 2024 10:35:02.563 * Ready to accept connections tcp
+1674:M 19 Sep 2024 11:33:52.118 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1674:M 19 Sep 2024 11:33:52.118 * Server initialized
+1674:M 19 Sep 2024 11:33:52.118 * Loading RDB produced by version 7.2.5
+1674:M 19 Sep 2024 11:33:52.118 * RDB age 2 seconds
+1674:M 19 Sep 2024 11:33:52.118 * RDB memory usage when created 0.91 Mb
+1674:M 19 Sep 2024 11:33:52.118 * Done loading RDB, keys loaded: 1, keys expired: 0.
+1674:M 19 Sep 2024 11:33:52.119 * DB loaded from disk: 0.000 seconds
+1674:M 19 Sep 2024 11:33:52.119 * Ready to accept connections tcp
 ```
 
 :::
@@ -144,7 +144,7 @@ redis-server --version
 ### 本地连接 {id=source-redis-cli}
 
 ```shell
-[root@centos-8-5-1 redis-7.2.5]# redis-cli 
+[root@k8s-1 redis-7.2.5]# redis-cli 
 127.0.0.1:6379> set name xuxiaowei
 OK
 127.0.0.1:6379> get name
@@ -220,7 +220,7 @@ cat /etc/redis/redis.conf | grep requirepass
 
 ```shell [在本地 Redis 控制台内使用密码连接，推荐]
 # 其中 SmTbQcOV0mXm2XLW 为 Redis 密码
-[root@centos-8-5-1 redis-7.2.5]# redis-cli
+[root@k8s-1 redis-7.2.5]# redis-cli
 127.0.0.1:6379> AUTH SmTbQcOV0mXm2XLW
 OK
 127.0.0.1:6379> 
@@ -228,7 +228,7 @@ OK
 
 ```shell [在本地命令行中直接使用密码连接，不推荐]
 # 尽量不要在 Linux 命令行中直接输入密码
-[root@centos-8-5-1 redis-7.2.5]# redis-cli -a $REDIS_PASSWORD
+[root@k8s-1 redis-7.2.5]# redis-cli -a $REDIS_PASSWORD
 Warning: Using a password with '-a' or '-u' option on the command line interface may not be safe.
 127.0.0.1:6379> 
 ```
@@ -397,49 +397,49 @@ systemctl status redis.service --no-pager -l
 ::: code-group
 
 ```shell [查看主节点信息]
-[root@centos-8-5-1 redis-7.2.5]# redis-cli 
+[root@k8s-1 ~]# redis-cli
 127.0.0.1:6379> INFO replication
 # Replication
 role:master
 connected_slaves:1
-slave0:ip=192.168.80.82,port=6379,state=online,offset=168,lag=0
+slave0:ip=192.168.80.82,port=6379,state=online,offset=14,lag=1
 master_failover_state:no-failover
-master_replid:c1c6b45e2dcbfc44a08136ff43075b10f2d9ebf1
+master_replid:a3a92c41d793800c26dcbfcbbe1ca03d84df79bd
 master_replid2:0000000000000000000000000000000000000000
-master_repl_offset:168
+master_repl_offset:14
 second_repl_offset:-1
 repl_backlog_active:1
 repl_backlog_size:1048576
 repl_backlog_first_byte_offset:1
-repl_backlog_histlen:168
+repl_backlog_histlen:14
 127.0.0.1:6379> 
 ```
 
 ```shell [查看从节点信息]
-[root@centos-8-5-2 redis-7.2.5]# redis-cli
+[root@k8s-2 ~]# redis-cli 
 127.0.0.1:6379> INFO replication
 # Replication
 role:slave
 master_host:192.168.80.81
 master_port:6379
 master_link_status:up
-master_last_io_seconds_ago:3
+master_last_io_seconds_ago:1
 master_sync_in_progress:0
-slave_read_repl_offset:252
-slave_repl_offset:252
+slave_read_repl_offset:140
+slave_repl_offset:140
 slave_priority:100
 slave_read_only:1
 replica_announced:1
 connected_slaves:0
 master_failover_state:no-failover
-master_replid:c1c6b45e2dcbfc44a08136ff43075b10f2d9ebf1
+master_replid:a3a92c41d793800c26dcbfcbbe1ca03d84df79bd
 master_replid2:0000000000000000000000000000000000000000
-master_repl_offset:252
+master_repl_offset:140
 second_repl_offset:-1
 repl_backlog_active:1
 repl_backlog_size:1048576
-repl_backlog_first_byte_offset:1
-repl_backlog_histlen:252
+repl_backlog_first_byte_offset:15
+repl_backlog_histlen:126
 127.0.0.1:6379> 
 ```
 
