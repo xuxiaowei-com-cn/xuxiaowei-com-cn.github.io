@@ -5,6 +5,7 @@
 ::: warning 注意
 
 1. 本文涉及的内容过多，根据自己的需求选择阅读
+2. 由于本文不是一次性完成的，所以`日志的时间`可能并非按照文章的上下顺序展示，但并不影响阅读
 
 :::
 
@@ -397,50 +398,113 @@ systemctl status redis.service --no-pager -l
 ::: code-group
 
 ```shell [查看主节点信息]
-[root@k8s-1 ~]# redis-cli
+# 其中 master_replid:8ec839af716f0256eb084f57708a60fb41cd62bb 代表主节点的ID
+[root@k8s-1 ~]# redis-cli 
 127.0.0.1:6379> INFO replication
 # Replication
 role:master
 connected_slaves:1
-slave0:ip=192.168.80.82,port=6379,state=online,offset=14,lag=1
+slave0:ip=192.168.80.82,port=6379,state=online,offset=3542,lag=0
 master_failover_state:no-failover
-master_replid:a3a92c41d793800c26dcbfcbbe1ca03d84df79bd
+master_replid:8ec839af716f0256eb084f57708a60fb41cd62bb
 master_replid2:0000000000000000000000000000000000000000
-master_repl_offset:14
+master_repl_offset:3542
 second_repl_offset:-1
 repl_backlog_active:1
 repl_backlog_size:1048576
 repl_backlog_first_byte_offset:1
-repl_backlog_histlen:14
+repl_backlog_histlen:3542
 127.0.0.1:6379> 
 ```
 
 ```shell [查看从节点信息]
-[root@k8s-2 ~]# redis-cli 
+# 其中 master_replid:8ec839af716f0256eb084f57708a60fb41cd62bb 代表主节点的ID
+[root@k8s-2 ~]# redis-cli
 127.0.0.1:6379> INFO replication
 # Replication
 role:slave
 master_host:192.168.80.81
 master_port:6379
 master_link_status:up
-master_last_io_seconds_ago:1
+master_last_io_seconds_ago:9
 master_sync_in_progress:0
-slave_read_repl_offset:140
-slave_repl_offset:140
+slave_read_repl_offset:3598
+slave_repl_offset:3598
 slave_priority:100
 slave_read_only:1
 replica_announced:1
 connected_slaves:0
 master_failover_state:no-failover
-master_replid:a3a92c41d793800c26dcbfcbbe1ca03d84df79bd
+master_replid:8ec839af716f0256eb084f57708a60fb41cd62bb
 master_replid2:0000000000000000000000000000000000000000
-master_repl_offset:140
+master_repl_offset:3598
 second_repl_offset:-1
 repl_backlog_active:1
 repl_backlog_size:1048576
 repl_backlog_first_byte_offset:15
-repl_backlog_histlen:126
+repl_backlog_histlen:3584
 127.0.0.1:6379> 
+```
+
+:::
+
+### 查看日志 {id=replication-log}
+
+::: tip
+
+1. 在从节点增加主节点的配置后，分别在两个节点中执行 `journalctl -xefu redis` 查看两个节点中 Redis 的日志，
+   然后重启从节点，可以观察到双方的日志如下
+
+:::
+
+::: code-group
+
+```shell [主节点日志]
+# 其中 master_replid:8ec839af716f0256eb084f57708a60fb41cd62bb 代表主节点的ID
+Sep 19 11:52:11 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:11.097 * Replica 192.168.80.82:6379 asks for synchronization
+Sep 19 11:52:11 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:11.098 * Full resync requested by replica 192.168.80.82:6379
+Sep 19 11:52:11 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:11.098 * Replication backlog created, my new replication IDs are '8ec839af716f0256eb084f57708a60fb41cd62bb' and '0000000000000000000000000000000000000000'
+Sep 19 11:52:11 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:11.098 * Delay next BGSAVE for diskless SYNC
+Sep 19 11:52:16 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:16.550 * Starting BGSAVE for SYNC with target: replicas sockets
+Sep 19 11:52:16 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:16.553 * Background RDB transfer started by pid 1680
+Sep 19 11:52:16 k8s-1 redis-server[1063]: 1680:C 19 Sep 2024 11:52:16.556 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+Sep 19 11:52:16 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:16.557 * Diskless rdb transfer, done reading from pipe, 1 replicas still up.
+Sep 19 11:52:16 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:16.563 * Background RDB transfer terminated with success
+Sep 19 11:52:16 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:16.563 * Streamed RDB transfer with replica 192.168.80.82:6379 succeeded (socket). Waiting for REPLCONF ACK from replica to enable streaming
+Sep 19 11:52:16 k8s-1 redis-server[1063]: 1063:M 19 Sep 2024 11:52:16.563 * Synchronization with replica 192.168.80.82:6379 succeeded
+```
+
+```shell [从节点日志]
+# 其中 master_replid:8ec839af716f0256eb084f57708a60fb41cd62bb 代表主节点的ID
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:C 19 Sep 2024 11:52:11.078 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:C 19 Sep 2024 11:52:11.078 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:C 19 Sep 2024 11:52:11.078 * Redis version=7.2.5, bits=64, commit=00000000, modified=0, pid=1651, just started
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:C 19 Sep 2024 11:52:11.078 * Configuration loaded
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.079 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.079 * monotonic clock: POSIX clock_gettime
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.080 * Running mode=standalone, port=6379.
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.080 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * Server initialized
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * Loading RDB produced by version 7.2.5
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * RDB age 0 seconds
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * RDB memory usage when created 0.83 Mb
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * Done loading RDB, keys loaded: 0, keys expired: 0.
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * DB loaded from disk: 0.000 seconds
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * Ready to accept connections tcp
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * Connecting to MASTER 192.168.80.81:6379
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.081 * MASTER <-> REPLICA sync started
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.094 * Non blocking connect for SYNC fired the event.
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.096 * Master replied to PING, replication can continue...
+Sep 19 11:52:11 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:11.097 * Partial resynchronization not possible (no cached master)
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.552 * Full resync from master: 8ec839af716f0256eb084f57708a60fb41cd62bb:14
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.558 * MASTER <-> REPLICA sync: receiving streamed RDB from master with EOF to disk
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.559 * MASTER <-> REPLICA sync: Flushing old data
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.559 * MASTER <-> REPLICA sync: Loading DB in memory
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.562 * Loading RDB produced by version 7.2.5
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.562 * RDB age 0 seconds
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.562 * RDB memory usage when created 1.00 Mb
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.562 * Done loading RDB, keys loaded: 0, keys expired: 0.
+Sep 19 11:52:16 k8s-2 redis-server[1651]: 1651:S 19 Sep 2024 11:52:16.562 * MASTER <-> REPLICA sync: Finished with success
 ```
 
 :::
