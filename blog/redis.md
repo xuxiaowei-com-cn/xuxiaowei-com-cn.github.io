@@ -617,6 +617,12 @@ sed -i 's/sentinel monitor mymaster 127.0.0.1 6379 2/#&/' /etc/redis/sentinel.co
 # 192.168.80.81 代表主节点地址
 sed -i "1s/^/sentinel monitor mymaster 192.168.80.81 6379 2\n/" /etc/redis/sentinel.conf
 
+# Redis 存在密码，则需要在 哨兵中配置 Redis 的密码
+# 尽量不要在 Linux 命令行中直接输入密码
+# 实际配置请使用 vi、vim 等工具
+# 其中 SmTbQcOV0mXm2XLW 为 Redis 密码
+# sed -i '2s/^/sentinel auth-pass mymaster SmTbQcOV0mXm2XLW\n/' /etc/redis/sentinel.conf
+
 cat /etc/redis/sentinel.conf | grep 'sentinel monitor'
 ```
 
