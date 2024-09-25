@@ -10,7 +10,8 @@
 
 | 镜像                                                                | 说明                                                            |
 |-------------------------------------------------------------------|---------------------------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0      | 1.27.0 代表版本号，支持：386、amd64、arm、arm64、mips64le、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.1      | 1.27.1 代表版本号，支持：386、amd64、arm、arm64、mips64le、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0      |                                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.26.0      |                                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.25.0      |                                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.23.3      |                                                               |
