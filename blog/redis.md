@@ -563,11 +563,12 @@ sed -i '1s/^/slaveof 192.168.80.81 6379\n/' /etc/redis/redis.conf
 cat /etc/redis/redis.conf | grep slaveof
 ```
 
-### 从节点增加主节点的密码 {id=sentinel-add-masterauth}
+### 主节点、从节点增加节点的密码 {id=sentinel-add-masterauth}
 
 ::: warning 注意
 
-1. 主节点没有密码可忽略此步骤
+1. 每个节点密码保持一致
+2. 节点没有密码可忽略此步骤
 
 :::
 
@@ -622,6 +623,7 @@ sed -i "1s/^/sentinel monitor mymaster 192.168.80.81 6379 2\n/" /etc/redis/senti
 # 实际配置请使用 vi、vim 等工具
 # 其中 SmTbQcOV0mXm2XLW 为 Redis 密码
 # sed -i '2s/^/sentinel auth-pass mymaster SmTbQcOV0mXm2XLW\n/' /etc/redis/sentinel.conf
+# cat /etc/redis/sentinel.conf | grep 'sentinel auth-pass'
 
 cat /etc/redis/sentinel.conf | grep 'sentinel monitor'
 ```
