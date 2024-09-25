@@ -23,21 +23,21 @@
 sudo docker run \
   -itd \
   --restart always \
-  --name nginx-1.27.0 \
+  --name nginx-1.27.1 \
   -p 80:80 \
   -p 443:443 \
-  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.1
 ```
 
 ```shell [创建容器、挂载路径]
 sudo docker run \
   -itd \
   --restart always \
-  --name nginx-1.27.0 \
+  --name nginx-1.27.1 \
   -p 80:80 \
   -p 443:443 \
   -v /nginx/conf.d:/etc/nginx/conf.d \
-  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0
+  -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.1
 ```
 
 ```shell [默认 /etc/nginx/conf.d/default.conf]
