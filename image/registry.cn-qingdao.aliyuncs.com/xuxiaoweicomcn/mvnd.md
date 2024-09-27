@@ -11,6 +11,9 @@
 - mvnd 2.0.0-beta-1 使用了 Maven 4.0.0-beta-3，而 Maven 4.0.0-beta-3 仅支持 JDK 17+，
   参见：[Maven Releases History](https://maven.apache.org/docs/history.html)，故 2.x 只能提供 JDK 17、21，无法提供 JDK 8
 - 如果 package 中包含中文文件名的文件，可能存在打包异常，请执行 `LANG=C.UTF-8` 命令后再打包（PS. 查看字符命令 `locale`）
+- `multiple`
+    - 代表多 JDK 镜像，包含 JDK `8`/`11`/`17`/`21`，默认 `21`
+    - 基础镜像：https://gitee.com/xuxiaowei-com-cn/dragonwell
 
 | 镜像                                                                                     | 说明                              |
 |----------------------------------------------------------------------------------------|---------------------------------|
@@ -20,6 +23,7 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-11-anolis        | anolis 代表是阿里云的龙蜥系统，兼容 CentOS    |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-17-anolis        | dragonwell-17 代表使用的是阿里巴巴 JDK 17 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-21-anolis        |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-multiple-anolis-23          | 多 dragonwell JDK 镜像             |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-8-anolis         |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-11-anolis        |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.1-dragonwell-17-anolis        |                                 |
