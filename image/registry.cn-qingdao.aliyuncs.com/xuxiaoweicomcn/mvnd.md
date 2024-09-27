@@ -8,8 +8,9 @@
 - [docker hub 镜像](https://hub.docker.com/r/xuxiaoweicomcn/mvnd)
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/gitlab.com/xuxiaowei-com-cn/mvnd/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
-- mvnd 2.0.0-beta-1 使用了 Maven 4.0.0-beta-3，而 Maven 4.0.0-beta-3 仅支持 JDK 17+，
-  参见：[Maven Releases History](https://maven.apache.org/docs/history.html)，故 2.x 只能提供 JDK 17、21，无法提供 JDK 8
+- `mvnd 2.0.0-beta-1` 使用了 `maven 4.0.0-beta-3`，而 `maven 4.0.0-beta-3` 仅支持 JDK `17+`，
+  参见：[Maven Releases History](https://maven.apache.org/docs/history.html)，故 `mvnd 2.x` 只能提供 JDK `17`、`21`，
+  无法提供 JDK `8`
 - 如果 package 中包含中文文件名的文件，可能存在打包异常，请执行 `LANG=C.UTF-8` 命令后再打包（PS. 查看字符命令 `locale`）
 - `multiple`
     - 代表多 JDK 镜像，包含 JDK `8`/`11`/`17`/`21`，默认 `21`
