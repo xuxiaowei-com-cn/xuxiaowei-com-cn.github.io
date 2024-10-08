@@ -10,9 +10,18 @@
 
 | 镜像                                                                 | 说明                                             |
 |--------------------------------------------------------------------|------------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.0      | 27.2.0 代表版本号，支持：amd64、arm64 平台                 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.0-cli  | 27.2.0 代表版本号，支持：amd64、arm64 平台，提供 docker 命令行工具 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.0-dind | 27.2.0 代表版本号，支持：amd64、arm64 平台，提供 docker 服务    |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.3.1      | 27.2.0 代表版本号，支持：amd64、arm64 平台                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.3.1-cli  | 27.2.0 代表版本号，支持：amd64、arm64 平台，提供 docker 命令行工具 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.3.1-dind | 27.2.0 代表版本号，支持：amd64、arm64 平台，提供 docker 服务    |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.3.0      |                                                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.3.0-cli  |                                                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.3.0-dind |                                                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.1      |                                                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.1-cli  |                                                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.1-dind |                                                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.0      |                                                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.0-cli  |                                                |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.2.0-dind |                                                |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.1.2      |                                                |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.1.2-cli  |                                                |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/docker:27.1.2-dind |                                                |
