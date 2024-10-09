@@ -87,6 +87,7 @@ networks:
 
 | 镜像                                                                    | 说明                      |
 |-----------------------------------------------------------------------|-------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.480-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.479-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.478-jdk17   | Weekly                  |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/jenkins:2.477-jdk17   | Weekly                  |
