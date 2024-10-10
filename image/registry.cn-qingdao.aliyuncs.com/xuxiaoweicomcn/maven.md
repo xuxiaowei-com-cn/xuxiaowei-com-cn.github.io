@@ -84,6 +84,29 @@ find /software/apache-maven-repository -type d -name '*-SNAPSHOT' -print -exec r
 
 :::
 
+::: code-group
+
+```shell [上传 jar]
+# -Dfile：指定 文件位置
+# -DgroupId：指定 groupId
+# -DartifactId：指定 artifactId
+# -Dversion：指定 version
+# -Dpackaging：指定 文件类型，可选值：jar、war、pom、rar 等
+# -DrepositoryId：指定 仓库 ID（与 settings.xml 文件中 server id 相同）
+# -Durl：指定 仓库 URL
+# -Dclassifier：分类器，可选值：空、sources、javadoc 等
+mvn deploy:deploy-file \
+	-Dfile=/tmp/abc-0.0.1-SNAPSHOT.jar \
+	-DgroupId=cn.com.xuxiaowei \
+    -DartifactId=abc \
+    -Dversion=0.0.1-SNAPSHOT \
+    -Dpackaging=jar \
+    -DrepositoryId=rdc-snapshots \
+    -Durl=https://packages.aliyun.com/maven/repository/xuxiaowei-snapshot-Jltnfj/
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_maven table tr th:nth-child(1), 
