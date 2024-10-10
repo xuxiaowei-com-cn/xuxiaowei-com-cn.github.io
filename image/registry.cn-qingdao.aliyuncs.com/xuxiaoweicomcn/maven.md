@@ -91,10 +91,11 @@ find /software/apache-maven-repository -type d -name '*-SNAPSHOT' -print -exec r
 # -DgroupId：指定 groupId
 # -DartifactId：指定 artifactId
 # -Dversion：指定 version
-# -Dpackaging：指定 文件类型，可选值：jar、war、pom、rar 等
+# -Dpackaging：指定 文件类型，可选值：jar、war、pom、rar、jar.asc、pom.asc 等
 # -DrepositoryId：指定 仓库 ID（与 settings.xml 文件中 server id 相同）
 # -Durl：指定 仓库 URL
 # -Dclassifier：分类器，可选值：空、sources、javadoc 等
+# -DgeneratePom：是否生成 pom，可选值：true、false
 mvn deploy:deploy-file \
 	-Dfile=/tmp/abc-0.0.1-SNAPSHOT.jar \
 	-DgroupId=cn.com.xuxiaowei \
