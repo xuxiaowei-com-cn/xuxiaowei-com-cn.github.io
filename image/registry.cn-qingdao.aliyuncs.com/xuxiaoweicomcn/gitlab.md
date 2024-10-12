@@ -203,6 +203,17 @@ networks:
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.11.2-ce.0 |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.11.2-ee.0 |                       |
 
+::: code-group
+
+```shell [使用阿里云镜像]
+cat /etc/apt/sources.list
+sed -i "s#archive.ubuntu.com#mirrors.aliyun.com#" /etc/apt/sources.list
+cat /etc/apt/sources.list
+apt update
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_gitlab table tr th:nth-child(1), 
