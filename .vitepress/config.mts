@@ -129,6 +129,7 @@ export default defineConfig({
         collapsed: false,
         base: '/blog/',
         items: [
+          { link: '2FA', text: '2FA 双因子验证/双因素验证' },
           { link: 'ci-cd-env', text: '流水线环境变量' },
           { link: 'cidr', text: 'CIDR 无类别域间路由' },
           { link: 'docker', text: 'Docker' },
