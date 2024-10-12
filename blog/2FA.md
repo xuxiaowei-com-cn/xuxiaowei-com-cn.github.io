@@ -6,23 +6,24 @@
 
 ### 别名 {id=alias}
 
-1. 2FA
-2. 2 Factor Authentication
-3. Two Factor Authentication
-4. 双因子验证
-5. 双因素验证
+1. `MFA`：`Multi-Factor Authentication`
+2. `2FA`：`2 Factor Authentication`、`Two Factor Authentication`
+3. 双因子验证
+4. 双因素验证
 
 ### 说明 {id=explain}
 
 1. `2FA` 是一种安全密码验证方式。
 2. 区别于传统的密码验证，由于传统的密码验证是由一组静态信息组成，如：字符、图像、手势等，很容易被获取，相对不安全。
-3. `2FA` 是基于时间、历史长度、实物（信用卡、SMS手机、令牌、指纹）等自然变量结合一定的加密算法组合出一组动态密码，一般每 `60秒` 刷新一次。
+3. `2FA` 是基于时间、历史长度、实物（信用卡、SMS手机、令牌、指纹）等自然变量结合一定的加密算法组合出一组动态密码，一般每 `60秒`
+   刷新一次。
 4. 不容易被获取和破解，相对安全。
 
 ## 配置与使用 {id=config-use}
 
-- 本文以 GitLab 为例（注意：GitLab 默认未强制开启 2FA，演示的 GitLab 强制开启了 2FA 验证）
-- 本文以 `阿里云` APP 为例，其他支持的 2FA 雷同，如：微软 `Microsoft Authenticator` 等
+- 本文以 GitLab 为例（注意：GitLab 默认未强制开启 `2FA`，演示的 GitLab 强制开启了 `2FA` 验证）
+- 本文以 `阿里云` APP 为例，其他支持的 `2FA` 雷同，如：微软 `Microsoft Authenticator` 等
+- `阿里云账户` 也可以启用 `2FA`，启用 `2FA` 地址：https://account.console.aliyun.com/v2#/security-setting
 
 ### 配置 {id=config}
 
@@ -64,13 +65,19 @@
 
 10. `GitLab` 配置完成的效果
 
-   ![2FA-10.png](static/2FA-10.png)
+    ![2FA-10.png](static/2FA-10.png)
 
 ### 使用 {id=use}
 
 重新登录账户，会提示输入 2FA 的验证码
 
 ![2FA-11.png](static/2FA-11.png)
+
+## 其他 {id=other}
+
+### 阿里云账户启用 `2FA` 地址：https://account.console.aliyun.com/v2#/security-setting
+
+![2FA-12.png](static/2FA-12.png)
 
 <style>
 ._blog_2FA img {
