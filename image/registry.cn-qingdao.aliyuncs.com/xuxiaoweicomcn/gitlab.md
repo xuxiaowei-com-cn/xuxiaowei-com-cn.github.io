@@ -208,6 +208,7 @@ networks:
 ```shell [使用阿里云镜像]
 cat /etc/apt/sources.list
 sed -i "s#archive.ubuntu.com#mirrors.aliyun.com#" /etc/apt/sources.list
+sed -i "s#security.ubuntu.com#mirrors.aliyun.com#" /etc/apt/sources.list
 cat /etc/apt/sources.list
 apt update
 ```
