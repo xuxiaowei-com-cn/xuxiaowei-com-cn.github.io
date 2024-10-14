@@ -88,14 +88,23 @@ find /software/apache-maven-repository -type d -name '*-SNAPSHOT' -print -exec r
 
 ```shell [上传 jar]
 # -Dfile：指定 文件位置
+# -Dfiles：指定 多个文件位置，使用英文 逗号 分隔，要与 -Dclassifiers、-Dtypes 的 数量、顺序 一致
 # -DgroupId：指定 groupId
 # -DartifactId：指定 artifactId
 # -Dversion：指定 version
 # -Dpackaging：指定 文件类型，可选值：jar、war、pom、rar、jar.asc、pom.asc 等
 # -DrepositoryId：指定 仓库 ID（与 settings.xml 文件中 server id 相同）
 # -Durl：指定 仓库 URL
-# -Dclassifier：分类器，可选值：空、sources、javadoc 等
+# -Dclassifier：指定 分类器，可选值：空、sources、javadoc 等
+# -Dclassifiers：指定 多个分类器，使用英文 逗号 分隔，要与 -Dfiles、-Dtypes 的 数量、顺序 一致，可为空
+# -Dtypes：指定 多个文件后缀名，使用英文 逗号 分隔，要与 -Dclassifiers、-Dfiles 的 数量、顺序 一致
+# -DpomFile：指定 pom.xml 文件位置，如果配置了此属性，可忽略 -DgroupId、-DartifactId、-Dversion
 # -DgeneratePom：是否生成 pom，可选值：true、false
+#
+# 上传结果的文件名：
+# 1. 当仅配置了 -DartifactId、-Dversion、-Dpackaging 时：${artifactId}-${version}.${packaging}
+# 2. 不存在 classifiers 时：${artifactId}-${version}.${type}
+# 3. 存在 classifiers 时：${artifactId}-${version}-${classifier}.${type}
 mvn deploy:deploy-file \
 	-Dfile=/tmp/abc-0.0.1-SNAPSHOT.jar \
 	-DgroupId=cn.com.xuxiaowei \
