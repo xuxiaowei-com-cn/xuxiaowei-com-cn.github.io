@@ -106,6 +106,28 @@ mvn deploy:deploy-file \
     -Durl=https://packages.aliyun.com/maven/repository/xuxiaowei-snapshot-Jltnfj/
 ```
 
+```shell [一次上传多个文件]
+# 如果要上传的文件如下：
+# ├── pom.xml
+# └── target
+#     ├── SF-CSIM-EXPRESS-SDK-V2.1.7.jar
+#     ├── SF-CSIM-EXPRESS-SDK-V2.1.7.jar.asc
+#     ├── SF-CSIM-EXPRESS-SDK-V2.1.7-javadoc.jar
+#     ├── SF-CSIM-EXPRESS-SDK-V2.1.7-javadoc.jar.asc
+#     ├── SF-CSIM-EXPRESS-SDK-V2.1.7.pom
+#     ├── SF-CSIM-EXPRESS-SDK-V2.1.7.pom.asc
+#     ├── SF-CSIM-EXPRESS-SDK-V2.1.7-sources.jar
+#     └── SF-CSIM-EXPRESS-SDK-V2.1.7-sources.jar.asc
+mvn deploy:deploy-file \
+    -DpomFile=pom.xml \
+    -Dfile=target/SF-CSIM-EXPRESS-SDK-V2.1.7.jar \
+    -Dfiles=target/SF-CSIM-EXPRESS-SDK-V2.1.7.pom.asc,target/SF-CSIM-EXPRESS-SDK-V2.1.7.jar.asc,target/SF-CSIM-EXPRESS-SDK-V2.1.7-javadoc.jar,target/SF-CSIM-EXPRESS-SDK-V2.1.7-javadoc.jar.asc,target/SF-CSIM-EXPRESS-SDK-V2.1.7-sources.jar,target/SF-CSIM-EXPRESS-SDK-V2.1.7-sources.jar.asc \
+    -Dclassifiers=,,javadoc,javadoc,sources,sources \
+    -Dtypes=pom.asc,jar.asc,jar,jar.asc,jar,jar.asc \
+    -DrepositoryId=ossrh \
+    -Durl=https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
+```
+
 :::
 
 <style>
