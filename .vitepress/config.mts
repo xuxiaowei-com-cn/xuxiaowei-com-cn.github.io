@@ -161,6 +161,7 @@ export default defineConfig({
                 collapsed: false,
                 items: [
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/apache-kafka', text: 'apache/kafka' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/bitnami-git', text: 'bitnami/git' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/bitnami-kafka', text: 'bitnami/kafka' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/bitnami-kubectl', text: 'bitnami/kubectl' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-cni', text: 'calico/cni' },
