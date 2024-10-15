@@ -134,6 +134,7 @@ export default defineConfig({
           { link: 'cidr', text: 'CIDR 无类别域间路由' },
           { link: 'docker', text: 'Docker' },
           { link: 'firewalld', text: 'CentOS Firewalld 防火墙' },
+          { link: 'jdk', text: 'JDK' },
           { link: 'jdk-17', text: 'JDK 17' },
           { link: 'jdk-major', text: 'JDK 版本与字节码' },
           { link: 'k8s-releases', text: 'k8s 发布' },
