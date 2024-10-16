@@ -132,6 +132,7 @@ export default defineConfig({
           { link: '2FA', text: '2FA 双因子验证/双因素验证' },
           { link: 'ci-cd-env', text: '流水线环境变量' },
           { link: 'cidr', text: 'CIDR 无类别域间路由' },
+          { link: 'clamav', text: 'ClamAV® 一个开源的防病毒引擎' },
           { link: 'docker', text: 'Docker' },
           { link: 'firewalld', text: 'CentOS Firewalld 防火墙' },
           { link: 'jdk', text: 'JDK' },
