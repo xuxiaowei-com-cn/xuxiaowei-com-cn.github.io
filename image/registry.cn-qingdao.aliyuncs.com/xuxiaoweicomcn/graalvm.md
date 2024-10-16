@@ -10,6 +10,8 @@
 
 | 镜像                                                                        | 说明                   |
 |---------------------------------------------------------------------------|----------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:23.0.1-anolis-23  |                      |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:23.0.1-anolis-7.9 |                      |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:23.0.0-anolis-23  |                      |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:23.0.0-anolis-7.9 |                      |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/graalvm:22.0.2-anolis-23  | 22.0.2 代表 JDK 版本号    |
