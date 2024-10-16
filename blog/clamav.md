@@ -6,12 +6,15 @@
 
 ## 链接 {id=link}
 
-| 名称     | 网站                                    |
-|--------|---------------------------------------|
-| GitHub | https://github.com/Cisco-Talos/clamav |
-| 官网     | https://www.clamav.net/               |
-| 下载     | https://www.clamav.net/downloads      |
-| 文档     | https://docs.clamav.net/              |
+| 名称     | 网站                                                      |
+|--------|---------------------------------------------------------|
+| GitHub | https://github.com/Cisco-Talos/clamav                   |
+| 官网     | https://www.clamav.net/                                 |
+| 下载     | https://www.clamav.net/downloads                        |
+| 文档     | https://docs.clamav.net/                                |
+| 安装文档   | https://docs.clamav.net/manual/Installing.html          |
+| 配置文档   | https://docs.clamav.net/manual/Usage/Configuration.html |
+| 扫描文档   | https://docs.clamav.net/manual/Usage/Scanning.html      |
 
 ## 安装 {id=install}
 
@@ -43,7 +46,7 @@ sed -i '/^Example/s/^/#/' /usr/local/etc/clamd.conf
 sed -i '/^Example/s/^/#/' /usr/local/etc/freshclam.conf
 # 设置国内 病毒数据库地址
 sed -i '1i\DatabaseMirror db.cn.clamav.net' /usr/local/etc/freshclam.conf
-# 设置数据库所属用户
+# 设置 病毒数据库所属用户
 sed -i '1i\DatabaseOwner root' /usr/local/etc/freshclam.conf
 
 # 更新 病毒数据库
