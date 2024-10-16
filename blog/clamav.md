@@ -6,15 +6,16 @@
 
 ## 链接 {id=link}
 
-| 名称     | 网站                                                      |
-|--------|---------------------------------------------------------|
-| GitHub | https://github.com/Cisco-Talos/clamav                   |
-| 官网     | https://www.clamav.net/                                 |
-| 下载     | https://www.clamav.net/downloads                        |
-| 文档     | https://docs.clamav.net/                                |
-| 安装文档   | https://docs.clamav.net/manual/Installing.html          |
-| 配置文档   | https://docs.clamav.net/manual/Usage/Configuration.html |
-| 扫描文档   | https://docs.clamav.net/manual/Usage/Scanning.html      |
+| 名称        | 网站                                                      |
+|-----------|---------------------------------------------------------|
+| GitHub    | https://github.com/Cisco-Talos/clamav                   |
+| 官网        | https://www.clamav.net/                                 |
+| 下载        | https://www.clamav.net/downloads                        |
+| 文档        | https://docs.clamav.net/                                |
+| 安装文档      | https://docs.clamav.net/manual/Installing.html          |
+| 包（安装结果）文档 | https://docs.clamav.net/manual/Installing/Packages.html |
+| 配置文档      | https://docs.clamav.net/manual/Usage/Configuration.html |
+| 扫描文档      | https://docs.clamav.net/manual/Usage/Scanning.html      |
 
 ## 安装 {id=install}
 
