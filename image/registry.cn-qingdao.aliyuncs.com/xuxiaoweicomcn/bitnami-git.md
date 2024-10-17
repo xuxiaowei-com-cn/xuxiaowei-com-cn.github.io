@@ -21,6 +21,15 @@ git config --global http.sslVerify false
 
 :::
 
+::: code-group
+
+```shell [全局忽略文件夹]
+git config --global core.excludesfile ~/.gitignore_global
+echo "target/" >> ~/.gitignore_global
+```
+
+:::
+
 <style>
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_bitnami-git table tr th:nth-child(1), 
