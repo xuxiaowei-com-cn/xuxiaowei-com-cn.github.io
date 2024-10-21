@@ -195,6 +195,7 @@ export default defineConfig({
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kubernetes-website', text: 'kubernetes-website' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/logstash', text: 'logstash' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven', text: 'maven' },
+                  { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server', text: 'metrics-server' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/minio', text: 'minio/minio' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd', text: 'mvnd' },
                   { link: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql', text: 'mysql' },
