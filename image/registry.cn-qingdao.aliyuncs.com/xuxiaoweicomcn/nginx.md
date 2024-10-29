@@ -129,6 +129,7 @@ server {
 ```shell [使用阿里云镜像]
 cat /etc/apt/sources.list.d/debian.sources
 sed -i "s#deb.debian.org#mirrors.aliyun.com#" /etc/apt/sources.list.d/debian.sources
+sed -i "s#security.debian.org#mirrors.aliyun.com#" /etc/apt/sources.list.d/debian.sources
 cat /etc/apt/sources.list.d/debian.sources
 apt update
 ```

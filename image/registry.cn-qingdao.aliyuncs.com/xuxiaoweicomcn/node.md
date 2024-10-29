@@ -63,6 +63,7 @@ sudo docker run \
 ```shell [使用阿里云镜像]
 cat /etc/apt/sources.list
 sed -i "s#deb.debian.org#mirrors.aliyun.com#" /etc/apt/sources.list
+sed -i "s#security.debian.org#mirrors.aliyun.com#" /etc/apt/sources.list
 cat /etc/apt/sources.list
 apt update
 ```
