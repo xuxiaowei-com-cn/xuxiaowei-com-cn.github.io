@@ -130,10 +130,10 @@ services:
         ipv4_address: 172.26.13.2
 
   gitlab-runner:
-    # image: 'gitlab/gitlab-runner:v17.5.1'
-    # image: 'gitlab/gitlab-runner:alpine3.19-v17.5.1'
-    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.1'
-    # image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.1'
+    # image: 'gitlab/gitlab-runner:v17.5.3'
+    # image: 'gitlab/gitlab-runner:alpine3.19-v17.5.3'
+    image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.3'
+    # image: 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.3'
     volumes:
       - '$GITLAB_HOME/gitlab-runner/config:/etc/gitlab-runner'
       - '$GITLAB_HOME/config/ssl:/etc/gitlab-runner/certs'

@@ -10,6 +10,10 @@
 
 | 镜像                                                                                | 说明                                            |
 |-----------------------------------------------------------------------------------|-----------------------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.3             |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.3  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.2             |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.2  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.1             | v17.5.1 代表版本号，支持 s390x、ppc64le、arm64、amd64 平台 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.1  | alpine3.19 代表基于 alpine 3.19 镜像制作              |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.0             |                                               |
