@@ -8,9 +8,16 @@
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/github.com/redis/redis/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 
-| 镜像                                                          | 说明                                                           |
-|-------------------------------------------------------------|--------------------------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.4 | 7.2.4 代表版本号，支持：386、amd64、arm、arm64、mips64le、ppc64le、s390x 平台 |
+| 镜像                                                                    | 说明                                                           |
+|-----------------------------------------------------------------------|--------------------------------------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.4.0           | 7.2.4 代表版本号，支持：386、amd64、arm、arm64、mips64le、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.5-anolis-23 |                                                              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.5           |                                                              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.4           |                                                              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.0.15          |                                                              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:6.2.14          |                                                              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:6.0.20          |                                                              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:6.0.0           |                                                              |
 
 ::: code-group
 
@@ -46,7 +53,7 @@ sudo docker run \
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_redis table tr th:nth-child(1), 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_redis table tr td:nth-child(1) {
-    min-width: 430px;
+    min-width: 500px;
 }
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_redis table tr th:nth-child(2), 

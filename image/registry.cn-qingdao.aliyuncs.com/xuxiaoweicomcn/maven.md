@@ -12,12 +12,12 @@
 
 | 镜像                                                                            | 说明                                  |
 |-------------------------------------------------------------------------------|-------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-jdk-8             | 3.6.3 代表 Maven 版本号，jdk-8 代表 JDK 版本号 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-jdk-8-slim        |                                     |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17        |                                     |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17-slim   |                                     |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.9.8-amazoncorretto-17 |                                     |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.9.9-amazoncorretto-21 |                                     |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.9.8-amazoncorretto-17 |                                     |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17-slim   |                                     |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-openjdk-17        |                                     |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-jdk-8-slim        |                                     |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/maven:3.6.3-jdk-8             | 3.6.3 代表 Maven 版本号，jdk-8 代表 JDK 版本号 |
 
 ## 创建容器 {id=container}
 

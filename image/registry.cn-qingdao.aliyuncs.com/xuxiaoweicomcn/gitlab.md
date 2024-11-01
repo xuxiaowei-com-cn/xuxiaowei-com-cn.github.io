@@ -35,9 +35,9 @@
 #
 services:
   gitlab:
-    #image: 'gitlab/gitlab-ce:17.5.0'
-    #image: 'gitlab/gitlab-ee:17.5.0'
-    image: 'registry.gitlab.cn/omnibus/gitlab-jh:17.5.0'
+    #image: 'gitlab/gitlab-ce:17.5.1'
+    #image: 'gitlab/gitlab-ee:17.5.1'
+    image: 'registry.gitlab.cn/omnibus/gitlab-jh:17.5.1'
     restart: always
     # hostname: 'gitlab.xuxiaowei.cn'
     # 更新证书 并 启动 gitlab
@@ -176,42 +176,44 @@ networks:
 
 | 镜像                                                                  | 说明                    |
 |---------------------------------------------------------------------|-----------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.5.0-ce.0  | 17.5.0 代表版本号，ce 代表社区版 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.5.0-ee.0  | 17.5.0 代表版本号，ee 代表企业版 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.2-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.5.1-ee.0  | 17.5.1 代表版本号，ee 代表企业版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.5.1-ce.0  | 17.5.1 代表版本号，ce 代表社区版 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.5.0-ee.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.5.0-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.2-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.1-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.2-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.1-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.0-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.1-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.0-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.3-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.4.0-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.3-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.2-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.3-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.2-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.1-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.2-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.1-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.0-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.1-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.0-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.3.0-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.2-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.0-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.1-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.0-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.2-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.2.0-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.2-ee.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.2-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.1-ee.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.1-ce.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.1-ee.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.0-ee.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.0-ce.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.1.1-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.0.2-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.0.2-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.0.1-ce.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.0.2-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.0.1-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.2.4-ce.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.2.4-ee.0  |                       |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.11.2-ce.0 |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:17.0.1-ce.0  |                       |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.11.2-ee.0 |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.11.2-ce.0 |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.2.4-ee.0  |                       |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab:16.2.4-ce.0  |                       |
 
 ::: code-group
 

@@ -10,7 +10,8 @@
 
 | 镜像                                                           | 说明                            |
 |--------------------------------------------------------------|-------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql:8.1.0  | 8.1.0 代表版本号，支持：amd64、arm64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql:8.3.0  | 8.3.0 代表版本号，支持：amd64、arm64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql:8.1.0  |                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql:8.0.36 |                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mysql:5.7.44 |                               |
 

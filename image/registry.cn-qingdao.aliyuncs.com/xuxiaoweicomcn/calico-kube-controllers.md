@@ -13,10 +13,16 @@
 
 | 镜像                                                                              | 说明                                            |
 |---------------------------------------------------------------------------------|-----------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.27.3 | v3.27.3 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.29.0 | v3.29.0 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.28.2 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.28.1 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.28.0 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.27.4 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.27.3 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.27.2 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.27.1 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.27.0 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.26.5 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.26.4 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.26.3 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.26.2 |                                               |
@@ -27,6 +33,10 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.25.0 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.24.6 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.24.5 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.24.4 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.24.3 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.24.2 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.24.1 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.24.0 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.23.5 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-kube-controllers:v3.23.0 |                                               |

@@ -8,15 +8,22 @@
 - 同步镜像流水线：https://gitlab.xuxiaowei.com.cn/hub.docker.com/github.com/nginx/nginx/-/pipelines
 - 注意：仅提供以下版本，其他版本待更新，如需其他版本，请 [联系我](../../../guide/website.md)
 
-| 镜像                                                                | 说明                                                            |
-|-------------------------------------------------------------------|---------------------------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.2      | 1.27.2 代表版本号，支持：386、amd64、arm、arm64、mips64le、ppc64le、s390x 平台 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.1      |                                                               |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0      |                                                               |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.26.0      |                                                               |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.25.0      |                                                               |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.23.3      |                                                               |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.14-alpine |                                                               |
+| 镜像                                                                           | 说明                                                            |
+|------------------------------------------------------------------------------|---------------------------------------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.2                 | 1.27.2 代表版本号，支持：386、amd64、arm、arm64、mips64le、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.1                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.27.0                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.26.1                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.26.0                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.25.4                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.25.2-host.access.log |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.25.2                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.25.1                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.25.0                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.24.0                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.23.4                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.23.3                 |                                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nginx:1.14-alpine            |                                                               |
 
 ::: code-group
 
@@ -140,7 +147,7 @@ apt update
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nginx table tr th:nth-child(1), 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nginx table tr td:nth-child(1) {
-    min-width: 480px;
+    min-width: 555px;
 }
 
 ._image_registry_cn-qingdao_aliyuncs_com_xuxiaoweicomcn_nginx table tr th:nth-child(2), 

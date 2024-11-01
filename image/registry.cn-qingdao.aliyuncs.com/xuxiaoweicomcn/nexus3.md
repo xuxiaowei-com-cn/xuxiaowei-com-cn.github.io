@@ -46,6 +46,7 @@ services:
 
 | 镜像                                                            | 说明                                                                                                      |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.73.0 |                                                                                                         |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.71.0 | 3.71.0 代表版本号，[不兼容升级](https://help.sonatype.com/en/upgrading-to-nexus-repository-3-71-0-and-beyond.html) |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.70.1 | 3.70.1 代表版本号                                                                                            |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/nexus3:3.70.0 |                                                                                                         |
