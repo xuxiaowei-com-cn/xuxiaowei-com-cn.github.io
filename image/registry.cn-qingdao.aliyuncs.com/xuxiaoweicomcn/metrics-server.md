@@ -20,6 +20,15 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.6.2 |                                             |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.6.1 |                                             |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.6.0 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.5.2 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.5.1 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.5.0 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.4.5 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.4.4 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.4.3 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.4.2 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.4.1 |                                             |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/metrics-server:v0.4.0 |                                             |
 
 <style>
 
