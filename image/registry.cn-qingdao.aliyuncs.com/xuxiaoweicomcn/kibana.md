@@ -16,6 +16,7 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kibana:7.17.25 |                         |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kibana:7.17.22 |                         |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kibana:7.17.14 |                         |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kibana:7.5.0   |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kibana:7.2.0   |
 
 <style>
