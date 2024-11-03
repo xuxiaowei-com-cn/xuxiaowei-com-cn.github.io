@@ -14,6 +14,7 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/elasticsearch:8.14.2  |                         |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/elasticsearch:7.17.22 |                         |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/elasticsearch:7.17.14 |                         |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/elasticsearch:7.2.0   |                         |
 
 <style>
 
