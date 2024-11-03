@@ -10,11 +10,13 @@
 
 | 镜像                                                               | 说明                      |
 |------------------------------------------------------------------|-------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:8.14.3  | 代表版本号，支持：amd64、arm64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:8.15.3  | 代表版本号，支持：amd64、arm64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:8.14.3  |                         |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:8.14.2  |                         |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:7.17.25 |                         |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:7.17.22 |                         |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:7.17.14 |                         |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:7.2.0   |                         |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/filebeat:7.2.0   |
 
 <style>
 
