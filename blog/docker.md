@@ -351,6 +351,119 @@ sudo docker images
 
 :::
 
+### 二进制安装 Docker {id=binary-install-docker}
+
+1. 以下使用 `x86_64` 架构为例
+2. 以下使用 `27.3.1` 版本为例
+
+#### 安装必要软件 {id=install-requires}
+
+::: code-group
+
+```shell [Debian]
+sudo apt-get update
+sudo apt-get install -y iptables
+```
+
+:::
+
+#### 安装二进制 {id=install-binary}
+
+::: code-group
+
+```shell [腾讯源]
+curl -O https://mirrors.cloud.tencent.com/docker-ce/linux/static/stable/x86_64/docker-27.3.1.tgz
+tar xzvf docker-27.3.1.tgz
+sudo cp docker/* /usr/bin/
+```
+
+```shell [阿里源]
+curl -O https://mirrors.aliyun.com/docker-ce/linux/static/stable/x86_64/docker-27.3.1.tgz
+tar xzvf docker-27.3.1.tgz
+sudo cp docker/* /usr/bin/
+```
+
+```shell [华为源]
+curl -O https://mirrors.huaweicloud.com/docker-ce/linux/static/stable/x86_64/docker-27.3.1.tgz
+tar xzvf docker-27.3.1.tgz
+sudo cp docker/* /usr/bin/
+```
+
+```shell [官方源]
+curl -O https://download.docker.com/linux/static/stable/x86_64/docker-27.3.1.tgz
+tar xzvf docker-27.3.1.tgz
+sudo cp docker/* /usr/bin/
+```
+
+:::
+
+::: code-group
+
+```shell [创建 Linux Docker 服务]
+sudo tee /etc/systemd/system/docker.service <<EOF
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network-online.target firewalld.service time-set.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+# the default is not to use systemd for cgroups because the delegate issues still
+# exists and systemd currently does not support the cgroup feature set required
+# for containers run by docker
+ExecStart=/usr/bin/dockerd
+ExecReload=/bin/kill -s HUP \$MAINPID
+TimeoutStartSec=0
+RestartSec=2
+Restart=always
+
+# Note that StartLimit* options were moved from "Service" to "Unit" in systemd 229.
+# Both the old, and new location are accepted by systemd 229 and up, so using the old location
+# to make them work for either version of systemd.
+StartLimitBurst=3
+
+# Note that StartLimitInterval was renamed to StartLimitIntervalSec in systemd 230.
+# Both the old, and new name are accepted by systemd 230 and up, so using the old name to make
+# this option work for either version of systemd.
+StartLimitInterval=60s
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Comment TasksMax if your systemd version does not support it.
+# Only systemd 226 and above support this option.
+TasksMax=infinity
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+OOMScoreAdjust=-500
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+```
+
+:::
+
+::: code-group
+
+```shell [启动]
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo docker info
+sudo docker ps
+sudo docker images
+```
+
+:::
+
 ## Docker 命令 {id=command}
 
 - 执行 Docker 命令存在多种方式，如：本机执行、远程调用等
