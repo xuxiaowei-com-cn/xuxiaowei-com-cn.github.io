@@ -23,3 +23,75 @@ vim /etc/apt/apt.conf
 ```shell
 Acquire::ForceIPv4 "true";
 ```
+
+## Debian 切换源
+
+::: code-group
+
+```shell [阿里镜像]
+cp /etc/apt/sources.list /etc/apt/sources.list.$(date +"%Y%m%d%H%M%S")
+
+cat /etc/apt/sources.list
+sed -i "s#deb.debian.org#mirrors.aliyun.com#" /etc/apt/sources.list
+sed -i "s#security.debian.org#mirrors.aliyun.com#" /etc/apt/sources.list
+cat /etc/apt/sources.list
+apt update
+```
+
+```shell [腾讯镜像]
+cp /etc/apt/sources.list /etc/apt/sources.list.$(date +"%Y%m%d%H%M%S")
+
+cat /etc/apt/sources.list
+sed -i "s#deb.debian.org#mirrors.tencent.com#" /etc/apt/sources.list
+sed -i "s#security.debian.org#mirrors.tencent.com#" /etc/apt/sources.list
+cat /etc/apt/sources.list
+apt update
+```
+
+```shell [华为镜像]
+cp /etc/apt/sources.list /etc/apt/sources.list.$(date +"%Y%m%d%H%M%S")
+
+cat /etc/apt/sources.list
+sed -i "s#deb.debian.org#mirrors.huaweicloud.com#" /etc/apt/sources.list
+sed -i "s#security.debian.org#mirrors.huaweicloud.com#" /etc/apt/sources.list
+cat /etc/apt/sources.list
+apt update
+```
+
+:::
+
+## Ubuntu 切换源
+
+::: code-group
+
+```shell [阿里镜像]
+cp /etc/apt/sources.list /etc/apt/sources.list.$(date +"%Y%m%d%H%M%S")
+
+cat /etc/apt/sources.list
+sed -i "s#archive.ubuntu.com#mirrors.aliyun.com#" /etc/apt/sources.list
+sed -i "s#security.ubuntu.com#mirrors.aliyun.com#" /etc/apt/sources.list
+cat /etc/apt/sources.list
+apt update
+```
+
+```shell [腾讯镜像]
+cp /etc/apt/sources.list /etc/apt/sources.list.$(date +"%Y%m%d%H%M%S")
+
+cat /etc/apt/sources.list
+sed -i "s#archive.ubuntu.com#mirrors.tencent.com#" /etc/apt/sources.list
+sed -i "s#security.ubuntu.com#mirrors.tencent.com#" /etc/apt/sources.list
+cat /etc/apt/sources.list
+apt update
+```
+
+```shell [华为镜像]
+cp /etc/apt/sources.list /etc/apt/sources.list.$(date +"%Y%m%d%H%M%S")
+
+cat /etc/apt/sources.list
+sed -i "s#archive.ubuntu.com#mirrors.huaweicloud.com#" /etc/apt/sources.list
+sed -i "s#security.ubuntu.com#mirrors.huaweicloud.com#" /etc/apt/sources.list
+cat /etc/apt/sources.list
+apt update
+```
+
+:::
