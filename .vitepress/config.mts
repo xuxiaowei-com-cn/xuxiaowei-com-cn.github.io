@@ -140,6 +140,7 @@ export default defineConfig({
           { link: 'clamav', text: 'ClamAV® 一个开源的防病毒引擎' },
           { link: 'docker', text: 'Docker' },
           { link: 'firewalld', text: 'CentOS Firewalld 防火墙' },
+          { link: 'gitlab', text: 'GitLab' },
           { link: 'jdk', text: 'JDK' },
           { link: 'jdk-17', text: 'JDK 17' },
           { link: 'jdk-major', text: 'JDK 版本与字节码' },
