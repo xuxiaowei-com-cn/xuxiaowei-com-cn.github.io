@@ -146,6 +146,7 @@ export default defineConfig({
           { link: 'jdk-major', text: 'JDK 版本与字节码' },
           { link: 'k8s-releases', text: 'k8s 发布' },
           { link: 'ldd', text: 'ldd' },
+          { link: 'mirrors', text: '镜像' },
           { link: 'mvnd', text: '使用 mvnd 加快 Maven 项目构建速度' },
           { link: 'netsh', text: 'Windows Netsh 网络配置' },
           { link: 'npmrc', text: 'Node 配置文件' },
