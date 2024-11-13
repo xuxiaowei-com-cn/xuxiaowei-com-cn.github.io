@@ -109,7 +109,7 @@ Unattended-Upgrade::Allowed-Origins {
   
 }
 
-sudo systemctl stop unattended-upgrades
+sudo systemctl restart unattended-upgrades
 ```
 
 :::
@@ -117,7 +117,7 @@ sudo systemctl stop unattended-upgrades
 ::: code-group
 
 ```shell [停止 unattended-upgrades]
-sudo systemctl disable unattended-upgrades
+sudo systemctl stop unattended-upgrades
 ```
 
 :::
