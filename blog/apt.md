@@ -95,3 +95,37 @@ apt update
 ```
 
 :::
+
+## 关闭自动更新 {id=unattended-upgrades}
+
+::: code-group
+
+```shell [禁用指定更新]
+vim /etc/apt/apt.conf.d/50unattended-upgrades
+
+Unattended-Upgrade::Allowed-Origins {
+  
+  # 注释掉不想更新的软件
+  
+}
+
+sudo systemctl stop unattended-upgrades
+```
+
+:::
+
+::: code-group
+
+```shell [停止 unattended-upgrades]
+sudo systemctl disable unattended-upgrades
+```
+
+:::
+
+::: code-group
+
+```shell [关闭 unattended-upgrades 开机自启]
+sudo systemctl disable unattended-upgrades
+```
+
+:::
