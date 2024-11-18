@@ -8,6 +8,7 @@
 |--------------------------------------|------------|-------------------------------------------|
 | http://mirror.kaiyuanshe.cn          | 开源社        |                                           |
 | https://mirror.bjtu.edu.cn           | 北京交通大学     |                                           |
+| https://mirror.iscas.ac.cn           | 中国科学院软件研究所 |                                           |
 | https://mirror.lzu.edu.cn            | 兰州大学       |                                           |
 | https://mirror.sjtu.edu.cn           | 上海交通大学     |                                           |
 | https://mirror.umd.edu/              | 马里兰大学      |                                           |
