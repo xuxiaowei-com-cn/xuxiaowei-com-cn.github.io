@@ -139,6 +139,7 @@ export default defineConfig({
           { link: 'cidr', text: 'CIDR 无类别域间路由' },
           { link: 'clamav', text: 'ClamAV® 一个开源的防病毒引擎' },
           { link: 'docker', text: 'Docker' },
+          { link: 'container-time-zone', text: 'Docker 容器时区' },
           { link: 'firewalld', text: 'CentOS Firewalld 防火墙' },
           { link: 'gitlab', text: 'GitLab' },
           { link: 'jdk', text: 'JDK' },
