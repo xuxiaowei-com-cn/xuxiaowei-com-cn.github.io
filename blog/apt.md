@@ -129,3 +129,19 @@ sudo systemctl disable unattended-upgrades
 ```
 
 :::
+
+## 允许 Root 用户远程连接 {id=PermitRootLogin}
+
+在 `/etc/ssh/sshd_config` 文件中，将 `PermitRootLogin` 参数的值改为 `yes`，然后重启 SSH 服务。
+
+```shell
+vim /etc/ssh/sshd_config
+```
+
+```shell
+PermitRootLogin yes
+```
+
+```shell
+sudo systemctl restart ssh
+```
