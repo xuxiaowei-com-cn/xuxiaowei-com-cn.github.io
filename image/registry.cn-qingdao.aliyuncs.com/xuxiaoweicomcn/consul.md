@@ -10,9 +10,9 @@
 
 | 镜像                                                            | 说明                                     |
 |---------------------------------------------------------------|----------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.20.2 |                                        |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.20.1 |                                        |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.2 | 1.19.2 代表版本号，支持：386、amd64、arm、arm64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.20.1 | 1.20.1 代表版本号，支持：386、amd64、arm、arm64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.20.0 |                                        |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.2 |                                        |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.1 |                                        |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.19.0 |                                        |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/consul:1.18.2 |                                        |

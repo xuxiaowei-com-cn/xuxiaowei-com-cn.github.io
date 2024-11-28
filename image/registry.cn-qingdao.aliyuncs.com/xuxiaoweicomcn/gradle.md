@@ -10,10 +10,10 @@
 
 | 镜像                                                                 | 说明                                              |
 |--------------------------------------------------------------------|-------------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle/8.8.0-jdk8  | 8.8.0 代表版本号，支持：amd64、arm、arm64、ppc64le、s390x 平台 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle/8.8.0-jdk17 |                                                 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle/8.0.2-jdk8  |                                                 |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle/8.0.2-jdk17 |                                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle:8.8.0-jdk8  | 8.8.0 代表版本号，支持：amd64、arm、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle:8.8.0-jdk17 |                                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle:8.0.2-jdk8  |                                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gradle:8.0.2-jdk17 |                                                 |
 
 ::: code-group
 

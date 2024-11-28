@@ -13,7 +13,8 @@
 
 | 镜像                                                                  | 说明                                            |
 |---------------------------------------------------------------------|-----------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.29.0 | v3.29.0 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.29.1 | v3.29.1 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.29.0 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.28.2 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.28.1 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.28.0 |                                               |

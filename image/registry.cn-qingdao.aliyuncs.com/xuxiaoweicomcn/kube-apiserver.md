@@ -12,12 +12,19 @@
 
 | 镜像                                                                      | 说明                                            |
 |-------------------------------------------------------------------------|-----------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.31.2  | v1.31.2 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.31.3  | v1.31.3 代表版本号，支持：amd64、arm64、ppc64le、s390x 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.31.2  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.31.1  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.31.0  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.30.7  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.30.6  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.30.5  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.30.4  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.30.3  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.30.2  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.30.1  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.30.0  |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.29.11 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.29.10 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.29.9  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/kube-apiserver:v1.29.8  |                                               |
