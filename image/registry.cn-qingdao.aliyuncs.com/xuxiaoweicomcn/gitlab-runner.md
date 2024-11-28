@@ -10,7 +10,8 @@
 
 | 镜像                                                                                | 说明                                            |
 |-----------------------------------------------------------------------------------|-----------------------------------------------|
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.3             | v17.5.3 代表版本号，支持 s390x、ppc64le、arm64、amd64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.6.0             | v17.6.0 代表版本号，支持 s390x、ppc64le、arm64、amd64 平台 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.3             |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.2             |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.1             |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.5.0             |                                               |
@@ -22,7 +23,8 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v17.0.0             |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v16.11.1            |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:v16.0.3             |                                               |
-| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.3  | alpine3.19 代表基于 alpine 3.19 镜像制作              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.6.0  | alpine3.19 代表基于 alpine 3.19 镜像制作              |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.3  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.2  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.1  |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/gitlab-runner:alpine3.19-v17.5.0  |                                               |
