@@ -18,6 +18,7 @@
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.28.2 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.28.1 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.28.0 |                                               |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.27.5 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.27.4 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.27.3 |                                               |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/calico-node:v3.27.2 |                                               |
