@@ -28,7 +28,7 @@
 
 ::: warning 警告
 
-1. `CentOS` `7` 的安装源中，截止 `2024-12-04` 只能下载到 `OpenSSL` `1.0.2k-fips`
+1. `CentOS` `7.9.2009` 的安装源中，截止 `2024-12-04` 只能下载到 `OpenSSL` `1.0.2k-fips`
 2. `OpenSSH` `V_9_3_P2` 以后的版本（不包含）所需 `OpenSSL` 最低要求 `1.1.1`
 3. 如果要安装 `OpenSSH` `V_9_3_P2` 以后的版本（不包含），可根据 [openssl.md](openssl.md) 安装 `OpenSSL` `1.1.1w`
     - 注意：`CentOS` `7.9.2009` 不支持 `OpenSSH` `V_9_9_P1` 及之后的版本

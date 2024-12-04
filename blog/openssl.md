@@ -15,6 +15,12 @@
 
 ### 说明 {id=centos-openssl-install-1.1.1w-desc}
 
+::: warning 警告
+
+1. `CentOS` `7.9.2009` 的安装源中，截止 `2024-12-04` 只能下载到 `OpenSSL` `1.0.2k-fips`
+
+:::
+
 - 源码文档
     - [GitHub: INSTALL](https://github.com/openssl/openssl/blob/OpenSSL_1_1_1w/INSTALL#L80)
 - 根据仓库源码中的文档可知，需要使用以下命令才能安装
