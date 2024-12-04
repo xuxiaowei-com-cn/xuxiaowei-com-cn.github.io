@@ -151,6 +151,7 @@ export default defineConfig({
           { link: 'mvnd', text: '使用 mvnd 加快 Maven 项目构建速度' },
           { link: 'netsh', text: 'Windows Netsh 网络配置' },
           { link: 'npmrc', text: 'Node 配置文件' },
+          { link: 'openssh', text: '源码安装 OpenSSH' },
           { link: 'pr-mr', text: '合并请求 PR/MR' },
           { link: 'redis', text: 'Redis' },
           { link: 'route', text: '路由表 route' },
