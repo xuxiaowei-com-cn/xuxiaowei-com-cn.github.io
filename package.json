@@ -23,7 +23,7 @@
     "vitepress"
   ],
   "devDependencies": {
-    "axios": "1.7.7",
+    "axios": "1.7.9",
     "semver": "7.6.3",
     "socks-proxy-agent": "8.0.4",
     "vitepress": "1.5.0"
