@@ -13,20 +13,27 @@
 
 - 原则上仅安装必要的软件（最小化安装所需软件，对系统影响最小）
 - 源码文档
-    - [GitHub](https://github.com/openssh/openssh-portable?#building-from-git)
-    - [作者自建 GitLab](https://gitlab.xuxiaowei.com.cn/mirrors/github.com/openssh/openssh-portable#building-from-git)
+    - [GitHub: building-from-git](https://github.com/openssh/openssh-portable?#building-from-git)
+    - [作者自建 GitLab: building-from-git](https://gitlab.xuxiaowei.com.cn/mirrors/github.com/openssh/openssh-portable#building-from-git)
 - 根据仓库源码中的文档可知，需要使用以下命令才能安装
-  ```shell
-  autoreconf
-  ./configure
-  make && make install
-  ```
+    ```shell
+    autoreconf
+    ./configure
+    make && make install
+    ```
 
 ## CentOS 系列编译安装 {id=centos-openssh-build}
 
-- 本示例以 `CentOS` `7`、`OpenSSH` `V_9_3_P2` 为例
-    - `CentOS` `7` 的安装源中，截止 `2024-12-04` 只能下载到 `OpenSSL` `1.0.2k-fips`
-    - `OpenSSH` `V_9_3_P2` 以后的版本所需 `OpenSSL` 最低要求 `1.1.1`
+- 本示例以 `CentOS` `7.9.2009`、`OpenSSH` `V_9_3_P2` 为例
+
+::: warning 警告
+
+1. `CentOS` `7` 的安装源中，截止 `2024-12-04` 只能下载到 `OpenSSL` `1.0.2k-fips`
+2. `OpenSSH` `V_9_3_P2` 以后的版本（不包含）所需 `OpenSSL` 最低要求 `1.1.1`
+3. 如果要安装 `OpenSSH` `V_9_3_P2` 以后的版本（不包含），可根据 [openssl.md](openssl.md) 安装 `OpenSSL` `1.1.1w`
+    - 注意：`CentOS` `7.9.2009` 不支持 `OpenSSH` `V_9_9_P1` 及之后的版本
+
+:::
 
 ### 下载源码 {id=centos-openssh-build-download}
 

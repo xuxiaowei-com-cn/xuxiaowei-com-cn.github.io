@@ -152,6 +152,7 @@ export default defineConfig({
           { link: 'netsh', text: 'Windows Netsh 网络配置' },
           { link: 'npmrc', text: 'Node 配置文件' },
           { link: 'openssh', text: '源码安装 OpenSSH' },
+          { link: 'openssl', text: '源码安装 OpenSSL' },
           { link: 'pr-mr', text: '合并请求 PR/MR' },
           { link: 'redis', text: 'Redis' },
           { link: 'route', text: '路由表 route' },
