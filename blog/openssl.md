@@ -5,7 +5,7 @@
 ## 源码仓库 {id=openssl-repo}
 
 - [GitHub](https://github.com/openssl/openssl)
-    - [下载地址](https://github.com/openssl/openssl/tags)
+    - [下载地址](https://github.com/openssl/openssl/releases)
 
 ## 说明 {id=openssl-desc}
 
@@ -26,7 +26,7 @@
 :::
 
 - 源码文档
-    - [GitHub: INSTALL](https://github.com/openssl/openssl/blob/OpenSSL_1_1_1w/INSTALL#L80)
+    - [GitHub: OpenSSL_1_1_1w INSTALL](https://github.com/openssl/openssl/blob/OpenSSL_1_1_1w/INSTALL#L80)
 - 根据仓库源码中的文档可知，需要使用以下命令才能安装
     ```shell
     ./config
@@ -176,7 +176,7 @@ OpenSSL 1.1.1w  11 Sep 2023
 :::
 
 - 源码文档
-    - [GitHub: INSTALL](https://github.com/openssl/openssl/blob/openssl-3.4.0/INSTALL.md#building-openssl)
+    - [GitHub: 3.4.0 INSTALL](https://github.com/openssl/openssl/blob/openssl-3.4.0/INSTALL.md#building-openssl)
 - 根据仓库源码中的文档可知，需要使用以下命令才能安装
     ```shell
     ./Configure
