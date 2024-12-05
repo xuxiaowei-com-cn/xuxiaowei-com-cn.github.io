@@ -6,6 +6,8 @@
 
 - [GitHub](https://github.com/openssl/openssl)
     - [下载地址](https://github.com/openssl/openssl/releases)
+- [作者云盘](https://xuxiaowei-my.sharepoint.com/:f:/g/personal/share_xuxiaowei_com_cn/EiBVhzqKnSdLpR42bKUXVUABzwfjjWcrl2EM25WlEgUOrQ)
+    - 在文件夹 `openssl/openssl/releases/download` 中找到自己需要的版本
 
 ## 说明 {id=openssl-desc}
 
