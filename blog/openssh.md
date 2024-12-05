@@ -11,7 +11,12 @@
 
 ## 说明 {id=openssh-desc}
 
-- 原则上仅安装必要的软件（最小化安装所需软件，对系统影响最小）
+::: warning 警告
+
+1. 原则上 `仅安装必要的软件`（`最小化安装所需软件`，`对系统影响最小`）
+
+:::
+
 - 源码文档
     - [GitHub: building-from-git](https://github.com/openssh/openssh-portable?#building-from-git)
     - [作者自建 GitLab: building-from-git](https://gitlab.xuxiaowei.com.cn/mirrors/github.com/openssh/openssh-portable#building-from-git)
