@@ -37,6 +37,7 @@
 2. `OpenSSH` `V_9_3_P2` 以后的版本（不包含）所需 `OpenSSL` 最低要求 `1.1.1`
 3. 如果要安装 `OpenSSH` `V_9_3_P2` 以后的版本（不包含），可根据 [openssl.md](openssl.md) 安装 `OpenSSL` `1.1.1w`
     - 注意：`CentOS` `7.9.2009` 不支持 `OpenSSH` `V_9_9_P1` 及之后的版本
+    - 注意：`CentOS` `8.0.1905` 支持 `OpenSSH` `V_9_9_P1`
 
 :::
 
@@ -186,12 +187,34 @@ yum -y install openssl-devel
 
 :::
 
+### 可选安装 make {id=centos-openssh-build-install-make}
+
+::: code-group
+
+```shell [执行 make 时报错] 
+[root@centos7-9 openssh-portable-V_9_3_P2]# make
+-bash: make: command not found
+[root@centos7-9 openssh-portable-V_9_3_P2]# 
+```
+
+:::
+
+::: code-group
+
+```shell [安装 make 命令所需依赖]
+yum -y install make
+
+# 安装完成，即可正常执行 make 命令
+```
+
+:::
+
 ### 完整安装命令 {id=centos-openssh-build-full}
 
 ::: code-group
 
 ```shell [不包含测试：耗时短]
-yum -y install autoconf automake gcc zlib-devel openssl-devel
+yum -y install autoconf automake gcc zlib-devel openssl-devel make
 autoreconf
 ./configure
 make && make install
@@ -200,7 +223,7 @@ ssh -V
 ```
 
 ```shell [包含测试：耗时长]
-yum -y install autoconf automake gcc zlib-devel openssl-devel
+yum -y install autoconf automake gcc zlib-devel openssl-devel make
 autoreconf
 ./configure
 make && make tests && make install

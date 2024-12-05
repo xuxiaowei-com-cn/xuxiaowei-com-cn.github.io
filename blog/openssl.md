@@ -95,6 +95,28 @@ yum -y install perl
 
 :::
 
+### 可选安装 make {id=centos-openssl-build-1.1.1w-install-make}
+
+::: code-group
+
+```shell [执行 make 时报错] 
+[root@centos7-9 openssl-1.1.1w]# make
+-bash: make: command not found
+[root@centos7-9 openssl-1.1.1w]# 
+```
+
+:::
+
+::: code-group
+
+```shell [安装 make 命令所需依赖]
+yum -y install make
+
+# 安装完成，即可正常执行 make 命令
+```
+
+:::
+
 ### 可选安装 gcc {id=centos-openssl-build-1.1.1w-install-gcc}
 
 ::: code-group
@@ -128,7 +150,7 @@ yum -y install gcc
 ::: code-group
 
 ```shell
-yum -y install perl gcc
+yum -y install perl make gcc
 ./config
 make && make install
 openssl version
@@ -298,6 +320,28 @@ yum -y install gcc
 
 :::
 
+### 可选安装 make {id=centos-openssl-build-3.4.0-install-make}
+
+::: code-group
+
+```shell [执行 make 时报错] 
+[root@centos7-9 openssl-3.4.0]# make
+-bash: make: command not found
+[root@centos7-9 openssl-3.4.0]# 
+```
+
+:::
+
+::: code-group
+
+```shell [安装 make 命令所需依赖]
+yum -y install make
+
+# 安装完成，即可正常执行 make 命令
+```
+
+:::
+
 ### 可选安装 perl-Data-Dumper {id=centos-openssl-build-3.4.0-install-perl-Data-Dumper}
 
 ::: code-group
@@ -343,7 +387,7 @@ yum -y install perl-Data-Dumper
 ::: code-group
 
 ```shell
-yum -y install perl perl-IPC-Cmd perl-Data-Dumper gcc
+yum -y install perl perl-IPC-Cmd perl-Data-Dumper make gcc
 make && make install
 openssl version
 ```
