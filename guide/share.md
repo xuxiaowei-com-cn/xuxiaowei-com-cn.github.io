@@ -17,7 +17,7 @@
 ## Windows 软件 exe {id=exe}
 
 - 链接:
-  https://xuxiaowei-my.sharepoint.com/:f:/g/personal/share_xuxiaowei_com_cn/EglFpQYeG4hJnhrHycAbmLkBZ0KQ_ByX4UnkH1zIsHVg5Q?e=xN2tlR
+  https://xuxiaowei-my.sharepoint.com/:f:/g/personal/share_xuxiaowei_com_cn/EglFpQYeG4hJnhrHycAbmLkBZ0KQ_ByX4UnkH1zIsHVg5Q
 
 ## github.com 项目发布文件下载 {id=github.com-releases-download}
 
@@ -44,12 +44,17 @@
 - registry.k8s.io/kube-scheduler
 - registry.k8s.io/pause
 
-## Kubernetes 作者编译的二进制可执行文件 {id=kubernetes-binary-executable-file}
+## Kubernetes 官方二进制可执行文件 {id=kubernetes-official-binary-executable-file}
+
+- 链接:
+  https://xuxiaowei-my.sharepoint.com/:f:/g/personal/share_xuxiaowei_com_cn/EtfIsbIxrANBshWdgjHHragB_--HY6_krtR_vGfC_ITpRQ
+
+## Kubernetes 作者编译的二进制可执行文件 {id=kubernetes-xuxiaowei-binary-executable-file}
 
 - 链接:
   https://xuxiaowei-my.sharepoint.com/:f:/g/personal/share_xuxiaowei_com_cn/EvcUl0DY4f1Km86NLrmuI3cB2yEbSaEgH9f1sgy3rHVrwQ
 
-### 作者编译的二进制可执行文件包含内容 {id=kubernetes-binary-executable-file-content}
+### 作者编译的二进制可执行文件包含内容 {id=kubernetes-xuxiaowei-binary-executable-file-content}
 
 - kubeadm-100-year: 仅修改 `kubeadm` 程序关于 `证书有效期` 的代码，
   源码 https://gitee.com/xuxiaowei-com-cn/kubernetes-binary
