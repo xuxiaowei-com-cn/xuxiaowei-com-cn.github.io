@@ -15,6 +15,9 @@ const list = async function (image, config = {}) {
 }
 
 async function main() {
+
+    let sum = new Set()
+
     const images = [// 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/apache-kafka',
         // 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/bitnami-git',
         // 'registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/bitnami-kafka',
@@ -75,6 +78,7 @@ async function main() {
         tmp.reverse()
         for (const tag of tmp) {
             console.log(`| ${tag} | |`)
+            sum.add(tag)
         }
 
         console.log()
@@ -82,6 +86,7 @@ async function main() {
         console.log()
     }
 
+    console.log(sum.size)
 }
 
 main()
