@@ -115,6 +115,7 @@ export default defineConfig({
         items: [
           { text: '个人简介', link: '/guide/intro' },
           { text: '个人网址', link: '/guide/website' },
+          { text: '共享文件', link: '/guide/share' },
           // 由于此处链接使用了其他域名，所以上方不能使用基础地址
           { text: '赞助', link: 'https://docs.xuxiaowei.cloud/spring-cloud-xuxiaowei/guide/contributes.html' },
           { text: '视频', link: 'https://docs.xuxiaowei.cloud/spring-cloud-xuxiaowei/guide/video.html' },

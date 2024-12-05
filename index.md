@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: 个人项目
       link: /project/personal
+    - theme: alt
+      text: 共享文件
+      link: /guide/share
 
 features:
   - title: Java
