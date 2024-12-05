@@ -27,6 +27,7 @@
 ### 产物镜像包含内容 {id=products-image-content}
 
 - github.com/openssl/openssl
+- github.com/etcd-io/etcd
 
 ## Docker 离线镜像 {id=docker-offline-image}
 
