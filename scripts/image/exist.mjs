@@ -71,6 +71,7 @@ async function main() {
         const tmp = []
         for (const tag of result.tags) {
             if (tag.endsWith('-386') || tag.endsWith('-arm') || tag.endsWith('-arm64') || tag.endsWith('-amd64') || tag.endsWith('-mips64le') || tag.endsWith('-ppc64le') || tag.endsWith('-s390x') || tag.endsWith('-ubi') || tag.endsWith('-alpine')) {
+                sum.add(tag)
                 continue
             }
             tmp.push(`${image}:${tag}`)
