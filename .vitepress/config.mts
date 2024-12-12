@@ -147,6 +147,7 @@ export default defineConfig({
           { link: 'jdk-17', text: 'JDK 17' },
           { link: 'jdk-major', text: 'JDK 版本与字节码' },
           { link: 'k8s-releases', text: 'k8s 发布' },
+          { link: 'kernel', text: 'kernel' },
           { link: 'ldd', text: 'ldd' },
           { link: 'mirrors', text: '镜像' },
           { link: 'mvnd', text: '使用 mvnd 加快 Maven 项目构建速度' },
