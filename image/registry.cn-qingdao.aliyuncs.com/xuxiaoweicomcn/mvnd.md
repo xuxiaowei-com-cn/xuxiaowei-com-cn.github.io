@@ -18,6 +18,8 @@
 
 | 镜像                                                                                     | 说明                              |
 |----------------------------------------------------------------------------------------|---------------------------------|
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:2.0.0-rc-1-dragonwell-17-anolis   |                                 |
+| registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:2.0.0-rc-1-dragonwell-21-anolis   |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:2.0.0-beta-1-dragonwell-17-anolis |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:2.0.0-beta-1-dragonwell-21-anolis |                                 |
 | registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/mvnd:1.0.2-dragonwell-8-anolis         | 1.0.2 代表 mvnd 版本                |
