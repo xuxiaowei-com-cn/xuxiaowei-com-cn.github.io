@@ -30,6 +30,7 @@ sudo docker run \
   -itd \
   --restart always \
   --name redis-7.2.4 \
+  -p 6379:6379 \
   -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.4 \
   --requirepass $REDIS_PASSWORD
 ```
@@ -43,6 +44,7 @@ sudo docker run \
   -itd \
   --restart always \
   --name redis-7.2.4 \
+  -p 6379:6379 \
   -d registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/redis:7.2.4 \
   --requirepass $REDIS_PASSWORD
 ```
