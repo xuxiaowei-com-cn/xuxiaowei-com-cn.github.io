@@ -30,7 +30,8 @@
 |------------------------------------------------|--------------------------------------------------|--------------------------------|
 | xuxiaoweicomcn/kubernetes-website:main         | https://kubernetes.xuxiaowei.com.cn/zh-cn/       | `main` 从源代码的 `main` 分支构建，代表最新版 |
 | xuxiaoweicomcn/kubernetes-website:main-xxxxxx  |                                                  | 历史版本，`xxxxxx` 代表构建时的流水线编号      |
-| xuxiaoweicomcn/kubernetes-website:release-1.30 | https://kubernetes-v1-30.xuxiaowei.com.cn/zh-cn/ | `release` 代表正式发布版，`1.30` 代表版本号 |
+| xuxiaoweicomcn/kubernetes-website:release-1.31 | https://kubernetes-v1-31.xuxiaowei.com.cn/zh-cn/ | `release` 代表正式发布版，`1.31` 代表版本号 |
+| xuxiaoweicomcn/kubernetes-website:release-1.30 | https://kubernetes-v1-30.xuxiaowei.com.cn/zh-cn/ |                                |
 | xuxiaoweicomcn/kubernetes-website:release-1.29 | https://kubernetes-v1-29.xuxiaowei.com.cn/zh-cn/ |                                |
 | xuxiaoweicomcn/kubernetes-website:release-1.28 | https://kubernetes-v1-28.xuxiaowei.com.cn/zh-cn/ |                                |
 | xuxiaoweicomcn/kubernetes-website:release-1.27 | https://kubernetes-v1-27.xuxiaowei.com.cn/zh-cn/ |                                |

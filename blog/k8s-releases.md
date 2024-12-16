@@ -2,10 +2,11 @@
 
 | 版本                                                       | 首次发布日期     | 终止日期       | 最后一个版本  |
 |----------------------------------------------------------|------------|------------|---------|
+| [1.32](https://kubernetes-v1-32.xuxiaowei.com.cn/zh-cn/) | 2024-12-12 | 2026-22-28 |         |
 | [1.31](https://kubernetes-v1-31.xuxiaowei.com.cn/zh-cn/) | 2024-08-13 | 2025-10-28 |         |
 | [1.30](https://kubernetes-v1-30.xuxiaowei.com.cn/zh-cn/) | 2024-04-17 | 2025-06-28 |         |
 | [1.29](https://kubernetes-v1-29.xuxiaowei.com.cn/zh-cn/) | 2023-12-13 | 2025-02-28 |         |
-| [1.28](https://kubernetes-v1-28.xuxiaowei.com.cn/zh-cn/) | 2023-08-15 | 2024-10-28 |         |
+| [1.28](https://kubernetes-v1-28.xuxiaowei.com.cn/zh-cn/) | 2023-08-15 | 2024-10-28 | 1.28.15 |
 | [1.27](https://kubernetes-v1-27.xuxiaowei.com.cn/zh-cn/) | 2023-04-11 | 2024-06-28 | 1.27.16 |
 | [1.26](https://kubernetes-v1-26.xuxiaowei.com.cn/zh-cn/) | 2022-12-09 | 2024-02-28 | 1.26.15 |
 | [1.25](https://kubernetes-v1-25.xuxiaowei.com.cn/zh-cn/) | 2022-08-23 | 2023-10-28 | 1.25.16 |
