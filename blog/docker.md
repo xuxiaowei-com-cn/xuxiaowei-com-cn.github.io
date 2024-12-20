@@ -609,14 +609,37 @@ docker manifest inspect ghcr.io/graalvm/jdk-community:22.0.2
 | `docker build`                                                  | 必填   | 构建 Docker 镜像的命令                                                          |
 | `-t registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/test:0.0.1` | 必填   | 指定构建镜像标签。数组，可指定多个标签。完整参数：`--tag`                                         |
 | `.`                                                             | 必填   | Dockerfile 所在上下文目录，这里代表当前目录                                              |
+| `--platform linux/amd64,linux/arm64`                            | 可选   | 构建时指定平台，可配置多个值，使用 `,` 隔开。默认与宿主机平台相同                                      |
 | `--build-arg A=123`                                             | 可选   | 构建时指定的参数。数组，可指定多个参数                                                      |
 | `--no-cache`                                                    | 可选   | 构建过程中不使用缓存，默认：使用缓存。此参数可能会导致重复构建速度降低。查看完整日志时需要，常与 `--progress plain` 一起使用 |
 | `--progress plain`                                              | 可选   | 构建过程中删除格式，`plain` 会让输出更详细，易于调试                                           |
 | `--push`                                                        | 可选   | 构建完成后自动推送镜像                                                              |
 
-```shell
-docker build --build-arg A=123 -t registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/test:0.0.1 . --no-cache --progress plain --push
+::: code-group
+
+```shell [构建镜像]
+docker build 
+  --build-arg A=123 
+  -t registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/test:0.0.1
+  . 
+  --no-cache 
+  --progress plain 
+  --push
 ```
+
+```shell [构建多平台镜像]
+docker buildx create --use
+docker build 
+  --platform linux/amd64,linux/arm64 
+  --build-arg A=123 
+  -t registry.cn-qingdao.aliyuncs.com/xuxiaoweicomcn/test:0.0.1
+  . 
+  --no-cache 
+  --progress plain 
+  --push
+```
+
+:::
 
 ::: warning 警告
 
